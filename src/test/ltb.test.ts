@@ -27,6 +27,7 @@ import {
 } from "@/data/ltb";
 import {
   PLANS,
+  STATE_A_BUTTON_HELPER,
   STATE_A_PLANS_OPEN_SOON,
   STATE_B_BUTTON_HELPER,
   autorenewHtml,
@@ -218,9 +219,7 @@ describe("v5 copy strings (verbatim)", () => {
 
   it("matches More rev2 State A prices line, A1, and Stripe helper", () => {
     expect(STATE_A_PLANS_OPEN_SOON).toBe(
-      "Plans open soon: County $39, Region $89 and Statewide $139 per month, " +
-        "billed monthly. Join the waitlist and we'll email you when you can " +
-        "subscribe. Joining is free, and no payment is taken.",
+      "County $39, Region $89 and Statewide $139 per month, billed monthly. Plans renew automatically every month until you cancel. This site is a preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details. Paid plans aren't open yet.",
     );
     expect(STATE_B_BUTTON_HELPER).toBe(
       "You'll check out on a page hosted by Stripe.",
@@ -540,5 +539,67 @@ describe("plan buttons (Andrew 5:46 PM Nov 17)", () => {
       "Subscribe: Statewide, $139/month",
     ]));
     expect(labels.join(" ")).not.toMatch(/waitlist/i);
+  });
+});
+
+
+describe("More preview wording (Andrew 5:52 PM ET Nov 17)", () => {
+  const BUTTON_HELPER =
+    "Preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Paid plans aren't open yet.";
+  const PLANS_OPEN_SOON =
+    "County $39, Region $89 and Statewide $139 per month, billed monthly. Plans renew automatically every month until you cancel. This site is a preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details. Paid plans aren't open yet.";
+  const TERMS_42 =
+    "4.2 <strong>Before paid plans open (preview).</strong> Until paid plans open, our site is a preview. The plan buttons lead to our sign-up step and then to a Stripe checkout running in test mode. <strong>A test checkout doesn't charge you, take real payment information or create a subscription.</strong> Please don't enter real card or bank details. You subscribe only by completing a live Stripe checkout after paid plans open. We don't offer founders' or other introductory discounts.";
+  const SIGNUP_USE =
+    "If you use our sign-up step: to set up your subscription and match your choices to your payment. If you don't finish checkout, we may send you one reminder to finish signing up (see section 6). During our preview, checkout runs in test mode, so using the sign-up step doesn't charge you or start a subscription.";
+  const WAITLIST_USE =
+    "If you join a waitlist, for example for a state we don't cover yet: to tell you when it opens. Joining a waitlist doesn't charge you or sign you up for a paid plan.";
+  const COOKIES =
+    "<p><strong>Cookies.</strong> Our own site sets no cookies. Our sign-up step and other forms on our pages send your entries straight to Google without loading Google cookies or scripts on our pages. When you use Stripe's checkout page (opened after our sign-up step), Stripe sets cookies it needs for payments and fraud prevention (https://stripe.com/cookie-settings). You can block or delete cookies in your browser, but checkout may not work without Stripe's necessary cookies.</p>";
+  const CUT_WAITLIST_FORM =
+    "The Florida plan waitlist form opens on Google's own site, where Google's privacy policy and cookies apply (https://policies.google.com/privacy).";
+  const FAQ_COMBINED =
+    "County $39/month, Region $89/month, Statewide $139/month. " + PLANS_OPEN_SOON;
+
+  it("uses More's preview strings verbatim", () => {
+    expect(STATE_A_BUTTON_HELPER).toBe(BUTTON_HELPER);
+    expect(STATE_A_PLANS_OPEN_SOON).toBe(PLANS_OPEN_SOON);
+    expect(TERMS_HTML).toContain(TERMS_42);
+    expect(PRIVACY_HTML).toContain("<li>" + SIGNUP_USE + "</li>");
+    expect(PRIVACY_HTML).toContain("<li>" + WAITLIST_USE + "</li>");
+    expect(PRIVACY_HTML).toContain(COOKIES);
+  });
+
+  it("removes the old waitlist wording from those spots and cuts the Google-hosted waitlist cookie sentence", () => {
+    expect(STATE_A_BUTTON_HELPER).not.toContain("Join the waitlist");
+    expect(STATE_A_BUTTON_HELPER).not.toContain("Subscriptions open soon");
+    expect(STATE_A_PLANS_OPEN_SOON).not.toContain("Plans open soon:");
+    expect(STATE_A_PLANS_OPEN_SOON).not.toContain("Join the waitlist");
+    expect(TERMS_HTML).not.toContain("the plan buttons on our site lead to a waitlist");
+    expect(TERMS_HTML).not.toContain("Joining the waitlist is free, takes no payment information, and doesn't create a subscription.");
+    expect(TERMS_HTML).not.toContain("We'll email waitlist members when plans open.");
+    expect(TERMS_HTML).not.toContain("4.2 <strong>Before paid plans open.</strong> Until paid plans open, the plan buttons on our site lead to a waitlist.");
+    expect(PRIVACY_HTML).not.toContain(
+      "If you join the waitlist: to tell you when paid plans open. Joining the waitlist doesn't charge you or sign you up for a paid plan.",
+    );
+    expect(PRIVACY_HTML).not.toContain(CUT_WAITLIST_FORM);
+    expect(PRIVACY_HTML).not.toContain("[PLACEHOLDER: Vincent to confirm that the background post of preference picks to Google loads no Google scripts or cookies; delete this note once confirmed]");
+  });
+
+  it("keeps the short PreviewCheckoutNotice under each plan button alongside the new State A helper", () => {
+    const cards = readFileSync(new URL("../components/site/PricingCards.tsx", import.meta.url), "utf8");
+    expect(cards).toContain('variant="short"');
+    expect(cards).toContain("{STATE_A_BUTTON_HELPER}");
+    expect(cards).toContain("{STATE_B_BUTTON_HELPER}");
+    expect(cards).toContain("SITE.checkoutLive");
+  });
+
+  it("leaves the FAQ price sentence in place, so the combined How much does it cost? answer is verbatim", () => {
+    const faq = readFileSync(new URL("../routes/faq.tsx", import.meta.url), "utf8");
+    expect(faq).toContain("County $39/month, Region $89/month, Statewide $139/month.");
+    expect(faq).toContain('!SITE.checkoutLive ? " " + STATE_A_PLANS_OPEN_SOON : ""');
+    expect(FAQ_COMBINED).toBe(
+      "County $39/month, Region $89/month, Statewide $139/month. County $39, Region $89 and Statewide $139 per month, billed monthly. Plans renew automatically every month until you cancel. This site is a preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details. Paid plans aren't open yet.",
+    );
   });
 });

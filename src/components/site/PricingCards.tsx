@@ -19,11 +19,9 @@ export function autorenewHtml(price: number): string {
   );
 }
 
-// More rev3.2 doc 04 A1 State A line (under the cards). Joining is free is More's text.
+// More preview wording (Andrew approved 5:52 PM ET Nov 17, 2026). Under the cards on home and /pricing/, and in the FAQ price answer.
 export const STATE_A_PLANS_OPEN_SOON =
-  "Plans open soon: County $39, Region $89 and Statewide $139 per month, " +
-  "billed monthly. Join the waitlist and we'll email you when you can " +
-  "subscribe. Joining is free, and no payment is taken.";
+  "County $39, Region $89 and Statewide $139 per month, billed monthly. Plans renew automatically every month until you cancel. This site is a preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details. Paid plans aren't open yet.";
 
 // More rev3.3 delivery line (LTB copy v5.1, Home mini-cards + Pricing table).
 export const DELIVERY_LINE =
@@ -40,7 +38,7 @@ export const EMAIL_DELIVERY_HELPER =
   "To switch later, email support@localtradebids.com.";
 
 export const STATE_A_BUTTON_HELPER =
-  "Subscriptions open soon. Join the waitlist and we'll email you when you can sign up.";
+  "Preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Paid plans aren't open yet.";
 
 // More rev3.2 doc 04 A1 helper under each Subscribe button (State B).
 export const STATE_B_BUTTON_HELPER =
