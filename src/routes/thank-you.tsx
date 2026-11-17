@@ -74,7 +74,7 @@ function Page() {
           </p>
           <p className="mt-3">
             {SITE.billingPortalUrl ? (
-              <a href={SITE.billingPortalUrl} className="link" rel="noopener">
+              <a href={SITE.billingPortalUrl} className="link" rel="noopener noreferrer" referrerPolicy="no-referrer">
                 Manage billing
               </a>
             ) : (

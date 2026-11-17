@@ -247,12 +247,12 @@ describe("v5 copy strings (verbatim)", () => {
     expect(CANCEL_FALLBACK_TEXT).toContain("We'll cancel within 2 business days");
   });
 
-  it("go-live: checkout on, live payment links set, portal URL not yet set", () => {
+  it("go-live: checkout on, live payment links set, live portal URL set", () => {
     expect(SITE.checkoutLive).toBe(true);
     expect(SITE.paymentLinks.county).toMatch(/^https:\/\/buy\.stripe\.com\/eVqd/);
     expect(SITE.paymentLinks.region).toMatch(/^https:\/\/buy\.stripe\.com\/14A14p/);
     expect(SITE.paymentLinks.statewide).toMatch(/^https:\/\/buy\.stripe\.com\/3cI00l/);
-    expect(SITE.billingPortalUrl).toBe("");
+    expect(SITE.billingPortalUrl).toBe("https://billing.stripe.com/p/login/eVqdRbctF1OJ4jma5N0kE00");
   });
 });
 

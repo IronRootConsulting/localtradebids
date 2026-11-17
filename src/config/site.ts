@@ -13,7 +13,9 @@ export const SITE = {
   // Stripe customer portal login URL. Empty: /manage/ shows a placeholder box and
   // the footer/thank-you "Manage billing" links go to /manage/. Bernard sends the
   // live URL; set it here and every Manage billing link points straight at it.
-  billingPortalUrl: "",
+  // Live Stripe customer portal (config bpc_1UcwG7Rz7lWavGOpcKSbDbxB), created on
+  // Andrew's approval 6:57 PM ET Nov 17, 2026 (via Bernard).
+  billingPortalUrl: "https://billing.stripe.com/p/login/eVqdRbctF1OJ4jma5N0kE00",
   // Cloudflare Web Analytics (cookieless JS beacon; Andrew's token, sent by Bernard
   // 6:52 PM ET Nov 17, 2026; public site token, not a secret). Empty = no beacon.
   cloudflareBeaconToken: "e7f6d1677ea94e93b250059483f5bdc6",

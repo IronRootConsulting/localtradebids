@@ -42,7 +42,7 @@ function Page() {
       <PageIntro title="Manage billing" />
       {SITE.billingPortalUrl ? (
         <p className="text-slate">
-          <a href={SITE.billingPortalUrl} className="btn-primary" rel="noopener">
+          <a href={SITE.billingPortalUrl} className="btn-primary" rel="noopener noreferrer" referrerPolicy="no-referrer">
             Manage billing
           </a>
         </p>

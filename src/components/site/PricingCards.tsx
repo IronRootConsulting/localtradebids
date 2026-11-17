@@ -34,8 +34,7 @@ export const DELIVERY_LINE =
 // description. State B: shown on the plan card next to the button (Stripe dropdowns
 // have no helper text).
 export const EMAIL_DELIVERY_HELPER =
-  "Same price either way. If we don't have your choice, you'll get the daily email. " +
-  "To switch later, email support@localtradebids.com.";
+  "Same price either way. To switch later, email support@localtradebids.com.";
 
 export const STATE_A_BUTTON_HELPER =
   "Preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Paid plans aren't open yet.";

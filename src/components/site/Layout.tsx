@@ -91,7 +91,7 @@ function BillingLink() {
   if (!SITE.checkoutLive) return null;
   if (SITE.billingPortalUrl) {
     return (
-      <a href={SITE.billingPortalUrl} className="link" rel="noopener">
+      <a href={SITE.billingPortalUrl} className="link" rel="noopener noreferrer" referrerPolicy="no-referrer">
         Manage billing
       </a>
     );
