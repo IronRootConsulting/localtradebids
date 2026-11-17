@@ -1,5 +1,5 @@
 /** All user-facing strings for the on-site plan preferences step.
- *  Ignatius ltb-preferences-step-v1.md sha256 a053c614edd18a1ae64479d2cf195f696f64b7b15f1b01f38ad7c4cc928ac130
+ *  Ignatius ltb-preferences-step-v1.md sha256 9778af1ad168e24beb4a1b17a188b861fac03c0efb4d10875cbdae43d972fd66
  *  Strings that mention a state name or price use {stateName} / {price} so FL renders byte-identical to that file.
  */
 export type SignupCopyVars = {
@@ -9,7 +9,8 @@ export type SignupCopyVars = {
 
 export const SIGNUP_COPY = {
   heading: "Set up your bid alerts",
-  intro: "Pick your coverage, your trades, and how often you want your email.",
+  intro:
+    "Tell us who you are, then pick your coverage, your trades, and how often you want your email.",
   stateLabel: "State",
   stateHelper: "{stateName} only at launch.",
   countyLabel: "County",
@@ -42,6 +43,20 @@ export const SIGNUP_COPY = {
     "Preview only: test checkout. No charge, and no subscription starts.",
   previewCheckoutLong:
     "This is a preview. Checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details; use Stripe's test card instead. Paid plans aren't open yet.",
+  detailsHeading: "Your details",
+  nameLabel: "Name",
+  namePlaceholder: "First and last name",
+  businessLabel: "Business name",
+  businessHelper: "The company you bid as.",
+  emailLabel: "Email",
+  emailHelper: "Your bid alerts go to this address. We'll fill it in for you at checkout.",
+  errorName: "Enter your name to continue.",
+  errorBusiness: "Enter your business name to continue.",
+  errorEmail: "Enter a valid email address, like name@company.com.",
+  detailsNotice:
+    "We use these details to set up your subscription and send your bid emails. If you don't finish checkout, we may send you one reminder, and we delete your details after 90 days. See our Privacy Policy.",
+  detailsNoticeLink: "Privacy Policy",
+  areaHeading: "Area",
 } as const;
 
 export function fillCopy(template: string, vars: SignupCopyVars = {}): string {

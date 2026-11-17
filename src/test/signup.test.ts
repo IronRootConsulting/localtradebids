@@ -5,14 +5,18 @@ import { planHref, preferencesHref, PLANS } from "@/components/site/PricingCards
 import { SIGNUP_COPY, fillCopy } from "@/data/signupCopy";
 import { STATES_FILE, defaultStateCode, regionsForState, countiesForState } from "@/data/states";
 import { TRADES } from "@/data/ltb";
+import { parseSignupPrefill } from "@/lib/signupPrefill";
 import {
   PICKS_FORM,
   PICKS_SCHEMA,
   buildCheckoutUrl,
   buildPicksPayload,
   generateRef,
+  isValidEmail,
   isValidRef,
   joinTrades,
+  normalizeEmail,
+  normalizeName,
   submitPicks,
   type Picks,
 } from "@/lib/submitPicks";
@@ -50,6 +54,30 @@ describe("preferences step: ref and checkout URL", () => {
     expect(buildCheckoutUrl("region", ref)).toContain("test_14A14p");
     expect(buildCheckoutUrl("statewide", ref)).toContain("test_eVqd");
   });
+
+  it("buildCheckoutUrl appends prefilled_email when an email is provided", () => {
+    const ref = "ltb_abc123xyz789";
+    const url = buildCheckoutUrl("county", ref, "Name@Company.com");
+    expect(url).toContain(`client_reference_id=${ref}`);
+    expect(url).toContain("prefilled_email=Name%40Company.com");
+    expect(buildCheckoutUrl("county", ref)).not.toContain("prefilled_email");
+  });
+});
+
+describe("preferences step: contact normalization", () => {
+  it("trims name and business, and lowercases email", () => {
+    expect(normalizeName("  Jane Doe  ")).toBe("Jane Doe");
+    expect(normalizeEmail("  Name@Company.com  ")).toBe("name@company.com");
+  });
+
+  it("accepts a basic email and rejects incomplete ones", () => {
+    expect(isValidEmail("name@company.com")).toBe(true);
+    expect(isValidEmail("  Name@Company.com  ")).toBe(true);
+    expect(isValidEmail("")).toBe(false);
+    expect(isValidEmail("name@")).toBe(false);
+    expect(isValidEmail("name@company")).toBe(false);
+    expect(isValidEmail("not-an-email")).toBe(false);
+  });
 });
 
 describe("preferences step: picks payload and submit", () => {
@@ -61,14 +89,17 @@ describe("preferences step: picks payload and submit", () => {
     area: "miami-dade",
     trades: joinTrades(["roofing", "electrical"]),
     delivery: "daily",
-    page_url: "https://example.test/localtradebids/signup/?plan=county",
+    page_url: "https://example.test/signup/?plan=county",
     ts: "2026-11-17T16:00:00.000Z",
+    name: "Ada Lovelace",
+    business: "Analytical Engines",
+    email: "ada@engines.example",
   };
 
-  it("buildPicksPayload uses Bede's v1 fields and the live entry ids", () => {
+  it("buildPicksPayload uses schema v2, contact fields, and the live entry ids", () => {
     const body = buildPicksPayload(picks);
     expect(body.get(PICKS_FORM.entries.ref)).toBe(picks.ref);
-    expect(body.get(PICKS_FORM.entries.schema)).toBe("v1");
+    expect(body.get(PICKS_FORM.entries.schema)).toBe("v2");
     expect(body.get(PICKS_FORM.entries.plan)).toBe("county");
     expect(body.get(PICKS_FORM.entries.state)).toBe("FL");
     expect(body.get(PICKS_FORM.entries.area)).toBe("miami-dade");
@@ -76,6 +107,12 @@ describe("preferences step: picks payload and submit", () => {
     expect(body.get(PICKS_FORM.entries.delivery)).toBe("daily");
     expect(body.get(PICKS_FORM.entries.page_url)).toBe(picks.page_url);
     expect(body.get(PICKS_FORM.entries.ts)).toBe(picks.ts);
+    expect(body.get(PICKS_FORM.entries.name)).toBe("Ada Lovelace");
+    expect(body.get(PICKS_FORM.entries.business)).toBe("Analytical Engines");
+    expect(body.get(PICKS_FORM.entries.email)).toBe("ada@engines.example");
+    expect(PICKS_FORM.entries.name).toBe("entry.241923616");
+    expect(PICKS_FORM.entries.business).toBe("entry.1884443749");
+    expect(PICKS_FORM.entries.email).toBe("entry.537479107");
   });
 
   it("maps region area to region_id and statewide area to blank", () => {
@@ -101,6 +138,7 @@ describe("preferences step: picks payload and submit", () => {
     expect(url).toBe(PICKS_FORM.formResponseUrl);
     expect(init.method).toBe("POST");
     expect(init.mode).toBe("no-cors");
+    expect(init.referrerPolicy).toBe("no-referrer");
     expect(String(init.headers && (init.headers as Record<string, string>)["Content-Type"])).toBe(
       "application/x-www-form-urlencoded",
     );
@@ -149,8 +187,26 @@ describe("preferences step: Ignatius copy and Bede data", () => {
     );
     expect(SIGNUP_COPY.heading).toBe("Set up your bid alerts");
     expect(SIGNUP_COPY.intro).toBe(
-      "Pick your coverage, your trades, and how often you want your email.",
+      "Tell us who you are, then pick your coverage, your trades, and how often you want your email.",
     );
+    expect(SIGNUP_COPY.detailsHeading).toBe("Your details");
+    expect(SIGNUP_COPY.nameLabel).toBe("Name");
+    expect(SIGNUP_COPY.namePlaceholder).toBe("First and last name");
+    expect(SIGNUP_COPY.businessLabel).toBe("Business name");
+    expect(SIGNUP_COPY.businessHelper).toBe("The company you bid as.");
+    expect(SIGNUP_COPY.emailLabel).toBe("Email");
+    expect(SIGNUP_COPY.emailHelper).toBe(
+      "Your bid alerts go to this address. We'll fill it in for you at checkout.",
+    );
+    expect(SIGNUP_COPY.errorName).toBe("Enter your name to continue.");
+    expect(SIGNUP_COPY.errorBusiness).toBe("Enter your business name to continue.");
+    expect(SIGNUP_COPY.errorEmail).toBe(
+      "Enter a valid email address, like name@company.com.",
+    );
+    expect(SIGNUP_COPY.detailsNotice).toBe(
+      "We use these details to set up your subscription and send your bid emails. If you don't finish checkout, we may send you one reminder, and we delete your details after 90 days. See our Privacy Policy.",
+    );
+    expect(SIGNUP_COPY.detailsNoticeLink).toBe("Privacy Policy");
     expect(SIGNUP_COPY.tradesSelectAll).toBe("Select all seven trades");
     expect(SIGNUP_COPY.errorDelivery).toBe(
       "Choose daily or weekly to continue.",
@@ -221,7 +277,9 @@ describe("preferences step: preview checkout notice", () => {
     const signup = readFileSync(new URL("../routes/signup.tsx", import.meta.url), "utf8");
     expect(signup).toContain('variant="long"');
     const form = readFileSync(new URL("../components/site/PreferencesForm.tsx", import.meta.url), "utf8");
-    expect(form).toContain('variant="long"');
+    expect(form).toContain('variant="short"');
+    expect(form).toContain("preview-notice-compact");
+    expect(form).not.toContain('variant="long"');
   });
 });
 
@@ -236,5 +294,140 @@ describe("canonical, og, and sitemap URLs", () => {
     expect(seo).toContain("const url = SITE.url + path");
     expect(seo).toContain('property: "og:url"');
     expect(seo).toContain('rel: "canonical"');
+  });
+});
+
+describe("preferences step: resume prefill from the URL", () => {
+  it("applies a full prefill of plan, state, area, trades, and delivery", () => {
+    const full = parseSignupPrefill({
+      plan: "county",
+      state: "FL",
+      area: "collier",
+      trades: "roofing,electrical",
+      delivery: "daily",
+    });
+    expect(full).toEqual({
+      plan: "county",
+      state: "FL",
+      county: "collier",
+      region: "",
+      trades: ["roofing", "electrical"],
+      delivery: "daily",
+    });
+
+    const region = parseSignupPrefill(
+      new URLSearchParams("plan=region&state=FL&area=fl-southwest&trades=sitework-heavy-civil&delivery=weekly"),
+    );
+    expect(region).toEqual({
+      plan: "region",
+      state: "FL",
+      county: "",
+      region: "fl-southwest",
+      trades: ["sitework-heavy-civil"],
+      delivery: "weekly",
+    });
+  });
+
+  it("applies a partial prefill and leaves the rest empty or default", () => {
+    const partial = parseSignupPrefill({ plan: "statewide", trades: "roofing,painting" });
+    expect(partial.plan).toBe("statewide");
+    expect(partial.state).toBe("");
+    expect(partial.county).toBe("");
+    expect(partial.region).toBe("");
+    expect(partial.trades).toEqual(["roofing", "painting"]);
+    expect(partial.delivery).toBe("");
+  });
+
+  it("ignores unknown or invalid values quietly and keeps the rest", () => {
+    const mixed = parseSignupPrefill({
+      plan: "county",
+      state: "ZZ",
+      area: "not-a-county",
+      trades: "roofing,not-a-trade,electrical,roofing",
+      delivery: "yearly",
+    });
+    expect(mixed.plan).toBe("county");
+    expect(mixed.state).toBe("");
+    expect(mixed.county).toBe("");
+    expect(mixed.region).toBe("");
+    expect(mixed.trades).toEqual(["roofing", "electrical"]);
+    expect(mixed.delivery).toBe("");
+
+    const mismatch = parseSignupPrefill({ plan: "region", area: "collier", delivery: "daily" });
+    expect(mismatch.plan).toBe("region");
+    expect(mismatch.region).toBe("");
+    expect(mismatch.county).toBe("");
+    expect(mismatch.delivery).toBe("daily");
+
+    const badPlan = parseSignupPrefill({ plan: "national", area: "collier", trades: "roofing" });
+    expect(badPlan.plan).toBe("");
+    expect(badPlan.county).toBe("");
+    expect(badPlan.trades).toEqual(["roofing"]);
+  });
+
+  it("never reads name, business, or email from the URL", () => {
+    const sneaky = parseSignupPrefill({
+      plan: "county",
+      area: "collier",
+      name: "From the URL",
+      business: "URL Construction",
+      email: "stolen@example.com",
+      trades: "roofing",
+      delivery: "weekly",
+    });
+    expect(sneaky).toEqual({
+      plan: "county",
+      state: "",
+      county: "collier",
+      region: "",
+      trades: ["roofing"],
+      delivery: "weekly",
+    });
+    expect(JSON.stringify(sneaky)).not.toMatch(/stolen@example\.com|From the URL|URL Construction/);
+    const src = readFileSync(new URL("../lib/signupPrefill.ts", import.meta.url), "utf8");
+    expect(src).not.toMatch(/readParam\(search,\s*["']name["']\)/);
+    expect(src).not.toMatch(/readParam\(search,\s*["']business["']\)/);
+    expect(src).not.toMatch(/readParam\(search,\s*["']email["']\)/);
+    const form = readFileSync(new URL("../components/site/PreferencesForm.tsx", import.meta.url), "utf8");
+    expect(form).toContain('useState("")');
+    expect(form).toContain("parseSignupPrefill");
+  });
+});
+
+describe("privacy policy: unfinished sign-ups and Google row", () => {
+  const SUBSCRIBE_BULLET =
+    "- When you subscribe: before checkout, our site asks for your name, business name and email, plus your coverage area, trades and delivery schedule, and gives your answers a random reference number. We send that reference and your email to Stripe when you go to checkout, so we can match your answers to your payment. Your email is included in the checkout link, so it may appear in your browser history. At Stripe checkout you enter your billing details, and Stripe may also collect your name and email. If you don't finish checkout, we keep what you entered for 90 days and then delete it. During that time we may send you one email reminding you to finish signing up, with a link to unsubscribe. We don't send any other marketing to unfinished sign-ups.";
+  const GOOGLE_TD =
+    "Receives the sign-up and preference forms on our site and stores the responses in a private spreadsheet only we can access. Responses include your name, business name and email address, your email choices, a record of any consent you gave, and the subscription choices you make before checkout (coverage area, trades and delivery schedule) with their reference number. Google also receives your IP address and browser information when a form is sent. https://policies.google.com/privacy";
+
+  it("includes More's section 1 subscribe bullet and section 3 Google row verbatim", async () => {
+    const { PRIVACY_HTML } = await import("@/routes/privacy");
+    expect(PRIVACY_HTML).toContain(SUBSCRIBE_BULLET);
+    expect(PRIVACY_HTML).toContain(GOOGLE_TD);
+    const privacy = readFileSync(new URL("../routes/privacy.tsx", import.meta.url), "utf8");
+    expect(privacy).toContain(SUBSCRIBE_BULLET);
+    expect(privacy).toContain(GOOGLE_TD);
+    expect(privacy).toContain(
+      "Unfinished sign-ups (details entered on our sign-up step without completing checkout): 90 days, then deleted. We keep only your email address, the date of any reminder we sent and any unsubscribe request, so we never send a second reminder or email you after you've opted out.",
+    );
+  });
+});
+
+describe("signup page: referrer policy in the built HTML", () => {
+  it("includes <meta name=\"referrer\" content=\"no-referrer\"> in the prerendered signup page", () => {
+    const html = readFileSync(new URL("../../.output/public/signup/index.html", import.meta.url), "utf8");
+    expect(html).toMatch(/<meta\s+name="referrer"\s+content="no-referrer"\s*\/?>/i);
+  });
+});
+
+describe("preferences step: no sessionStorage stash", () => {
+  it("does not write picks to sessionStorage", () => {
+    const src = readFileSync(new URL("../lib/submitPicks.ts", import.meta.url), "utf8");
+    const form = readFileSync(new URL("../components/site/PreferencesForm.tsx", import.meta.url), "utf8");
+    expect(src).not.toContain("stashPicks");
+    expect(src).not.toContain("PICKS_STORAGE_KEY");
+    expect(src).not.toContain("sessionStorage");
+    expect(form).not.toContain("stashPicks");
+    expect(form).not.toContain("sessionStorage");
   });
 });

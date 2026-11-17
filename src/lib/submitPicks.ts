@@ -1,8 +1,8 @@
 import { SITE, type PlanKey } from "@/config/site";
 
-export const PICKS_SCHEMA = "v1" as const;
+export const PICKS_SCHEMA = "v2" as const;
+export const FIELD_MAX = 200;
 export const SUBMIT_PICKS_TIMEOUT_MS = 1500;
-export const PICKS_STORAGE_KEY = "ltb_signup_picks";
 export const REF_PREFIX = "ltb_";
 export const REF_LENGTH = 12;
 
@@ -20,6 +20,10 @@ export const PICKS_FORM = {
     delivery: "entry.994699508",
     page_url: "entry.1112194196",
     ts: "entry.774732596",
+    // Entry IDs from the public viewform FB_PUBLIC_LOAD_DATA_ (titles name, business, email).
+    name: "entry.241923616",
+    business: "entry.1884443749",
+    email: "entry.537479107",
   },
 } as const;
 
@@ -35,6 +39,9 @@ export type Picks = {
   delivery: DeliveryKey;
   page_url: string;
   ts: string;
+  name: string;
+  business: string;
+  email: string;
 };
 
 const BASE36 = "0123456789abcdefghijklmnopqrstuvwxyz";
@@ -63,6 +70,19 @@ export function joinTrades(slugs: string[]): string {
   return slugs.join(",");
 }
 
+export function normalizeName(value: string): string {
+  return value.trim().slice(0, FIELD_MAX);
+}
+
+export function normalizeEmail(value: string): string {
+  return value.trim().toLowerCase().slice(0, FIELD_MAX);
+}
+
+/** Basic email syntax: one @, local and domain parts, a dot in the domain. */
+export function isValidEmail(value: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizeEmail(value));
+}
+
 export function buildPicksPayload(picks: Picks): URLSearchParams {
   const e = PICKS_FORM.entries;
   const body = new URLSearchParams();
@@ -76,6 +96,9 @@ export function buildPicksPayload(picks: Picks): URLSearchParams {
     delivery: picks.delivery,
     page_url: picks.page_url,
     ts: picks.ts,
+    name: picks.name,
+    business: picks.business,
+    email: picks.email,
   };
   (Object.keys(e) as (keyof typeof e)[]).forEach((key) => {
     const entryId = e[key];
@@ -84,18 +107,15 @@ export function buildPicksPayload(picks: Picks): URLSearchParams {
   return body;
 }
 
-export function stashPicks(picks: Picks, storage: Storage = sessionStorage): void {
-  storage.setItem(PICKS_STORAGE_KEY, JSON.stringify(picks));
-}
-
-/** Append client_reference_id to a test Payment Link. Never uses live paymentLinks. */
-export function buildCheckoutUrl(plan: PlanKey, ref: string): string {
+/** Append client_reference_id and prefilled_email to a test Payment Link. Never uses live paymentLinks. */
+export function buildCheckoutUrl(plan: PlanKey, ref: string, email?: string): string {
   const base = SITE.testPaymentLinks[plan];
   if (!base) {
     throw new Error(`Missing test payment link for plan ${plan}`);
   }
   const url = new URL(base);
   url.searchParams.set("client_reference_id", ref);
+  if (email) url.searchParams.set("prefilled_email", email);
   return url.toString();
 }
 
@@ -121,6 +141,7 @@ export async function submitPicks(
     method: "POST",
     mode: "no-cors",
     credentials: "omit",
+    referrerPolicy: "no-referrer",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body,
   }).then(
