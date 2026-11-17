@@ -19,13 +19,21 @@ export const SITE = {
     statewide: "Statewide ($139/mo)",
   },
   billingPortalUrl: "",
-  // checkoutLive=false: plan buttons go to waitlistUrl (Google Form).
-  // Set true and fill paymentLinks after Andrew approves Stripe and the name filing.
+  // checkoutLive=false: plan buttons go to the on-site preferences step, then
+  // to testPaymentLinks (Stripe test mode). Live paymentLinks stay empty until
+  // Andrew gives the launch go. Never put buy.stripe.com links without test_ here.
   checkoutLive: false,
   paymentLinks: {
     county: "",
     region: "",
     statewide: "",
+  },
+  // Preview-only Stripe test Payment Links. Do not use the live counterparts
+  // (buy.stripe.com/eVqd..., 14A14p..., 3cI00l... without the test_ prefix).
+  testPaymentLinks: {
+    county: "https://buy.stripe.com/test_eVqdRbctF1OJ4jma5N0kE00",
+    region: "https://buy.stripe.com/test_14A14p51d50V3fi0vd0kE01",
+    statewide: "https://buy.stripe.com/test_3cI00l1P11OJ8zCb9R0kE02",
   },
   consentLogEnabled: true,
   consentLogUrl:

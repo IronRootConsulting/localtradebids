@@ -75,16 +75,16 @@ export const PLANS: {
   },
 ];
 
+export function preferencesHref(key: PlanKey): string {
+  return withBase(`signup/?plan=${encodeURIComponent(key)}`);
+}
+
 export function planHref(key: PlanKey): string {
   if (SITE.checkoutLive) {
     const link = SITE.paymentLinks[key];
     if (link) return link;
   }
-  const params = new URLSearchParams({
-    usp: "pp_url",
-    [SITE.planSignupPlanEntry]: SITE.planSignupPlanValues[key],
-  });
-  return `${SITE.planSignupUrl}?${params.toString()}`;
+  return preferencesHref(key);
 }
 
 export function planCta(plan: (typeof PLANS)[number]): string {
@@ -93,12 +93,14 @@ export function planCta(plan: (typeof PLANS)[number]): string {
 }
 
 export function PlanButton({ plan }: { plan: (typeof PLANS)[number] }) {
+  const href = planHref(plan.key);
+  const external = /^https?:\/\//.test(href);
   return (
     <a
-      href={planHref(plan.key)}
+      href={href}
       className="btn-primary mt-6"
-      target={SITE.checkoutLive ? undefined : "_blank"}
-      rel={SITE.checkoutLive ? undefined : "noopener"}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener" : undefined}
     >
       {planCta(plan)}
     </a>

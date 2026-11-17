@@ -423,7 +423,7 @@ describe("count line grammar", () => {
   });
 });
 
-describe("legal pages: More rev3.5 Daily/Weekly sections", () => {
+describe("legal pages: More rev3.6 Daily/Weekly sections", () => {
   it("Terms 2.1 has daily/weekly and the switching sentence", () => {
     expect(TERMS_HTML).toContain("daily or weekly, at the same price");
     expect(TERMS_HTML).toContain("Switching doesn't change your price or billing date.");
@@ -513,7 +513,7 @@ describe("LTB copy v5.4", () => {
   });
 });
 
-describe("legal pages: More's public rev3.5 text (preview)", () => {
+describe("legal pages: More's public rev3.6 text (preview)", () => {
   const all = PRIVACY_HTML + TERMS_HTML + REFUND_HTML;
   it("has no internal notes or citations", () => {
     for (const bad of ["per Andrew", "relayed", "More's wording", "rev3"]) {

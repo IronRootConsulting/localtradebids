@@ -1,0 +1,476 @@
+{
+  "schema": "v1",
+  "states": [
+    {
+      "code": "FL",
+      "name": "Florida",
+      "enabled": true,
+      "regions": [
+        {
+          "id": "fl-apalachee",
+          "name": "Apalachee Regional Planning Council",
+          "counties": [
+            "calhoun",
+            "franklin",
+            "gadsden",
+            "gulf",
+            "jackson",
+            "jefferson",
+            "leon",
+            "liberty",
+            "wakulla"
+          ]
+        },
+        {
+          "id": "fl-central",
+          "name": "Central Florida Regional Planning Council",
+          "counties": [
+            "desoto",
+            "hardee",
+            "highlands",
+            "okeechobee",
+            "polk"
+          ]
+        },
+        {
+          "id": "fl-east-central",
+          "name": "East Central Florida Regional Planning Council",
+          "counties": [
+            "brevard",
+            "lake",
+            "marion",
+            "orange",
+            "osceola",
+            "seminole",
+            "sumter",
+            "volusia"
+          ]
+        },
+        {
+          "id": "fl-emerald-coast",
+          "name": "Emerald Coast Regional Council",
+          "counties": [
+            "bay",
+            "escambia",
+            "holmes",
+            "okaloosa",
+            "santa-rosa",
+            "walton",
+            "washington"
+          ]
+        },
+        {
+          "id": "fl-north-central",
+          "name": "North Central Florida Regional Planning Council",
+          "counties": [
+            "alachua",
+            "bradford",
+            "columbia",
+            "dixie",
+            "gilchrist",
+            "hamilton",
+            "lafayette",
+            "levy",
+            "madison",
+            "suwannee",
+            "taylor",
+            "union"
+          ]
+        },
+        {
+          "id": "fl-northeast",
+          "name": "Northeast Florida Regional Council",
+          "counties": [
+            "baker",
+            "clay",
+            "duval",
+            "flagler",
+            "nassau",
+            "putnam",
+            "st-johns"
+          ]
+        },
+        {
+          "id": "fl-south",
+          "name": "South Florida Regional Planning Council",
+          "counties": [
+            "broward",
+            "miami-dade",
+            "monroe"
+          ]
+        },
+        {
+          "id": "fl-southwest",
+          "name": "Southwest Florida Regional Planning Council",
+          "counties": [
+            "charlotte",
+            "collier",
+            "glades",
+            "hendry",
+            "lee",
+            "sarasota"
+          ]
+        },
+        {
+          "id": "fl-tampa-bay",
+          "name": "Tampa Bay Regional Planning Council",
+          "counties": [
+            "citrus",
+            "hernando",
+            "hillsborough",
+            "manatee",
+            "pasco",
+            "pinellas"
+          ]
+        },
+        {
+          "id": "fl-treasure-coast",
+          "name": "Treasure Coast Regional Planning Council",
+          "counties": [
+            "indian-river",
+            "martin",
+            "palm-beach",
+            "st-lucie"
+          ]
+        }
+      ],
+      "counties": [
+        {
+          "slug": "alachua",
+          "name": "Alachua",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "baker",
+          "name": "Baker",
+          "regionId": "fl-northeast"
+        },
+        {
+          "slug": "bay",
+          "name": "Bay",
+          "regionId": "fl-emerald-coast"
+        },
+        {
+          "slug": "bradford",
+          "name": "Bradford",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "brevard",
+          "name": "Brevard",
+          "regionId": "fl-east-central"
+        },
+        {
+          "slug": "broward",
+          "name": "Broward",
+          "regionId": "fl-south"
+        },
+        {
+          "slug": "calhoun",
+          "name": "Calhoun",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "charlotte",
+          "name": "Charlotte",
+          "regionId": "fl-southwest"
+        },
+        {
+          "slug": "citrus",
+          "name": "Citrus",
+          "regionId": "fl-tampa-bay"
+        },
+        {
+          "slug": "clay",
+          "name": "Clay",
+          "regionId": "fl-northeast"
+        },
+        {
+          "slug": "collier",
+          "name": "Collier",
+          "regionId": "fl-southwest"
+        },
+        {
+          "slug": "columbia",
+          "name": "Columbia",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "desoto",
+          "name": "DeSoto",
+          "regionId": "fl-central"
+        },
+        {
+          "slug": "dixie",
+          "name": "Dixie",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "duval",
+          "name": "Duval",
+          "regionId": "fl-northeast"
+        },
+        {
+          "slug": "escambia",
+          "name": "Escambia",
+          "regionId": "fl-emerald-coast"
+        },
+        {
+          "slug": "flagler",
+          "name": "Flagler",
+          "regionId": "fl-northeast"
+        },
+        {
+          "slug": "franklin",
+          "name": "Franklin",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "gadsden",
+          "name": "Gadsden",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "gilchrist",
+          "name": "Gilchrist",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "glades",
+          "name": "Glades",
+          "regionId": "fl-southwest"
+        },
+        {
+          "slug": "gulf",
+          "name": "Gulf",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "hamilton",
+          "name": "Hamilton",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "hardee",
+          "name": "Hardee",
+          "regionId": "fl-central"
+        },
+        {
+          "slug": "hendry",
+          "name": "Hendry",
+          "regionId": "fl-southwest"
+        },
+        {
+          "slug": "hernando",
+          "name": "Hernando",
+          "regionId": "fl-tampa-bay"
+        },
+        {
+          "slug": "highlands",
+          "name": "Highlands",
+          "regionId": "fl-central"
+        },
+        {
+          "slug": "hillsborough",
+          "name": "Hillsborough",
+          "regionId": "fl-tampa-bay"
+        },
+        {
+          "slug": "holmes",
+          "name": "Holmes",
+          "regionId": "fl-emerald-coast"
+        },
+        {
+          "slug": "indian-river",
+          "name": "Indian River",
+          "regionId": "fl-treasure-coast"
+        },
+        {
+          "slug": "jackson",
+          "name": "Jackson",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "jefferson",
+          "name": "Jefferson",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "lafayette",
+          "name": "Lafayette",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "lake",
+          "name": "Lake",
+          "regionId": "fl-east-central"
+        },
+        {
+          "slug": "lee",
+          "name": "Lee",
+          "regionId": "fl-southwest"
+        },
+        {
+          "slug": "leon",
+          "name": "Leon",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "levy",
+          "name": "Levy",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "liberty",
+          "name": "Liberty",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "madison",
+          "name": "Madison",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "manatee",
+          "name": "Manatee",
+          "regionId": "fl-tampa-bay"
+        },
+        {
+          "slug": "marion",
+          "name": "Marion",
+          "regionId": "fl-east-central"
+        },
+        {
+          "slug": "martin",
+          "name": "Martin",
+          "regionId": "fl-treasure-coast"
+        },
+        {
+          "slug": "miami-dade",
+          "name": "Miami-Dade",
+          "regionId": "fl-south"
+        },
+        {
+          "slug": "monroe",
+          "name": "Monroe",
+          "regionId": "fl-south"
+        },
+        {
+          "slug": "nassau",
+          "name": "Nassau",
+          "regionId": "fl-northeast"
+        },
+        {
+          "slug": "okaloosa",
+          "name": "Okaloosa",
+          "regionId": "fl-emerald-coast"
+        },
+        {
+          "slug": "okeechobee",
+          "name": "Okeechobee",
+          "regionId": "fl-central"
+        },
+        {
+          "slug": "orange",
+          "name": "Orange",
+          "regionId": "fl-east-central"
+        },
+        {
+          "slug": "osceola",
+          "name": "Osceola",
+          "regionId": "fl-east-central"
+        },
+        {
+          "slug": "palm-beach",
+          "name": "Palm Beach",
+          "regionId": "fl-treasure-coast"
+        },
+        {
+          "slug": "pasco",
+          "name": "Pasco",
+          "regionId": "fl-tampa-bay"
+        },
+        {
+          "slug": "pinellas",
+          "name": "Pinellas",
+          "regionId": "fl-tampa-bay"
+        },
+        {
+          "slug": "polk",
+          "name": "Polk",
+          "regionId": "fl-central"
+        },
+        {
+          "slug": "putnam",
+          "name": "Putnam",
+          "regionId": "fl-northeast"
+        },
+        {
+          "slug": "santa-rosa",
+          "name": "Santa Rosa",
+          "regionId": "fl-emerald-coast"
+        },
+        {
+          "slug": "sarasota",
+          "name": "Sarasota",
+          "regionId": "fl-southwest"
+        },
+        {
+          "slug": "seminole",
+          "name": "Seminole",
+          "regionId": "fl-east-central"
+        },
+        {
+          "slug": "st-johns",
+          "name": "St. Johns",
+          "regionId": "fl-northeast"
+        },
+        {
+          "slug": "st-lucie",
+          "name": "St. Lucie",
+          "regionId": "fl-treasure-coast"
+        },
+        {
+          "slug": "sumter",
+          "name": "Sumter",
+          "regionId": "fl-east-central"
+        },
+        {
+          "slug": "suwannee",
+          "name": "Suwannee",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "taylor",
+          "name": "Taylor",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "union",
+          "name": "Union",
+          "regionId": "fl-north-central"
+        },
+        {
+          "slug": "volusia",
+          "name": "Volusia",
+          "regionId": "fl-east-central"
+        },
+        {
+          "slug": "wakulla",
+          "name": "Wakulla",
+          "regionId": "fl-apalachee"
+        },
+        {
+          "slug": "walton",
+          "name": "Walton",
+          "regionId": "fl-emerald-coast"
+        },
+        {
+          "slug": "washington",
+          "name": "Washington",
+          "regionId": "fl-emerald-coast"
+        }
+      ]
+    }
+  ]
+}

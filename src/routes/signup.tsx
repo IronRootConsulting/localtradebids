@@ -1,13 +1,15 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/lib/seo";
-import { PageIntro, SampleBand, SampleConditions } from "@/components/site/ui";
+import { PageIntro } from "@/components/site/ui";
+import { PreferencesForm } from "@/components/site/PreferencesForm";
+import { SIGNUP_COPY } from "@/data/signupCopy";
 
 export const Route = createFileRoute("/signup")({
   head: () =>
     pageHead({
-      title: "Sign up | LocalTradeBids",
+      title: "Set up your bid alerts | LocalTradeBids",
       description:
-        "Get the free weekly sample of Florida public construction bids, or see LocalTradeBids plans.",
+        "Pick your coverage, your trades, and how often you want your LocalTradeBids email, then continue to checkout.",
       path: "/signup",
     }),
   component: Page,
@@ -16,15 +18,8 @@ export const Route = createFileRoute("/signup")({
 function Page() {
   return (
     <>
-      <PageIntro title="Sign up" />
-      <div className="flex flex-wrap items-start gap-4">
-        <Link to="/pricing" className="btn-primary">See plans</Link>
-        <div>
-          <Link to="/" hash="sample-band" className="link">Get the free weekly sample</Link>
-          <SampleConditions />
-        </div>
-      </div>
-      <SampleBand />
+      <PageIntro title={SIGNUP_COPY.heading}>{SIGNUP_COPY.intro}</PageIntro>
+      <PreferencesForm />
     </>
   );
 }
