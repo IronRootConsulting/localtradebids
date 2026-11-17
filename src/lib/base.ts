@@ -1,4 +1,4 @@
-/** Vite base path, always with a trailing slash (e.g. "/localtradebids/"). */
+/** Vite base path, always with a trailing slash (e.g. "/"). */
 export const BASE_PATH: string = import.meta.env.BASE_URL || "/";
 
 /** Prefix an in-app path with the site base so it resolves on GitHub Pages. */

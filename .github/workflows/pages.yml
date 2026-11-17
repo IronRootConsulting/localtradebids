@@ -1,6 +1,7 @@
-# Deploy the prerendered static site to GitHub Pages.
-# Repo Pages URL: https://ironrootconsulting.github.io/localtradebids/
-# Triggered on push to main and by workflow_dispatch. No CNAME (project site, no custom domain).
+# Deploy the prerendered static site to GitHub Pages at the domain root.
+# Custom domain: localtradebids.com (see public/CNAME). Push this only after
+# that domain is saved in the repo's GitHub Pages settings.
+# Triggered on push to main and by workflow_dispatch.
 name: Deploy to GitHub Pages
 
 on:

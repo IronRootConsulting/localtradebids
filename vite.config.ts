@@ -1,8 +1,9 @@
-// GitHub Pages static export. Serves under /localtradebids/
-// (https://ironrootconsulting.github.io/localtradebids/).
+// GitHub Pages static export at the domain root (https://localtradebids.com/).
+// Requires the custom domain to be saved in the repo's Pages settings.
+// Do not push this branch until that domain is saved. No /localtradebids/ subpath.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-const BASE = "/localtradebids/";
+const BASE = "/";
 
 export default defineConfig({
   vite: {
@@ -15,7 +16,7 @@ export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     server: { entry: "server" },
-    router: { basepath: "/localtradebids" },
+    router: { basepath: "/" },
     prerender: { enabled: true, crawlLinks: false, autoSubfolderIndex: true },
     pages: [
       { path: "/" }, { path: "/coming-soon" }, { path: "/contact" }, { path: "/faq" }, { path: "/florida" }, { path: "/how-it-works" }, { path: "/pricing" }, { path: "/privacy" },

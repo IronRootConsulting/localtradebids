@@ -224,3 +224,17 @@ describe("preferences step: preview checkout notice", () => {
     expect(form).toContain('variant="long"');
   });
 });
+
+describe("canonical, og, and sitemap URLs", () => {
+  it("use https://localtradebids.com without a /localtradebids/ path prefix", () => {
+    expect(SITE.url).toBe("https://localtradebids.com");
+    expect(new URL(SITE.url).pathname).toBe("/");
+    const sitemap = readFileSync(new URL("../../public/sitemap.xml", import.meta.url), "utf8");
+    expect(sitemap).toContain("https://localtradebids.com/pricing");
+    expect(sitemap).not.toContain("localtradebids.com/localtradebids");
+    const seo = readFileSync(new URL("../lib/seo.ts", import.meta.url), "utf8");
+    expect(seo).toContain("const url = SITE.url + path");
+    expect(seo).toContain('property: "og:url"');
+    expect(seo).toContain('rel: "canonical"');
+  });
+});
