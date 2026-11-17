@@ -1,0 +1,50 @@
+# Deploy the prerendered static site to GitHub Pages.
+# Repo Pages URL: https://ironrootconsulting.github.io/localtradebids/
+# Triggered on push to main and by workflow_dispatch. No CNAME (project site, no custom domain).
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Build prerendered site
+        run: npm run build
+      - name: Upload Pages artifact
+        # v3 includes dotfiles such as .nojekyll. v4+ omits hidden files by default.
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .output/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

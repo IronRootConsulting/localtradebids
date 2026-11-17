@@ -1,0 +1,303 @@
+/*
+ * Tailwind v4 entry: config lives here, with no tailwind.config.js or PostCSS plugin.
+ * - Keep every @import in this top block, above @theme and the rest of the file. Install an
+ *   npm package before @importing its CSS. Never @import a remote URL (web fonts, CDN CSS): the
+ *   build resolves @import from the filesystem. Load those with a <link> in the head() of
+ *   src/routes/__root.tsx and name the family in a --font-* token in @theme inline below.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The design lives in this file: oklch color tokens on the shadcn variables
+ * (--background, --foreground, --primary, --secondary, --muted, --accent, ...) plus
+ * new tokens as needed, font tokens, and custom styles and animations.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+
+:root {
+  --radius: 0.625rem;
+  --brand: #0f2742;
+  --ink: #0f172a;
+  --slate: #475569;
+  --line: #e2e8f0;
+  --accent-dark: #1e40af;
+  --badge: #e0e7ff;
+  --draft: #fcd34d;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #1d4ed8;
+  --primary-foreground: #ffffff;
+  --secondary: #e0e7ff;
+  --secondary-foreground: #0f2742;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #e0e7ff;
+  --accent-foreground: #0f2742;
+  --destructive: #b91c1c;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #cbd5e1;
+  --ring: #1d4ed8;
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-ink: var(--ink);
+  --color-slate: var(--slate);
+  --color-badge: var(--badge);
+  --font-sans: var(--font-system);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-padding-top: 6rem; }
+  body { background-color: var(--background); color: var(--foreground); font-family: var(--font-system); }
+  :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 4px; }
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: 1080px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  .draft-banner {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 60;
+    min-height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    background: var(--draft);
+    color: var(--ink);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .site-header {
+    position: sticky;
+    top: 1.75rem;
+    z-index: 50;
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 0 0.75rem;
+    border-radius: 6px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .nav-link:hover, .nav-link[aria-current="page"] {
+    color: var(--primary);
+    background: var(--muted);
+  }
+  .btn-primary {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.1rem;
+    border-radius: 8px;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    font-weight: 600;
+    transition: background .15s;
+    cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-outline {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.1rem;
+    border-radius: 8px;
+    border: 1px solid var(--input);
+    background: var(--card);
+    color: var(--brand);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+  .btn-outline::-webkit-details-marker { display: none; }
+  .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+  .link { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+  .link:hover { color: var(--accent-dark); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+  .badge {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: var(--badge);
+    color: var(--brand);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+  }
+  .tag-placeholder {
+    display: inline-block;
+    margin-left: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    vertical-align: middle;
+  }
+  .placeholder-box {
+    border: 2px dashed var(--input);
+    border-radius: 12px;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: var(--muted-foreground);
+    font-weight: 500;
+    background: var(--card);
+  }
+  .chip {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    padding: 0 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--input);
+    background: var(--card);
+    color: var(--ink);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .chip[aria-current="true"] {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: var(--primary-foreground);
+  }
+  .field {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 0.75rem;
+    border: 1px solid var(--input);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--ink);
+  }
+  .mobile-menu { position: relative; }
+  .mobile-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    width: 15rem;
+    padding: 0.5rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px -10px rgb(15 39 66 / .25);
+  }
+  .skip-link { position: absolute; left: -9999px; top: 2.5rem; z-index: 70; }
+  .skip-link:focus { left: 1rem; }
+  .autorenew-box {
+    border: 2px solid var(--ink);
+    background: var(--card);
+    color: var(--ink);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+  }
+  .bid-table-wrap { overflow-x: auto; margin-top: 1rem; }
+  .bid-table { width: 100%; border-collapse: collapse; background: var(--card); }
+  .bid-table th, .bid-table td {
+    border: 1px solid var(--line);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .bid-table th { background: var(--muted); font-size: 0.8rem; color: var(--ink); }
+  .bid-caption {
+    caption-side: bottom;
+    padding-top: 0.75rem;
+    text-align: left;
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+  }
+  .sample-band {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .digest-mockup { }
+  .email-frame {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+}
