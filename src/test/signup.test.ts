@@ -1,4 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
+import { readFileSync } from "node:fs";
 import { SITE } from "@/config/site";
 import { planHref, preferencesHref, PLANS } from "@/components/site/PricingCards";
 import { SIGNUP_COPY, fillCopy } from "@/data/signupCopy";
@@ -45,8 +46,9 @@ describe("preferences step: ref and checkout URL", () => {
     );
     expect(url).toContain("buy.stripe.com/test_");
     expect(url).not.toMatch(/buy\.stripe\.com\/(?!test_)/);
+    expect(buildCheckoutUrl("county", ref)).toContain("test_3cI00l");
     expect(buildCheckoutUrl("region", ref)).toContain("test_14A14p");
-    expect(buildCheckoutUrl("statewide", ref)).toContain("test_3cI00l");
+    expect(buildCheckoutUrl("statewide", ref)).toContain("test_eVqd");
   });
 });
 
@@ -150,6 +152,9 @@ describe("preferences step: Ignatius copy and Bede data", () => {
       "Pick your coverage, your trades, and how often you want your email.",
     );
     expect(SIGNUP_COPY.tradesSelectAll).toBe("Select all seven trades");
+    expect(SIGNUP_COPY.errorDelivery).toBe(
+      "Choose daily or weekly to continue.",
+    );
   });
 
   it("uses plan config prices that match the coverage labels", () => {
@@ -184,5 +189,38 @@ describe("preferences step: Ignatius copy and Bede data", () => {
     expect(countiesForState("FL").find((c) => c.slug === "miami-dade")?.regionId).toBe("fl-south");
     expect(countiesForState("FL").find((c) => c.slug === "st-johns")?.regionId).toBe("fl-northeast");
     expect(countiesForState("FL").find((c) => c.slug === "collier")?.regionId).toBe("fl-southwest");
+  });
+});
+
+describe("preferences step: delivery starts unselected", () => {
+  it("PreferencesForm does not preselect daily or weekly", () => {
+    const src = readFileSync(new URL("../components/site/PreferencesForm.tsx", import.meta.url), "utf8");
+    expect(src).toContain('useState<DeliveryKey | "">("")');
+    expect(src).not.toMatch(/useState<DeliveryKey>\("daily"\)/);
+    expect(SIGNUP_COPY.errorDelivery).toBe("Choose daily or weekly to continue.");
+  });
+});
+
+describe("preferences step: preview checkout notice", () => {
+  it("uses Ignatius/More #17 preview notices only while checkout is off", () => {
+    const copySrc = readFileSync(new URL("../data/signupCopy.ts", import.meta.url), "utf8");
+    expect(copySrc).not.toContain("TODO-IGNATIUS");
+    expect(copySrc).toContain("Remove both in the same change that sets checkoutLive to true");
+    expect(SIGNUP_COPY.previewCheckoutShort).toBe(
+      "Preview only: test checkout. No charge, and no subscription starts.",
+    );
+    expect(SIGNUP_COPY.previewCheckoutLong).toBe(
+      "This is a preview. Checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details; use Stripe's test card instead. Paid plans aren't open yet.",
+    );
+    expect(SITE.checkoutLive).toBe(false);
+    const notice = readFileSync(new URL("../components/site/PreviewCheckoutNotice.tsx", import.meta.url), "utf8");
+    expect(notice).toContain("if (SITE.checkoutLive) return null");
+    expect(notice).toContain("Remove in the same change that sets checkoutLive to true");
+    const cards = readFileSync(new URL("../components/site/PricingCards.tsx", import.meta.url), "utf8");
+    expect(cards).toContain('variant="short"');
+    const signup = readFileSync(new URL("../routes/signup.tsx", import.meta.url), "utf8");
+    expect(signup).toContain('variant="long"');
+    const form = readFileSync(new URL("../components/site/PreferencesForm.tsx", import.meta.url), "utf8");
+    expect(form).toContain('variant="long"');
   });
 });

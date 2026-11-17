@@ -1,5 +1,6 @@
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { PreviewCheckoutNotice } from "@/components/site/PreviewCheckoutNotice";
 import type { PlanKey } from "@/config/site";
 import { PLANS } from "@/components/site/PricingCards";
 import { TRADES } from "@/data/ltb";
@@ -62,7 +63,7 @@ export function PreferencesForm({
   const [county, setCounty] = useState("");
   const [region, setRegion] = useState("");
   const [trades, setTrades] = useState<string[]>([]);
-  const [delivery, setDelivery] = useState<DeliveryKey>("daily");
+  const [delivery, setDelivery] = useState<DeliveryKey | "">("");
   const [attempted, setAttempted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -107,7 +108,7 @@ export function PreferencesForm({
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setAttempted(true);
-    if (Object.keys(errors).length > 0 || !plan) return;
+    if (Object.keys(errors).length > 0 || !plan || (delivery !== "daily" && delivery !== "weekly")) return;
 
     const area =
       plan === "county"
@@ -341,6 +342,7 @@ export function PreferencesForm({
       </fieldset>
 
       <div className="grid gap-3">
+        <PreviewCheckoutNotice variant="long" />
         <button type="submit" className="btn-primary w-fit" disabled={submitting}>
           {SIGNUP_COPY.submit}
         </button>

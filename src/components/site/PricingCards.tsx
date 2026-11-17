@@ -1,4 +1,5 @@
 import { SITE, type PlanKey } from "@/config/site";
+import { PreviewCheckoutNotice } from "@/components/site/PreviewCheckoutNotice";
 import { withBase } from "@/lib/base";
 
 // More rev3.2 doc 04 A1, per-plan (hidden while SITE.checkoutLive is false).
@@ -135,6 +136,7 @@ export function PricingCards() {
             Email delivery: Daily (weekdays) or Weekly (Mondays). All seven trades.
           </p>
           <PlanButton plan={p} />
+          <PreviewCheckoutNotice variant="short" className="mt-3" />
           {SITE.checkoutLive ? (
             <>
               <div className="mt-4">

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/lib/seo";
 import { PageIntro } from "@/components/site/ui";
+import { PreviewCheckoutNotice } from "@/components/site/PreviewCheckoutNotice";
 import { PreferencesForm } from "@/components/site/PreferencesForm";
 import { SIGNUP_COPY } from "@/data/signupCopy";
 
@@ -19,6 +20,7 @@ function Page() {
   return (
     <>
       <PageIntro title={SIGNUP_COPY.heading}>{SIGNUP_COPY.intro}</PageIntro>
+      <PreviewCheckoutNotice variant="long" className="mb-6" />
       <PreferencesForm />
     </>
   );

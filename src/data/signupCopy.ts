@@ -1,5 +1,5 @@
 /** All user-facing strings for the on-site plan preferences step.
- *  Ignatius ltb-preferences-step-v1.md sha256 d26cfc963e863cae3042ecf711e0ea3e170663b26b8370cc95087e7b98d75ee0
+ *  Ignatius ltb-preferences-step-v1.md sha256 a053c614edd18a1ae64479d2cf195f696f64b7b15f1b01f38ad7c4cc928ac130
  *  Strings that mention a state name or price use {stateName} / {price} so FL renders byte-identical to that file.
  */
 export type SignupCopyVars = {
@@ -37,6 +37,11 @@ export const SIGNUP_COPY = {
   coverageStatewide: "Statewide, all of {stateName}, ${price}/mo",
   coverageRegion: "Region, a group of neighboring counties, ${price}/mo",
   coverageCounty: "County, one county, ${price}/mo",
+  // Preview-only notices. Remove both in the same change that sets checkoutLive to true.
+  previewCheckoutShort:
+    "Preview only: test checkout. No charge, and no subscription starts.",
+  previewCheckoutLong:
+    "This is a preview. Checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details; use Stripe's test card instead. Paid plans aren't open yet.",
 } as const;
 
 export function fillCopy(template: string, vars: SignupCopyVars = {}): string {

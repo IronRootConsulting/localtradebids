@@ -141,6 +141,18 @@
     font-weight: 600;
     text-align: center;
   }
+
+  .preview-notice {
+    margin: 0;
+    padding: 0.7rem 0.9rem;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    background: var(--draft);
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
   .site-header {
     position: sticky;
     top: 1.75rem;

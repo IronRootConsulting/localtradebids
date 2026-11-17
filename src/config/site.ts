@@ -30,10 +30,12 @@ export const SITE = {
   },
   // Preview-only Stripe test Payment Links. Do not use the live counterparts
   // (buy.stripe.com/eVqd..., 14A14p..., 3cI00l... without the test_ prefix).
+  // Prices verified by loading each test Payment Link (Playwright, 17 Nov 2026):
+  // test_3cI00l…02 = County $39/mo; test_14A14p…01 = Region $89/mo; test_eVqd…00 = Statewide $139/mo.
   testPaymentLinks: {
-    county: "https://buy.stripe.com/test_eVqdRbctF1OJ4jma5N0kE00",
+    county: "https://buy.stripe.com/test_3cI00l1P11OJ8zCb9R0kE02",
     region: "https://buy.stripe.com/test_14A14p51d50V3fi0vd0kE01",
-    statewide: "https://buy.stripe.com/test_3cI00l1P11OJ8zCb9R0kE02",
+    statewide: "https://buy.stripe.com/test_eVqdRbctF1OJ4jma5N0kE00",
   },
   consentLogEnabled: true,
   consentLogUrl:
