@@ -126,6 +126,8 @@ export function PricingCards() {
     <ul className="grid gap-4 md:grid-cols-3">
       {PLANS.map((p) => (
         <li key={p.key} className="card flex flex-col p-6">
+          {/* Text block grows so every card's button block starts at the same height. */}
+          <div className="flex-1">
           <h3 className="text-xl font-bold text-brand">{p.name}</h3>
           <p className="mt-2 text-3xl font-bold text-ink">
             ${p.price}<span className="text-base font-medium text-slate"> / month</span>
@@ -135,6 +137,7 @@ export function PricingCards() {
           <p className="mt-2 text-sm text-slate">
             Email delivery: Daily (weekdays) or Weekly (Mondays). All seven trades.
           </p>
+          </div>
           <PlanButton plan={p} />
           <PreviewCheckoutNotice variant="short" className="mt-3" />
           {SITE.checkoutLive ? (
