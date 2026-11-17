@@ -127,12 +127,16 @@ const LEGAL_DOC_CLASS = [
   "[&_hr]:my-8 [&_strong]:text-ink",
 ].join(" ");
 
+function wrapLegalTables(html: string): string {
+  return html.replace(/<table\b[\s\S]*?<\/table>/gi, (table) => `<div class="legal-table-wrap">${table}</div>`);
+}
+
 export function LegalDoc({ html, id }: { html: string; id?: string }) {
   return (
     <article
       id={id}
       className={LEGAL_DOC_CLASS}
-      dangerouslySetInnerHTML={{ __html: html }}
+      dangerouslySetInnerHTML={{ __html: wrapLegalTables(html) }}
     />
   );
 }

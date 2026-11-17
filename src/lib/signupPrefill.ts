@@ -42,7 +42,7 @@ export function parseSignupPrefill(
   search: URLSearchParams | Record<string, string | null | undefined>,
 ): SignupPrefill {
   const result: SignupPrefill = {
-    plan: "",
+    plan: "statewide",
     state: "",
     county: "",
     region: "",
@@ -50,7 +50,7 @@ export function parseSignupPrefill(
     delivery: "",
   };
 
-  result.plan = parsePlanParam(readParam(search, "plan"));
+  result.plan = parsePlanParam(readParam(search, "plan")) || "statewide";
 
   const stateRaw = readParam(search, "state").toUpperCase();
   if (stateRaw && isStateEnabled(stateRaw)) result.state = stateRaw;
@@ -85,7 +85,7 @@ export function parseSignupPrefill(
 
 export function readPrefillFromLocation(): SignupPrefill {
   if (typeof window === "undefined") {
-    return { plan: "", state: "", county: "", region: "", trades: [], delivery: "" };
+    return { plan: "statewide", state: "", county: "", region: "", trades: [], delivery: "" };
   }
   return parseSignupPrefill(new URLSearchParams(window.location.search));
 }

@@ -360,9 +360,15 @@ describe("preferences step: resume prefill from the URL", () => {
     expect(mismatch.delivery).toBe("daily");
 
     const badPlan = parseSignupPrefill({ plan: "national", area: "collier", trades: "roofing" });
-    expect(badPlan.plan).toBe("");
+    expect(badPlan.plan).toBe("statewide");
     expect(badPlan.county).toBe("");
     expect(badPlan.trades).toEqual(["roofing"]);
+
+    const missing = parseSignupPrefill({});
+    expect(missing.plan).toBe("statewide");
+    expect(missing.county).toBe("");
+    expect(missing.region).toBe("");
+    expect(missing.delivery).toBe("");
   });
 
   it("never reads name, business, or email from the URL", () => {
@@ -429,5 +435,26 @@ describe("preferences step: no sessionStorage stash", () => {
     expect(src).not.toContain("sessionStorage");
     expect(form).not.toContain("stashPicks");
     expect(form).not.toContain("sessionStorage");
+  });
+});
+
+
+describe("home hero CTA wiring", () => {
+  it("keeps the home headline and sample link unchanged", () => {
+    const src = readFileSync(new URL("../routes/index.tsx", import.meta.url), "utf8");
+    expect(src).toContain("<HomeHeroCta />");
+    expect(src).toContain("Government bids for your trade, in your county.");
+    expect(src).toContain('href="#sample-band"');
+    expect(src).toContain("Get the free weekly sample");
+    expect(src).not.toContain('href="#search" className="btn-primary"');
+  });
+});
+
+describe("signup prerender defaults to Statewide", () => {
+  it("checks the statewide coverage radio in the prerendered /signup/ HTML", () => {
+    const html = readFileSync(new URL("../../.output/public/signup/index.html", import.meta.url), "utf8");
+    expect(html).toMatch(/id="coverage-statewide"[^>]*checked/);
+    expect(html).not.toMatch(/id="coverage-county"[^>]*checked/);
+    expect(html).not.toMatch(/id="coverage-region"[^>]*checked/);
   });
 });

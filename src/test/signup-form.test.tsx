@@ -33,6 +33,19 @@ function isChecked(locator: HTMLElement) {
 }
 
 describe("PreferencesForm resume prefill", () => {
+  it("preselects Statewide when the URL has no plan or an invalid plan", () => {
+    const { unmount } = render(<PreferencesForm />);
+    expect(isChecked(screen.getByRole("radio", { name: "Statewide, all of Florida, $139/mo" }))).toBe(true);
+    expect(screen.queryByLabelText("County")).toBeNull();
+    expect(screen.queryByLabelText("Region")).toBeNull();
+    unmount();
+
+    render(<PreferencesForm initialSearch={{ plan: "national", trades: "roofing" }} />);
+    expect(isChecked(screen.getByRole("radio", { name: "Statewide, all of Florida, $139/mo" }))).toBe(true);
+    expect(isChecked(screen.getByRole("checkbox", { name: "Roofing" }))).toBe(true);
+    expect(isChecked(screen.getByRole("radio", { name: "County, one county, $39/mo" }))).toBe(false);
+  });
+
   it("preselects a full set of plan, area, trades, and delivery after hydration", () => {
     render(
       <PreferencesForm
@@ -117,7 +130,7 @@ describe("PreferencesForm resume prefill", () => {
     expect(alerts).toContain(SIGNUP_COPY.errorName);
     expect(alerts).toContain(SIGNUP_COPY.errorBusiness);
     expect(alerts).toContain(SIGNUP_COPY.errorEmail);
-    expect(alerts).toContain(SIGNUP_COPY.errorCoverage);
+    expect(alerts).not.toContain(SIGNUP_COPY.errorCoverage);
     expect(alerts).toContain(SIGNUP_COPY.errorTrades);
     expect(alerts).toContain(SIGNUP_COPY.errorDelivery);
     expect(submitPicksFn).not.toHaveBeenCalled();

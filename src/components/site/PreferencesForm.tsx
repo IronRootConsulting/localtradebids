@@ -91,7 +91,7 @@ export function PreferencesForm({
   redirectTo,
   now,
 }: PreferencesFormProps = {}) {
-  const [plan, setPlan] = useState<PlanKey | "">("");
+  const [plan, setPlan] = useState<PlanKey>("statewide");
   const [state, setState] = useState(defaultStateCode());
   const [county, setCounty] = useState("");
   const [region, setRegion] = useState("");

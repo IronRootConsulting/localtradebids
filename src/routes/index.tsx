@@ -15,6 +15,7 @@ import {
   PricingCards,
   PlansOpenSoonNote,
 } from "@/components/site/PricingCards";
+import { HomeHeroCta } from "@/components/site/HomeHeroCta";
 import {
   BidTable,
   HomeEmailPanel,
@@ -148,7 +149,7 @@ function Home() {
           One email, daily or weekly, your choice.
         </p>
         <div className="mt-6 flex flex-wrap items-start gap-4">
-          <a href="#search" className="btn-primary">See bids in my county</a>
+          <HomeHeroCta />
           <div>
             <a href="#sample-band" className="link">Get the free weekly sample</a>
             <SampleConditions />
