@@ -55,7 +55,7 @@ export function Header() {
               {n.label}
             </Link>
           ))}
-          <Link to="/signup" className="btn-primary ml-2">Get bid alerts</Link>
+          <Link to="/signup" reloadDocument className="btn-primary ml-2">Get bid alerts</Link>
         </nav>
         <details className="mobile-menu md:hidden" open={menuOpen}>
           <summary
@@ -77,7 +77,7 @@ export function Header() {
             {NAV.map((n) => (
               <Link key={n.to} to={n.to} className="nav-link block">{n.label}</Link>
             ))}
-            <Link to="/signup" className="btn-primary mt-2 w-full">Get bid alerts</Link>
+            <Link to="/signup" reloadDocument className="btn-primary mt-2 w-full">Get bid alerts</Link>
           </nav>
         </details>
       </div>

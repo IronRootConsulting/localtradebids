@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
   type ErrorComponentProps,
@@ -15,6 +16,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Footer, Header } from "@/components/site/Layout";
 import { orgLd, robotsContent, websiteLd } from "@/lib/seo";
 import { withBase } from "@/lib/base";
+import { beaconConfig, shouldLoadBeacon } from "@/lib/analytics";
 
 function NotFoundComponent() {
   return (
@@ -75,13 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const beacon = shouldLoadBeacon(pathname);
   return (
     <html lang="en">
       <head>
         <HeadContent />
-        {/* Cloudflare Web Analytics beacon: add at export
-            (cookieless; Andrew chose this Nov 17, 2026).
-            No script in this preview. */}
       </head>
       <body>
         <a href="#main" className="skip-link btn-primary">Skip to content</a>
@@ -89,6 +90,15 @@ function RootShell({ children }: { children: ReactNode }) {
         <main id="main" className="container-site py-10">{children}</main>
         <Footer />
         <Scripts />
+        {/* Cloudflare Web Analytics (cookieless; Andrew chose this Nov 17, 2026).
+            Snippet as Cloudflare issued it. Never on /signup/ or /thank-you/. */}
+        {beacon ? (
+          <script
+            type="module"
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={beaconConfig()}
+          />
+        ) : null}
       </body>
     </html>
   );
