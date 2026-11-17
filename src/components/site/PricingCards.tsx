@@ -89,8 +89,8 @@ export function planHref(key: PlanKey): string {
 }
 
 export function planCta(plan: (typeof PLANS)[number]): string {
-  if (SITE.checkoutLive) return `Subscribe: ${plan.name}, $${plan.price}/month`;
-  return `Join the waitlist: ${plan.name}`;
+  // Andrew 5:46 PM ET Nov 17, 2026: plan buttons use the approved Subscribe label in preview too.
+  return `Subscribe: ${plan.name}, $${plan.price}/month`;
 }
 
 export function PlanButton({ plan }: { plan: (typeof PLANS)[number] }) {

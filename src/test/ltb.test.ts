@@ -529,3 +529,16 @@ describe("legal pages: More's public rev3.6 text (preview)", () => {
     expect(TERMS_HTML).toContain("<strong>Last updated:</strong> [PLACEHOLDER: publish date]");
   });
 });
+
+import { planCta as __planCta, PLANS as __PLANS } from "@/components/site/PricingCards";
+describe("plan buttons (Andrew 5:46 PM Nov 17)", () => {
+  it("use the approved Subscribe labels in preview", () => {
+    const labels = __PLANS.map((p) => __planCta(p));
+    expect(labels).toEqual(expect.arrayContaining([
+      "Subscribe: County, $39/month",
+      "Subscribe: Region, $89/month",
+      "Subscribe: Statewide, $139/month",
+    ]));
+    expect(labels.join(" ")).not.toMatch(/waitlist/i);
+  });
+});
