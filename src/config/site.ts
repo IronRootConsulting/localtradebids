@@ -1,41 +1,38 @@
 export const SITE = {
   name: "LocalTradeBids",
   url: "https://localtradebids.com",
-  draft: true,
+  // go-live branch: draft off removes the DRAFT banner and the site-wide noindex.
+  draft: false,
   contactEmail: "support@localtradebids.com",
   operator: "IronRoot Consulting LLC",
   address: "5052 Pope John Paul II Blvd, Suite 108-23, Ave Maria, FL 34142",
   waitlistUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLScRsTCBMK718Mqs-U_QHfmgHh6zLhuGg6v-riqU-4Hqy8GtTw/viewform",
-  // Preview-only plan signup form (Bernard option B, Nov 17, 2026). Private to Andrew.
-  // The live waitlist form above is unchanged; switching live is a launch step.
-  planSignupUrl:
-    "https://docs.google.com/forms/d/e/1FAIpQLSc9QoRjor-T3Z0662TWX04YsWhZWIAvoErqVtofDYx9jXWeIA/" +
-    "viewform",
-  planSignupPlanEntry: "entry.1289881317",
-  planSignupPlanValues: {
-    county: "County ($39/mo)",
-    region: "Region ($89/mo)",
-    statewide: "Statewide ($139/mo)",
-  },
+  // The old preview-only plan signup Google Form (Bernard option B) is unused and
+  // removed on the go-live branch so its id never ships in the live build.
+  // Stripe customer portal login URL. Empty: /manage/ shows a placeholder box and
+  // the footer/thank-you "Manage billing" links go to /manage/. Bernard sends the
+  // live URL; set it here and every Manage billing link points straight at it.
   billingPortalUrl: "",
-  // checkoutLive=false: plan buttons go to the on-site preferences step, then
-  // to testPaymentLinks (Stripe test mode). Live paymentLinks stay empty until
-  // Andrew gives the launch go. Never put buy.stripe.com links without test_ here.
-  checkoutLive: false,
+  // go-live branch (held; flips only on Andrew's own go). checkoutLive=true:
+  // plan buttons still go to the on-site preferences step (/signup/), which
+  // posts picks to LIVE_PICKS_FORM (src/lib/submitPicks.ts) and then sends the
+  // buyer to the LIVE Payment Link below with ?client_reference_id=&prefilled_email=.
+  checkoutLive: true,
+  // LIVE Stripe Payment Links. The live IDs do NOT map to plans the same way as
+  // the test IDs. Mapping per Bernard/Andrew, Nov 17, 2026:
+  // live eVqd…00 = County $39/mo; live 14A14p…01 = Region $89/mo; live 3cI00l…02 = Statewide $139/mo.
   paymentLinks: {
+    county: "https://buy.stripe.com/eVqdRbctF1OJ4jma5N0kE00",
+    region: "https://buy.stripe.com/14A14p51d50V3fi0vd0kE01",
+    statewide: "https://buy.stripe.com/3cI00l1P11OJ8zCb9R0kE02",
+  },
+  // Preview-only Stripe test Payment Links: emptied on the go-live branch so no
+  // test-mode link ships in the live build (main keeps the test links).
+  testPaymentLinks: {
     county: "",
     region: "",
     statewide: "",
-  },
-  // Preview-only Stripe test Payment Links. Do not use the live counterparts
-  // (buy.stripe.com/eVqd..., 14A14p..., 3cI00l... without the test_ prefix).
-  // Prices verified by loading each test Payment Link (Playwright, 17 Nov 2026):
-  // test_3cI00l…02 = County $39/mo; test_14A14p…01 = Region $89/mo; test_eVqd…00 = Statewide $139/mo.
-  testPaymentLinks: {
-    county: "https://buy.stripe.com/test_3cI00l1P11OJ8zCb9R0kE02",
-    region: "https://buy.stripe.com/test_14A14p51d50V3fi0vd0kE01",
-    statewide: "https://buy.stripe.com/test_eVqdRbctF1OJ4jma5N0kE00",
   },
   consentLogEnabled: true,
   consentLogUrl:

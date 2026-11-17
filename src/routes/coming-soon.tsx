@@ -129,9 +129,6 @@ function Page() {
           <SampleConditions />
         </div>
       ) : null}
-      <p className="mt-2 text-xs text-muted-foreground">
-        Form not connected in this preview.
-      </p>
     </>
   );
 }

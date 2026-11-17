@@ -1,5 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync, statSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { SITE } from "@/config/site";
 import { planHref, preferencesHref, PLANS } from "@/components/site/PricingCards";
 import { SIGNUP_COPY, fillCopy } from "@/data/signupCopy";
@@ -7,6 +9,8 @@ import { STATES_FILE, defaultStateCode, regionsForState, countiesForState } from
 import { TRADES } from "@/data/ltb";
 import { parseSignupPrefill } from "@/lib/signupPrefill";
 import {
+  LIVE_FORM_ID,
+  LIVE_PICKS_FORM,
   PICKS_FORM,
   PICKS_SCHEMA,
   buildCheckoutUrl,
@@ -42,17 +46,15 @@ describe("preferences step: ref and checkout URL", () => {
     expect(seen.size).toBe(50);
   });
 
-  it("buildCheckoutUrl appends client_reference_id to the TEST link only", () => {
+  it("go-live: buildCheckoutUrl appends client_reference_id to the LIVE link for each plan", () => {
     const ref = "ltb_abc123xyz789";
     const url = buildCheckoutUrl("county", ref);
-    expect(url).toBe(
-      `${SITE.testPaymentLinks.county}?client_reference_id=${ref}`,
-    );
-    expect(url).toContain("buy.stripe.com/test_");
-    expect(url).not.toMatch(/buy\.stripe\.com\/(?!test_)/);
-    expect(buildCheckoutUrl("county", ref)).toContain("test_3cI00l");
-    expect(buildCheckoutUrl("region", ref)).toContain("test_14A14p");
-    expect(buildCheckoutUrl("statewide", ref)).toContain("test_eVqd");
+    expect(url).toBe(`${SITE.paymentLinks.county}?client_reference_id=${ref}`);
+    expect(url).not.toContain("test_");
+    // Live mapping (not the same as the test mapping).
+    expect(buildCheckoutUrl("county", ref)).toContain("buy.stripe.com/eVqdRbctF1OJ4jma5N0kE00?");
+    expect(buildCheckoutUrl("region", ref)).toContain("buy.stripe.com/14A14p51d50V3fi0vd0kE01?");
+    expect(buildCheckoutUrl("statewide", ref)).toContain("buy.stripe.com/3cI00l1P11OJ8zCb9R0kE02?");
   });
 
   it("buildCheckoutUrl appends prefilled_email when an email is provided", () => {
@@ -146,12 +148,13 @@ describe("preferences step: picks payload and submit", () => {
   });
 });
 
-describe("preferences step: plan CTAs and live checkout stay off", () => {
-  it("keeps checkoutLive false and live payment link slots empty", () => {
-    expect(SITE.checkoutLive).toBe(false);
-    expect(SITE.paymentLinks.county).toBe("");
-    expect(SITE.paymentLinks.region).toBe("");
-    expect(SITE.paymentLinks.statewide).toBe("");
+describe("go-live: checkout on with the live Payment Links", () => {
+  it("sets checkoutLive true and the 3 live Payment Links on the right plans", () => {
+    expect(SITE.checkoutLive).toBe(true);
+    expect(SITE.draft).toBe(false);
+    expect(SITE.paymentLinks.county).toBe("https://buy.stripe.com/eVqdRbctF1OJ4jma5N0kE00");
+    expect(SITE.paymentLinks.region).toBe("https://buy.stripe.com/14A14p51d50V3fi0vd0kE01");
+    expect(SITE.paymentLinks.statewide).toBe("https://buy.stripe.com/3cI00l1P11OJ8zCb9R0kE02");
   });
 
   it("points plan cards at the on-site preferences step, not the Google Form", () => {
@@ -160,13 +163,80 @@ describe("preferences step: plan CTAs and live checkout stay off", () => {
     expect(planHref("region")).toContain("signup/?plan=region");
     expect(planHref("statewide")).toContain("signup/?plan=statewide");
     expect(planHref("county")).not.toContain("docs.google.com");
-    expect(SITE.planSignupUrl).toContain("docs.google.com/forms");
+    expect(planHref("county")).not.toContain("buy.stripe.com");
   });
 
-  it("test Payment Links are test-mode only", () => {
+  it("ships no Stripe test links on the go-live branch", () => {
     for (const key of ["county", "region", "statewide"] as const) {
-      expect(SITE.testPaymentLinks[key]).toMatch(/^https:\/\/buy\.stripe\.com\/test_/);
+      expect(SITE.testPaymentLinks[key]).toBe("");
+      expect(SITE.paymentLinks[key]).toMatch(/^https:\/\/buy\.stripe\.com\/(?!test_)/);
     }
+  });
+});
+
+const PREVIEW_FORM_ID = ["1FAIpQLSdIaxnBWh6b6OW4Z4zdyAbIyOBH1FIBeF", "-uLV2AaIrMJL_YIQ"].join("");
+
+function walk(dir: string, out: string[] = []): string[] {
+  for (const name of readdirSync(dir)) {
+    const p = join(dir, name);
+    if (statSync(p).isDirectory()) walk(p, out);
+    else out.push(p);
+  }
+  return out;
+}
+
+describe("go-live posts only to the LIVE responder", () => {
+  it("LIVE_PICKS_FORM is the live form with all 12 entry ids", () => {
+    expect(LIVE_FORM_ID).toBe("1FAIpQLSfGpq5_JW6dvdp3gZDGPHH_suwkm4Q25HoVVzcxg629I_WXFA");
+    expect(PICKS_FORM).toBe(LIVE_PICKS_FORM);
+    expect(PICKS_FORM.formResponseUrl).toBe(
+      "https://docs.google.com/forms/d/e/1FAIpQLSfGpq5_JW6dvdp3gZDGPHH_suwkm4Q25HoVVzcxg629I_WXFA/formResponse",
+    );
+    expect(PICKS_FORM.entries).toEqual({
+      ref: "entry.2014708544",
+      schema: "entry.1909228968",
+      plan: "entry.1219267651",
+      state: "entry.1725167983",
+      area: "entry.848654876",
+      trades: "entry.2076805814",
+      delivery: "entry.994699508",
+      page_url: "entry.1112194196",
+      ts: "entry.774732596",
+      name: "entry.241923616",
+      business: "entry.1884443749",
+      email: "entry.537479107",
+    });
+  });
+
+  it("submitPicks POSTs only to the LIVE formResponse URL (no network)", async () => {
+    const fetchImpl = vi.fn(() => Promise.resolve(new Response()));
+    await submitPicks(
+      {
+        ref: "ltb_abcdefghijkl", schema: PICKS_SCHEMA, plan: "county", state: "FL",
+        area: "lee", trades: "roofing", delivery: "daily", page_url: "", ts: "",
+        name: "A", business: "B", email: "a@b.example",
+      },
+      { fetchImpl: fetchImpl as unknown as typeof fetch, timeoutMs: 20 },
+    );
+    expect(fetchImpl).toHaveBeenCalledTimes(1);
+    const [url] = fetchImpl.mock.calls[0] as unknown as [string];
+    expect(url).toContain(`/forms/d/e/${LIVE_FORM_ID}/formResponse`);
+  });
+
+  it("the preview responder id appears nowhere in src/ or .output/public", () => {
+    const root = fileURLToPath(new URL("../../", import.meta.url));
+    const files = [
+      ...walk(join(root, "src")),
+      ...walk(join(root, "public")),
+      ...walk(join(root, ".output/public")),
+    ];
+    expect(files.some((f) => f.includes(join(".output", "public", "signup")))).toBe(true);
+    const hits = files.filter((f) => readFileSync(f, "latin1").includes(PREVIEW_FORM_ID));
+    expect(hits).toEqual([]);
+    const live = files.filter(
+      (f) => f.includes(join(".output", "public")) && readFileSync(f, "latin1").includes(LIVE_FORM_ID),
+    );
+    expect(live.length).toBeGreaterThan(0);
   });
 });
 
@@ -258,7 +328,7 @@ describe("preferences step: delivery starts unselected", () => {
 });
 
 describe("preferences step: preview checkout notice", () => {
-  it("uses Ignatius/More #17 preview notices only while checkout is off", () => {
+  it("keeps Ignatius/More #17 preview notices wired to hide when checkout is live", () => {
     const copySrc = readFileSync(new URL("../data/signupCopy.ts", import.meta.url), "utf8");
     expect(copySrc).not.toContain("TODO-IGNATIUS");
     expect(copySrc).toContain("Remove both in the same change that sets checkoutLive to true");
@@ -268,7 +338,7 @@ describe("preferences step: preview checkout notice", () => {
     expect(SIGNUP_COPY.previewCheckoutLong).toBe(
       "This is a preview. Checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details; use Stripe's test card instead. Paid plans aren't open yet.",
     );
-    expect(SITE.checkoutLive).toBe(false);
+    expect(SITE.checkoutLive).toBe(true); // go-live: the notices render nothing
     const notice = readFileSync(new URL("../components/site/PreviewCheckoutNotice.tsx", import.meta.url), "utf8");
     expect(notice).toContain("if (SITE.checkoutLive) return null");
     expect(notice).toContain("Remove in the same change that sets checkoutLive to true");
@@ -456,5 +526,23 @@ describe("signup prerender defaults to Statewide", () => {
     expect(html).toMatch(/id="coverage-statewide"[^>]*checked/);
     expect(html).not.toMatch(/id="coverage-county"[^>]*checked/);
     expect(html).not.toMatch(/id="coverage-region"[^>]*checked/);
+  });
+});
+
+describe("go-live: preview guards are off in the built site", () => {
+  const out = (p: string) => readFileSync(new URL(`../../.output/public/${p}`, import.meta.url), "utf8");
+  it("robots.txt allows all and lists the sitemap", () => {
+    const robots = out("robots.txt");
+    expect(robots).not.toMatch(/Disallow:\s*\//);
+    expect(robots).toContain("Allow: /");
+    expect(robots).toContain("Sitemap: https://localtradebids.com/sitemap.xml");
+  });
+  it("home and pricing have no DRAFT banner and are indexable", () => {
+    for (const p of ["index.html", "pricing/index.html", "signup/index.html"]) {
+      const html = out(p);
+      expect(html).not.toContain("DRAFT PREVIEW");
+      expect(html).not.toContain("noindex");
+      expect(html).toContain('content="index, follow"');
+    }
   });
 });

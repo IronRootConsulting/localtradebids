@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { DraftBanner, Footer, Header } from "@/components/site/Layout";
+import { Footer, Header } from "@/components/site/Layout";
 import { orgLd, robotsContent, websiteLd } from "@/lib/seo";
 import { withBase } from "@/lib/base";
 
@@ -83,9 +83,8 @@ function RootShell({ children }: { children: ReactNode }) {
             (cookieless; Andrew chose this Nov 17, 2026).
             No script in this preview. */}
       </head>
-      <body className="pt-7">
+      <body>
         <a href="#main" className="skip-link btn-primary">Skip to content</a>
-        <DraftBanner />
         <Header />
         <main id="main" className="container-site py-10">{children}</main>
         <Footer />

@@ -230,6 +230,7 @@ describe("v5 copy strings (verbatim)", () => {
       "Renews automatically every month at this price until you cancel.",
     );
     expect(autorenewHtml(39)).not.toContain("$[39 / 89 / 139]");
+    expect(autorenewHtml(39)).toMatch(/Refund Policy<\/a>\.$/);
   });
 
   it("keeps unfilled plan-change and cancel wording from More rev2 / v3", () => {
@@ -246,11 +247,11 @@ describe("v5 copy strings (verbatim)", () => {
     expect(CANCEL_FALLBACK_TEXT).toContain("We'll cancel within 2 business days");
   });
 
-  it("keeps checkout off and payment link slots empty", () => {
-    expect(SITE.checkoutLive).toBe(false);
-    expect(SITE.paymentLinks.county).toBe("");
-    expect(SITE.paymentLinks.region).toBe("");
-    expect(SITE.paymentLinks.statewide).toBe("");
+  it("go-live: checkout on, live payment links set, portal URL not yet set", () => {
+    expect(SITE.checkoutLive).toBe(true);
+    expect(SITE.paymentLinks.county).toMatch(/^https:\/\/buy\.stripe\.com\/eVqd/);
+    expect(SITE.paymentLinks.region).toMatch(/^https:\/\/buy\.stripe\.com\/14A14p/);
+    expect(SITE.paymentLinks.statewide).toMatch(/^https:\/\/buy\.stripe\.com\/3cI00l/);
     expect(SITE.billingPortalUrl).toBe("");
   });
 });

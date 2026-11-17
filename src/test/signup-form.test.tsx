@@ -138,7 +138,7 @@ describe("PreferencesForm resume prefill", () => {
     expect(document.activeElement?.id).toBe("prefs-name");
   });
 
-  it("submits v2 picks, generates a new ref, and adds prefilled_email to the test checkout URL", async () => {
+  it("submits v2 picks, generates a new ref, and adds prefilled_email to the LIVE checkout URL", async () => {
     const posted: Picks[] = [];
     const redirects: string[] = [];
     const generateRefFn = vi.fn(() => "ltb_newref000001");
@@ -177,7 +177,8 @@ describe("PreferencesForm resume prefill", () => {
     expect(posted[0]?.name).toBe("Jane Doe");
     expect(posted[0]?.business).toBe("Doe Roofing");
     expect(posted[0]?.email).toBe("jane@doeroofing.com");
-    expect(redirects[0]).toContain("test_3cI00l");
+    expect(redirects[0]).toContain("https://buy.stripe.com/eVqdRbctF1OJ4jma5N0kE00?");
+    expect(redirects[0]).not.toContain("test_");
     expect(redirects[0]).toContain("client_reference_id=ltb_newref000001");
     expect(redirects[0]).toContain("prefilled_email=jane%40doeroofing.com");
     expect(redirects[0]).not.toContain("url@evil.test");

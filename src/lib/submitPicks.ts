@@ -6,10 +6,19 @@ export const SUBMIT_PICKS_TIMEOUT_MS = 1500;
 export const REF_PREFIX = "ltb_";
 export const REF_LENGTH = 12;
 
-/** Google Form that receives preference picks. Empty URL skips the POST. */
-export const PICKS_FORM = {
-  formResponseUrl:
-    "https://docs.google.com/forms/d/e/1FAIpQLSdIaxnBWh6b6OW4Z4zdyAbIyOBH1FIBeF-uLV2AaIrMJL_YIQ/formResponse",
+/**
+ * ===================== LIVE SIGNUP FORM (go-live) =====================
+ * The ONE place for the live preferences Google Form: its formResponse URL and
+ * all 12 entry ids (Nov 17, 2026; entry ids match the preview form's).
+ * The test "go-live posts only to the LIVE responder" checks this block, and
+ * that the preview form id never appears in source or the built site.
+ * Never put the preview form here.
+ * =====================================================================
+ */
+export const LIVE_FORM_ID = "1FAIpQLSfGpq5_JW6dvdp3gZDGPHH_suwkm4Q25HoVVzcxg629I_WXFA";
+
+export const LIVE_PICKS_FORM = {
+  formResponseUrl: `https://docs.google.com/forms/d/e/${LIVE_FORM_ID}/formResponse`,
   entries: {
     ref: "entry.2014708544",
     schema: "entry.1909228968",
@@ -20,12 +29,14 @@ export const PICKS_FORM = {
     delivery: "entry.994699508",
     page_url: "entry.1112194196",
     ts: "entry.774732596",
-    // Entry IDs from the public viewform FB_PUBLIC_LOAD_DATA_ (titles name, business, email).
     name: "entry.241923616",
     business: "entry.1884443749",
     email: "entry.537479107",
   },
 } as const;
+
+/** Google Form that receives preference picks (the live form on this branch). */
+export const PICKS_FORM = LIVE_PICKS_FORM;
 
 export type DeliveryKey = "daily" | "weekly";
 
@@ -107,11 +118,14 @@ export function buildPicksPayload(picks: Picks): URLSearchParams {
   return body;
 }
 
-/** Append client_reference_id and prefilled_email to a test Payment Link. Never uses live paymentLinks. */
+/** Append client_reference_id and prefilled_email to the plan's Payment Link:
+ *  the LIVE link when SITE.checkoutLive is true, otherwise the test link. */
 export function buildCheckoutUrl(plan: PlanKey, ref: string, email?: string): string {
-  const base = SITE.testPaymentLinks[plan];
+  const base = SITE.checkoutLive ? SITE.paymentLinks[plan] : SITE.testPaymentLinks[plan];
   if (!base) {
-    throw new Error(`Missing test payment link for plan ${plan}`);
+    throw new Error(
+      `Missing ${SITE.checkoutLive ? "live" : "test"} payment link for plan ${plan}`,
+    );
   }
   const url = new URL(base);
   url.searchParams.set("client_reference_id", ref);

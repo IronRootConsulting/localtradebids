@@ -25,15 +25,6 @@ const NAV = [
   { to: "/faq", label: "FAQ" },
 ] as const;
 
-export function DraftBanner() {
-  if (!SITE.draft) return null;
-  return (
-    <div className="draft-banner" role="note">
-      DRAFT PREVIEW {"\u2014"} not live. Copy marked [PLACEHOLDER] is not final.
-    </div>
-  );
-}
-
 export function Header() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [menuOpen, setMenuOpen] = useState(false);

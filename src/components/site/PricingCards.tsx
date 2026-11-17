@@ -15,7 +15,7 @@ export function autorenewHtml(price: number): string {
     "charged again. No refunds except billing errors, or a renewal you " +
     "dispute within 7 days of the charge. By subscribing you agree to our " +
     '<a class="link" href="' + withBase("terms") + '">Terms of Service</a> and ' +
-    '<a class="link" href="' + withBase("terms") + '#refund-policy">Refund Policy</a.'
+    '<a class="link" href="' + withBase("terms") + '#refund-policy">Refund Policy</a>.'
   );
 }
 
@@ -78,11 +78,11 @@ export function preferencesHref(key: PlanKey): string {
   return withBase(`signup/?plan=${encodeURIComponent(key)}`);
 }
 
+// Plan buttons always open the on-site preferences step, live or preview. The
+// preferences step posts the picks and then sends the buyer to the plan's
+// Payment Link with client_reference_id (live links when checkoutLive is true),
+// so every paid signup has a matching row in the picks Sheet.
 export function planHref(key: PlanKey): string {
-  if (SITE.checkoutLive) {
-    const link = SITE.paymentLinks[key];
-    if (link) return link;
-  }
   return preferencesHref(key);
 }
 

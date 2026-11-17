@@ -33,6 +33,8 @@ jobs:
         run: npm ci
       - name: Build prerendered site
         run: npm run build
+      - name: Run tests (go-live guards; deploy stops if any fail)
+        run: npm test
       - name: Upload Pages artifact
         # v3 includes dotfiles such as .nojekyll. v4+ omits hidden files by default.
         uses: actions/upload-pages-artifact@v3

@@ -315,9 +315,6 @@ export function SampleBand() {
         <p className="mt-2 text-sm text-ink">Please enter a valid email address.</p>
       ) : null}
       {status === "ok" ? <p className="mt-2 text-sm text-ink">{SAMPLE_SUCCESS}</p> : null}
-      <p className="mt-2 text-xs text-muted-foreground">
-        Sample email is not connected in this preview.
-      </p>
     </section>
   );
 }
