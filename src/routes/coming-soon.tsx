@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { pageHead } from "@/lib/seo";
-import { TRADES, STATES } from "@/data/ltb";
+import { STATES } from "@/data/ltb";
 import { submitConsentLog } from "@/config/site";
 import {
   MARKETING_OPT_IN_TEXT,
@@ -23,6 +23,20 @@ export const Route = createFileRoute("/coming-soon")({
 });
 
 const OTHER_STATES = STATES.filter((s) => s.code !== "FL");
+
+// Andrew 6:19 PM ET Nov 17, 2026: save the chosen state with each waitlist signup.
+// The consent-log form has no state field, so the state rides on the logged page URL as ?state=XX.
+export function pageUrlWithState(state: string, href?: string): string {
+  const base = href ?? (typeof location !== "undefined" ? location.href : "");
+  if (!base) return "";
+  try {
+    const u = new URL(base);
+    u.searchParams.set("state", state);
+    return u.toString();
+  } catch {
+    return base;
+  }
+}
 
 function Page() {
   const [error, setError] = useState("");
@@ -57,7 +71,7 @@ function Page() {
       checkboxText: MARKETING_OPT_IN_TEXT,
       textVersion: MARKETING_OPT_IN_VERSION,
       formName: "coming-soon-waitlist",
-      pageUrl: typeof location !== "undefined" ? location.href : "",
+      pageUrl: pageUrlWithState(state),
     });
     setError("");
     setOk(`Thanks. You're on the list for ${name}.`);
@@ -93,29 +107,6 @@ function Page() {
               </option>
             ))}
           </select>
-        </label>
-        <label className="grid gap-1 text-sm font-medium text-ink">
-          Company name
-          <input className="field" type="text" name="company" autoComplete="organization" />
-        </label>
-        <label className="grid gap-1 text-sm font-medium text-ink">
-          Trade
-          <select className="field" name="trade" defaultValue="">
-            <option value="">Optional</option>
-            {TRADES.map((t) => (
-              <option key={t.slug} value={t.slug}>{t.name}</option>
-            ))}
-            <option value="other">Other</option>
-          </select>
-        </label>
-        <label className="grid gap-1 text-sm font-medium text-ink">
-          Counties you work in
-          <input
-            className="field"
-            type="text"
-            name="counties"
-            placeholder="e.g. Fulton, Cobb"
-          />
         </label>
         <button type="submit" className="btn-primary w-fit">Add me to the list</button>
         <p className="text-sm text-slate">

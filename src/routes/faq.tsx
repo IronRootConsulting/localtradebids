@@ -122,8 +122,9 @@ function Page() {
         <section>
           <h2 className="text-lg font-semibold text-ink">How much does it cost?</h2>
           <p className="mt-2">
-            County $39/month, Region $89/month, Statewide $139/month.
-            {!SITE.checkoutLive ? " " + STATE_A_PLANS_OPEN_SOON : ""}
+            {SITE.checkoutLive
+              ? "County $39/month, Region $89/month, Statewide $139/month."
+              : STATE_A_PLANS_OPEN_SOON}
           </p>
         </section>
         {SITE.checkoutLive ? (

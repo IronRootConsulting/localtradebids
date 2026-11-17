@@ -558,8 +558,6 @@ describe("More preview wording (Andrew 5:52 PM ET Nov 17)", () => {
     "<p><strong>Cookies.</strong> Our own site sets no cookies. Our sign-up step and other forms on our pages send your entries straight to Google without loading Google cookies or scripts on our pages. When you use Stripe's checkout page (opened after our sign-up step), Stripe sets cookies it needs for payments and fraud prevention (https://stripe.com/cookie-settings). You can block or delete cookies in your browser, but checkout may not work without Stripe's necessary cookies.</p>";
   const CUT_WAITLIST_FORM =
     "The Florida plan waitlist form opens on Google's own site, where Google's privacy policy and cookies apply (https://policies.google.com/privacy).";
-  const FAQ_COMBINED =
-    "County $39/month, Region $89/month, Statewide $139/month. " + PLANS_OPEN_SOON;
 
   it("uses More's preview strings verbatim", () => {
     expect(STATE_A_BUTTON_HELPER).toBe(BUTTON_HELPER);
@@ -594,12 +592,16 @@ describe("More preview wording (Andrew 5:52 PM ET Nov 17)", () => {
     expect(cards).toContain("SITE.checkoutLive");
   });
 
-  it("leaves the FAQ price sentence in place, so the combined How much does it cost? answer is verbatim", () => {
+  it("uses More's single verbatim FAQ cost answer in preview (Andrew 6:19 PM ET)", () => {
     const faq = readFileSync(new URL("../routes/faq.tsx", import.meta.url), "utf8");
-    expect(faq).toContain("County $39/month, Region $89/month, Statewide $139/month.");
-    expect(faq).toContain('!SITE.checkoutLive ? " " + STATE_A_PLANS_OPEN_SOON : ""');
-    expect(FAQ_COMBINED).toBe(
-      "County $39/month, Region $89/month, Statewide $139/month. County $39, Region $89 and Statewide $139 per month, billed monthly. Plans renew automatically every month until you cancel. This site is a preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details. Paid plans aren't open yet.",
+    expect(faq).toContain(": STATE_A_PLANS_OPEN_SOON}");
+    expect(STATE_A_PLANS_OPEN_SOON).toBe(
+      "County $39, Region $89 and Statewide $139 per month, billed monthly. Plans renew automatically every month until you cancel. This site is a preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details. Paid plans aren't open yet.",
     );
+  });
+
+  it("Privacy says there is no website login, with no placeholder", () => {
+    expect(PRIVACY_HTML).toContain("- We don't have website accounts or a login on our site.\n- Messages you send us");
+    expect(PRIVACY_HTML).not.toContain("confirm no site login at launch");
   });
 });
