@@ -1,4 +1,5 @@
-import { Link } from "@tanstack/react-router";
+import { useLayoutEffect, useState } from "react";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { SITE } from "@/config/site";
 import { LogoMark } from "./ui";
 
@@ -34,6 +35,13 @@ export function DraftBanner() {
 }
 
 export function Header() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useLayoutEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   return (
     <header className="site-header">
       <div className="container-site flex h-16 items-center justify-between gap-4">
@@ -58,9 +66,23 @@ export function Header() {
           ))}
           <Link to="/signup" className="btn-primary ml-2">Get bid alerts</Link>
         </nav>
-        <details className="mobile-menu md:hidden">
-          <summary className="btn-outline">Menu</summary>
-          <nav aria-label="Mobile" className="mobile-panel">
+        <details className="mobile-menu md:hidden" open={menuOpen}>
+          <summary
+            className="btn-outline"
+            onClick={(event) => {
+              event.preventDefault();
+              setMenuOpen((open) => !open);
+            }}
+          >
+            Menu
+          </summary>
+          <nav
+            aria-label="Mobile"
+            className="mobile-panel"
+            onClick={(event) => {
+              if ((event.target as Element).closest("a")) setMenuOpen(false);
+            }}
+          >
             {NAV.map((n) => (
               <Link key={n.to} to={n.to} className="nav-link block">{n.label}</Link>
             ))}
