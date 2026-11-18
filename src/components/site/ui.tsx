@@ -180,7 +180,12 @@ export function BidTable({
             return (
               <tr key={b.id}>
                 <td className="bid-agency">{b.agency}</td>
-                <td className="bid-title">{b.title}</td>
+                <td className="bid-title">
+                  {b.title}
+                  {cols !== "home" && b.county === "Statewide" ? (
+                    <span className="bid-statewide">Statewide</span>
+                  ) : null}
+                </td>
                 {cols === "home" ? <td className="bid-field" data-label="County">{b.county}</td> : null}
                 {cols === "county" ? <td className="bid-field" data-label="Trade">{trade?.name ?? b.trade}</td> : null}
                 <td className="bid-field" data-label="Due date">{b.dueDateISO ? formatDue(b.dueDateISO) : b.dueDate || "Not listed"}</td>
@@ -208,13 +213,30 @@ export function CountLine({
   count,
   updated,
   qualifier,
+  statewide,
 }: {
   count: number;
   updated: string;
   qualifier?: string;
+  /** County and county+trade pages: Statewide bids included in count (Andrew 2:01 AM ET Nov 18). */
+  statewide?: number;
 }) {
   if (count <= 0 || !updated) return null;
-  return <p className="mt-2 text-slate">{countLineText(count, updated, qualifier)}</p>;
+  const sw = statewideIncludedText(statewide);
+  return (
+    <p className="mt-2 text-slate">
+      {countLineText(count, updated, qualifier)}
+      {sw ? ` ${sw}` : null}
+    </p>
+  );
+}
+
+/** Honest-count note: the open count above includes N Statewide bids. */
+export function statewideIncludedText(statewide?: number): string {
+  if (typeof statewide !== "number" || !(statewide > 0)) return "";
+  return statewide === 1
+    ? "This includes 1 statewide bid, labeled Statewide."
+    : `This includes ${statewide} statewide bids, labeled Statewide.`;
 }
 
 /** Count line text; "bid" is singular when count is 1. */

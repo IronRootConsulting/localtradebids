@@ -77,7 +77,7 @@ function Page() {
         Public bid postings from agencies in {county.name} County, sorted by trade.
         Each one links to the official notice.
       </p>
-      <CountLine count={sample.openCount} updated={updated} />
+      <CountLine count={sample.openCount} updated={updated} statewide={sample.statewideCount} />
       <RegionLine countyName={county.name} countySlug={county.slug} />
       <p className="mt-4 text-sm font-medium text-ink">Show bids for:</p>
       <ul className="mt-2 flex flex-wrap gap-3">

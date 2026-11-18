@@ -93,7 +93,7 @@ export function CountyTradeView({
         We list the facts and link to the agency's notice.
       </p>
       <p className="mt-2 text-slate">{trade.scope}</p>
-      <CountLine count={sample.openCount} updated={updated} qualifier={trade.lc} />
+      <CountLine count={sample.openCount} updated={updated} qualifier={trade.lc} statewide={sample.statewideCount} />
       {sample.openCount === 0 ? (
         <NoOpenBids countyName={county.name} tradeName={trade.lc} />
       ) : (

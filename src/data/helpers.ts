@@ -38,7 +38,7 @@ export const openBids = (bids: Bid[], asOf: string = BUILD_DATE_ISO) =>
 /* Public listing pages render Bede's export (PUBLIC_PAGES in ltb.ts) as-is. */
 
 export type PageType = "home" | "county" | "trade" | "county_trade";
-export type PageSample = { rows: Bid[]; openCount: number; shownCount: number; moreCount: number };
+export type PageSample = { rows: Bid[]; openCount: number; shownCount: number; moreCount: number; statewideCount: number };
 
 export const HOME_PAGE_KEY = "home";
 export const countyPageKey = (countySlug: string) => countySlug;
@@ -78,9 +78,9 @@ function rowToBid(r: PublicRow): Bid {
  */
 export function getPageSample(pageKey: string): PageSample {
   const page = hasPublicPage(pageKey) ? PUBLIC_PAGES[pageKey] : undefined;
-  if (!page) return { rows: [], openCount: 0, shownCount: 0, moreCount: 0 };
-  const [openCount, shownCount, moreCount, rows] = page;
-  return { rows: rows.map(rowToBid), openCount, shownCount, moreCount };
+  if (!page) return { rows: [], openCount: 0, shownCount: 0, moreCount: 0, statewideCount: 0 };
+  const [openCount, shownCount, moreCount, rows, statewideCount = 0] = page;
+  return { rows: rows.map(rowToBid), openCount, shownCount, moreCount, statewideCount };
 }
 
 export const countiesWithBids = () =>
