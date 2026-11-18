@@ -35,6 +35,8 @@ jobs:
         run: npm run build
       - name: Run tests (go-live guards; deploy stops if any fail)
         run: npm test
+      - name: Keep recent hashed assets (cached pages must still find their CSS/JS)
+        run: bash scripts/carry-assets.sh .output/public
       - name: Upload Pages artifact
         # v3 includes dotfiles such as .nojekyll. v4+ omits hidden files by default.
         uses: actions/upload-pages-artifact@v3
