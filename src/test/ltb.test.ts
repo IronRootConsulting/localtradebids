@@ -151,11 +151,15 @@ describe("SEO titles and metas", () => {
       expect(countyTitle(c.name).length).toBeLessThanOrEqual(TITLE_MAX);
       expect(countyTitle(c.name)).not.toMatch(/Official/i);
       expect(countyMeta(c.name).length).toBeLessThanOrEqual(META_MAX);
+      expect(countyMeta(c.name, true).length).toBeLessThanOrEqual(META_MAX);
+      expect(countyMeta(c.name, true)).toContain("plus statewide bids");
       for (const t of TRADES) {
         const title = countyTradeTitle(t, c.name);
         expect(title.length).toBeLessThanOrEqual(TITLE_MAX);
         expect(title).not.toMatch(/Official/i);
         expect(countyTradeMeta(t, c.name).length).toBeLessThanOrEqual(META_MAX);
+        expect(countyTradeMeta(t, c.name, true).length).toBeLessThanOrEqual(META_MAX);
+        expect(countyTradeMeta(t, c.name, true)).toContain("plus statewide");
       }
     }
     for (const t of TRADES) {
@@ -167,7 +171,7 @@ describe("SEO titles and metas", () => {
   it("drops the brand when a county+trade title still exceeds 60", () => {
     const trade = TRADES.find((t) => t.slug === "plumbing-hvac")!;
     const title = countyTradeTitle(trade, "Hillsborough");
-    expect(title).toBe("Plumbing & HVAC Bids in Hillsborough County, FL");
+    expect(title).toBe("Hillsborough County, FL Plumbing & HVAC Bids");
     expect(title.length).toBeLessThanOrEqual(60);
   });
 

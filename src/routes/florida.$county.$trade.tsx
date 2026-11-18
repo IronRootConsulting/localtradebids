@@ -89,7 +89,9 @@ export function CountyTradeView({
         {trade.name} bids in {county.name} County, Florida
       </h1>
       <p className="mt-3 max-w-3xl text-slate">
-        Public {trade.lc} bids from government agencies in {county.name} County.
+        {sample.statewideCount > 0
+          ? `Public ${trade.lc} bids from government agencies in ${county.name} County, plus statewide ${trade.lc} bids, labeled Statewide.`
+          : `Public ${trade.lc} bids from government agencies in ${county.name} County.`}{" "}
         We list the facts and link to the agency's notice.
       </p>
       <p className="mt-2 text-slate">{trade.scope}</p>
@@ -156,7 +158,7 @@ export const Route = createFileRoute("/florida/$county/$trade")({
     const path = `/florida/${county.slug}/${trade.slug}`;
     return pageHead({
       title: countyTradeTitle(trade, county.name),
-      description: countyTradeMeta(trade, county.name),
+      description: countyTradeMeta(trade, county.name, sample.statewideCount > 0),
       path,
       noindex: sample.openCount === 0,
       jsonLd: [

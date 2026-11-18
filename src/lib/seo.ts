@@ -97,8 +97,10 @@ export function countyTitle(countyName: string): string {
 }
 
 export function countyTradeTitle(trade: Trade, countyName: string): string {
-  const tail = ` Bids in ${countyName} County, FL | LocalTradeBids`;
-  return fitTitle(trade.name + tail, trade.shortName + tail);
+  // More (Nov 18, 2026): titles must not say bids are "in <County>", since statewide bids are included.
+  const head = `${countyName} County, FL `;
+  const tail = " Bids | LocalTradeBids";
+  return fitTitle(head + trade.name + tail, head + trade.shortName + tail);
 }
 
 export function statewideTradeTitle(trade: Trade): string {
@@ -106,10 +108,19 @@ export function statewideTradeTitle(trade: Trade): string {
   return fitTitle(`Florida ${trade.name}${tail}`, `Florida ${trade.shortName}${tail}`);
 }
 
-export function countyMeta(countyName: string): string {
-  return (
+export function countyMeta(countyName: string, hasStatewide = false): string {
+  if (!hasStatewide) {
+    return (
+      `Public construction and property-services bids from government agencies in ` +
+      `${countyName} County, FL, sorted by trade, with due dates and official links.`
+    );
+  }
+  // More (Nov 18, 2026): say statewide bids are included, so the list isn't presented as all local.
+  return fitMeta(
     `Public construction and property-services bids from government agencies in ` +
-    `${countyName} County, FL, sorted by trade, with due dates and official links.`
+      `${countyName} County, FL, plus statewide bids, sorted by trade, with official links.`,
+    `Construction and property-services bids from agencies in ${countyName} County, FL, ` +
+      `plus statewide bids, sorted by trade.`,
   );
 }
 
@@ -121,7 +132,16 @@ function fitMeta(full: string, shortForm?: string): string {
   return full;
 }
 
-export function countyTradeMeta(trade: Trade, countyName: string): string {
+export function countyTradeMeta(trade: Trade, countyName: string, hasStatewide = false): string {
+  if (hasStatewide) {
+    // More (Nov 18, 2026): statewide bids are included on county pages and must not read as local.
+    const mid = ` bids from public agencies in ${countyName} County, FL, plus statewide `;
+    const end = " bids, with due dates and links to the official notice.";
+    return fitMeta(
+      "Open " + trade.lc + mid + trade.lc + end,
+      "Open " + trade.lcShort + mid + trade.lcShort + " bids, with links to the official notice.",
+    );
+  }
   const tail =
     ` bids from public agencies in ${countyName} County, FL, ` +
     "with due dates and links to the official notice. Emailed daily or weekly.";

@@ -32,7 +32,7 @@ export const Route = createFileRoute("/florida/$county/")({
     const path = `/florida/${county.slug}`;
     return pageHead({
       title: countyTitle(county.name),
-      description: countyMeta(county.name),
+      description: countyMeta(county.name, sample.statewideCount > 0),
       path,
       noindex: sample.openCount === 0,
       jsonLd: [
@@ -74,7 +74,9 @@ function Page() {
         Government bids in {county.name} County, Florida
       </h1>
       <p className="mt-3 max-w-3xl text-slate">
-        Public bid postings from agencies in {county.name} County, sorted by trade.
+        {sample.statewideCount > 0
+          ? `Public bid postings from agencies in ${county.name} County, plus statewide bids, sorted by trade. Statewide bids are labeled.`
+          : `Public bid postings from agencies in ${county.name} County, sorted by trade.`}{" "}
         Each one links to the official notice.
       </p>
       <CountLine count={sample.openCount} updated={updated} statewide={sample.statewideCount} />
