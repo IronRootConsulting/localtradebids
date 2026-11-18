@@ -19,7 +19,7 @@ export const SAMPLE_CONSENT_OPT_IN =
 
 export const SAMPLE_DETAILS =
   "Every Monday, around 7:30 AM ET: up to 10 of the newest open bids statewide, " +
-  "across all seven trades. Only bids from sources we've cleared, and never " +
+  "across all eight trades. Only bids from sources we've cleared, and never " +
   "past-due bids. Free, with no purchase needed. Every sample email has an " +
   "unsubscribe link and our mailing address.";
 
@@ -327,7 +327,7 @@ export function SampleBand() {
       <h2 id="sample-band" className="text-2xl font-bold text-brand">See it before you pay</h2>
       <p className="mt-2 text-slate">
         Get a free weekly sample of the newest open Florida public construction and
-        property-services bids across all seven trades, by email. It's a sample, not
+        property-services bids across all eight trades, by email. It's a sample, not
         the full digest. No card needed, and it never turns into a paid plan.
       </p>
       <p className="mt-2 text-slate">{SAMPLE_DETAILS}</p>

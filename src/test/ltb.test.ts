@@ -68,7 +68,7 @@ import { DELIVERY_LINE } from "@/components/site/PricingCards";
 import { REFUND_HTML, TERMS_HTML } from "@/routes/terms";
 
 describe("trades and prices", () => {
-  it("has the seven approved trades and slugs", () => {
+  it("has the eight approved trades and slugs (Fire & Life Safety after Painting)", () => {
     expect(TRADES.map((t) => t.slug)).toEqual([
       "roofing",
       "electrical",
@@ -77,6 +77,7 @@ describe("trades and prices", () => {
       "commercial-general-contracting",
       "landscaping",
       "painting",
+      "fire-life-safety",
     ]);
     expect(TRADES.map((t) => t.name)).toEqual([
       "Roofing",
@@ -86,6 +87,7 @@ describe("trades and prices", () => {
       "Commercial General Contracting",
       "Landscaping",
       "Painting",
+      "Fire & Life Safety",
     ]);
   });
 
@@ -198,7 +200,7 @@ describe("v5 copy strings (verbatim)", () => {
     );
     expect(SAMPLE_DETAILS).toBe(
       "Every Monday, around 7:30 AM ET: up to 10 of the newest open bids statewide, " +
-        "across all seven trades. Only bids from sources we've cleared, and never " +
+        "across all eight trades. Only bids from sources we've cleared, and never " +
         "past-due bids. Free, with no purchase needed. Every sample email has an " +
         "unsubscribe link and our mailing address.",
     );
@@ -367,6 +369,39 @@ describe("Landscaping blurb v1 (Andrew approved 7:28 AM ET Nov 18, Ignatius sha 
     expect(TRADES.find((tr) => tr.slug === "landscaping")?.scope).toBe(
       "Mowing, edging, planting, mulch, lawn care and grounds maintenance, plus tree trimming and removal, right-of-way vegetation and debris clearing, and herbicide spraying. Not landscape architecture or design, pest control, tree sales, or equipment, plant, mulch, tree and herbicide purchases (supply only).",
     );
+  });
+});
+
+describe("Fire & Life Safety 8th trade copy v2.1 (Andrew approved 8:09 AM ET Nov 18, Ignatius sha 2d40c175)", () => {
+  const SCOPE =
+    "Fire alarm, fire sprinkler, standpipe and fire suppression systems, including kitchen hood suppression, plus fire extinguisher service: installation, repair, replacement, inspection, testing, maintenance and fire alarm monitoring. Not design, engineering, consulting or plan-review contracts, fire stations, fire apparatus or vehicles, hydrants, lawn or irrigation sprinklers, security alarm monitoring, or equipment and extinguisher purchases (supply only).";
+  const fls = TRADES.find((tr) => tr.slug === "fire-life-safety");
+  it("uses the Option B scope line verbatim, without the bold label", () => {
+    expect(fls?.scope).toBe(SCOPE);
+    expect(fls?.scope).not.toContain("Fire & Life Safety:");
+    expect(fls?.scope).not.toMatch(/emergency lighting/i);
+  });
+  it("keeps Fire & Life Safety everywhere except the SEO title short form", () => {
+    expect(fls?.name).toBe("Fire & Life Safety");
+    expect(fls?.lc).toBe("fire and life safety");
+    expect(fls?.lcShort).toBe("fire and life safety");
+    expect(fls?.shortName).toBe("Fire Safety");
+    expect(fls?.sheetKey).toBe("fire_life_safety");
+    expect(TRADES.indexOf(fls!)).toBe(TRADES.findIndex((t) => t.slug === "painting") + 1);
+  });
+  it("statewide page SEO: 58-char title, 154-char meta, noindex while 0 bids", () => {
+    expect(statewideTradeTitle(fls!)).toBe("Florida Fire & Life Safety Bids by County | LocalTradeBids");
+    expect(statewideTradeMeta(fls!)).toBe(
+      "Public fire and life safety bids from government agencies across Florida, listed by county with due dates and official links. Get a daily or weekly email.",
+    );
+    expect(getPageSample(tradePageKey("fire-life-safety")).openCount).toBe(0);
+  });
+  it("county+trade titles fit 60 for all 67 counties (Fire Safety short form only when needed)", () => {
+    for (const c of FLORIDA_COUNTIES) {
+      const t = countyTradeTitle(fls!, c.name);
+      expect(t.length).toBeLessThanOrEqual(60);
+      if (!t.includes("Fire & Life Safety")) expect(t).toContain("Fire Safety");
+    }
   });
 });
 

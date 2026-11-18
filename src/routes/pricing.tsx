@@ -18,7 +18,7 @@ export const Route = createFileRoute("/pricing")({
     pageHead({
       title: "Pricing | LocalTradeBids Florida Bid Alerts",
       description:
-        "LocalTradeBids plans for one county, a region, or all of Florida. Monthly pricing for a daily or weekly email of public bids for seven trades.",
+        "LocalTradeBids plans for one county, a region, or all of Florida. Monthly pricing for a daily or weekly email of public bids for eight trades.",
       path: "/pricing",
     }),
   component: Page,
@@ -29,14 +29,14 @@ function Page() {
     <>
       <PageIntro title="Plans for every size of coverage">
         Pick one county, a region, or the whole state. Every plan includes the
-        daily or weekly email digest and all seven trades.
+        daily or weekly email digest and all eight trades.
       </PageIntro>
       <PricingCards />
       <PlansOpenSoonNote />
       <DeliveryNote />
       <section className="mt-10 max-w-3xl" aria-labelledby="seven-trades">
         <h2 id="seven-trades" className="text-xl font-bold text-brand">
-          What the seven trades cover
+          What the eight trades cover
         </h2>
         <TradeScopeList />
       </section>

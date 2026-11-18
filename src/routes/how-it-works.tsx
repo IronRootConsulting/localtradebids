@@ -45,10 +45,10 @@ function Page() {
       </section>
 
       <section className="mt-10 max-w-3xl text-slate">
-        <h2 className="text-xl font-bold text-brand">Seven trades at launch</h2>
+        <h2 className="text-xl font-bold text-brand">Eight trades</h2>
         <TradeScopeList />
         <p className="mt-3">
-          Every plan includes all seven trades. Pick the ones you want in your email.
+          Every plan includes all eight trades. Pick the ones you want in your email.
         </p>
       </section>
 

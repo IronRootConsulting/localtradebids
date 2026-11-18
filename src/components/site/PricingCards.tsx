@@ -140,7 +140,7 @@ export function PricingCards() {
           <p className="mt-4 text-slate">{p.coverage}.</p>
           <p className="mt-2 text-sm text-slate">{p.bestFor}</p>
           <p className="mt-2 text-sm text-slate">
-            Email delivery: Daily (weekdays) or Weekly (Mondays). All seven trades.
+            Email delivery: Daily (weekdays) or Weekly (Mondays). All eight trades.
           </p>
           </div>
           <PlanButton plan={p} />

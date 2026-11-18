@@ -277,7 +277,7 @@ describe("preferences step: Ignatius copy and Bede data", () => {
       "We use these details to set up your subscription and send your bid emails. If you don't finish checkout, we may send you one reminder, and we delete your details after 90 days. See our Privacy Policy.",
     );
     expect(SIGNUP_COPY.detailsNoticeLink).toBe("Privacy Policy");
-    expect(SIGNUP_COPY.tradesSelectAll).toBe("Select all seven trades");
+    expect(SIGNUP_COPY.tradesSelectAll).toBe("Select all eight trades");
     expect(SIGNUP_COPY.errorDelivery).toBe(
       "Choose daily or weekly to continue.",
     );
@@ -291,8 +291,8 @@ describe("preferences step: Ignatius copy and Bede data", () => {
     ]);
   });
 
-  it("has exactly seven trades, matching the select-all copy", () => {
-    expect(TRADES).toHaveLength(7);
+  it("has exactly eight trades, matching the select-all copy (PR-01)", () => {
+    expect(TRADES).toHaveLength(8);
   });
 
   it("loads Bede states.json: FL enabled, 10 regions, 67 counties", () => {

@@ -32,6 +32,37 @@ function isChecked(locator: HTMLElement) {
   return (locator as HTMLInputElement).checked;
 }
 
+describe("PR-01 Select all eight trades (Ignatius v2.1, Andrew 8:09 AM ET Nov 18)", () => {
+  it("shows the exact label, unchecked by default, with Fire & Life Safety last", () => {
+    render(<PreferencesForm />);
+    const all = screen.getByRole("checkbox", { name: "Select all eight trades" });
+    expect(isChecked(all)).toBe(false);
+    const fls = screen.getByRole("checkbox", { name: "Fire & Life Safety" });
+    expect(isChecked(fls)).toBe(false);
+    const names = screen
+      .getAllByRole("checkbox")
+      .filter((el) => (el as HTMLInputElement).name === "trades")
+      .map((el) => (el as HTMLInputElement).value);
+    expect(names).toHaveLength(8);
+    expect(names.at(-1)).toBe("fire-life-safety");
+    expect(names.at(-2)).toBe("painting");
+  });
+  it("a seven-trade resume prefill leaves Fire & Life Safety and select-all unchecked", () => {
+    render(
+      <PreferencesForm
+        initialSearch={{
+          plan: "statewide",
+          trades:
+            "roofing,electrical,plumbing-hvac,sitework-heavy-civil,commercial-general-contracting,landscaping,painting",
+        }}
+      />,
+    );
+    expect(isChecked(screen.getByRole("checkbox", { name: "Painting" }))).toBe(true);
+    expect(isChecked(screen.getByRole("checkbox", { name: "Fire & Life Safety" }))).toBe(false);
+    expect(isChecked(screen.getByRole("checkbox", { name: "Select all eight trades" }))).toBe(false);
+  });
+});
+
 describe("PreferencesForm resume prefill", () => {
   it("preselects Statewide when the URL has no plan or an invalid plan", () => {
     const { unmount } = render(<PreferencesForm />);

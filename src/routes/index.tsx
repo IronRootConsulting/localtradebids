@@ -103,7 +103,7 @@ function SearchCard() {
       <label className="grid gap-1 text-sm font-medium text-ink">
         Trade (optional)
         <select className="field" value={trade} onChange={(e) => setTrade(e.target.value)}>
-          <option value="">All seven trades</option>
+          <option value="">All eight trades</option>
           {TRADES.map((t) => (
             <option key={t.slug} value={t.slug}>{t.name}</option>
           ))}

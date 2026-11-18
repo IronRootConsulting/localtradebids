@@ -27,7 +27,10 @@ export type Bid = {
 export const SAMPLE_BIDS_AS_OF = "2026-11-17";
 
 // Trade names and slugs: five approved 6:40 AM ET, plus Landscaping and
-// Painting (Andrew, 7:06 AM ET Nov 17, via Bernard). Seven trades total.
+// Painting (Andrew, 7:06 AM ET Nov 17, via Bernard), plus Fire & Life Safety
+// (Andrew, 7:28 AM ET Nov 18; copy v2.1 approved 8:09 AM ET Nov 18, Ignatius
+// sha 2d40c175). Eight trades total. Fire & Life Safety goes after Painting.
+// shortName "Fire Safety" is for SEO <title> fallback only (fitTitle in lib/seo.ts).
 export const TRADES: Trade[] = [
   {
     slug: "roofing",
@@ -91,6 +94,15 @@ export const TRADES: Trade[] = [
     lcShort: "painting",
     sheetKey: "painting",
     scope: "Interior and exterior painting, plus parking-lot striping. Not road or traffic markings, vehicle painting, paint purchases or pressure washing.",
+  },
+  {
+    slug: "fire-life-safety",
+    name: "Fire & Life Safety",
+    shortName: "Fire Safety",
+    lc: "fire and life safety",
+    lcShort: "fire and life safety",
+    sheetKey: "fire_life_safety",
+    scope: "Fire alarm, fire sprinkler, standpipe and fire suppression systems, including kitchen hood suppression, plus fire extinguisher service: installation, repair, replacement, inspection, testing, maintenance and fire alarm monitoring. Not design, engineering, consulting or plan-review contracts, fire stations, fire apparatus or vehicles, hydrants, lawn or irrigation sprinklers, security alarm monitoring, or equipment and extinguisher purchases (supply only).",
   },
 ];
 

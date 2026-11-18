@@ -445,7 +445,7 @@ export default defineConfig({
       // END county+trade pages
       { path: "/florida/trade/roofing" }, { path: "/florida/trade/electrical" },
       { path: "/florida/trade/plumbing-hvac" }, { path: "/florida/trade/sitework-heavy-civil" }, { path: "/florida/trade/commercial-general-contracting" }, { path: "/florida/trade/landscaping" },
-      { path: "/florida/trade/painting" },
+      { path: "/florida/trade/painting" }, { path: "/florida/trade/fire-life-safety" },
     ]
   },
 });

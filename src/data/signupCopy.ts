@@ -20,7 +20,7 @@ export const SIGNUP_COPY = {
   statewideNote: "Your plan covers all of {stateName}, so there's no area to pick.",
   tradesLabel: "Trades",
   tradesHelper: "Pick all that apply.",
-  tradesSelectAll: "Select all seven trades",
+  tradesSelectAll: "Select all eight trades",
   deliveryLabel: "Email delivery",
   deliveryDaily: "Daily (weekdays, around 7:30 AM ET)",
   deliveryWeekly: "Weekly (Mondays, around 7:30 AM ET)",

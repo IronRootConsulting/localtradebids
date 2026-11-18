@@ -59,7 +59,7 @@ function Page() {
         </section>
         <section>
           <h2 className="text-lg font-semibold text-ink">Which trades do you cover?</h2>
-          <p className="mt-2">Seven trades, and every plan includes all seven:</p>
+          <p className="mt-2">Eight trades, and every plan includes all eight:</p>
           <TradeScopeList />
         </section>
         <section>
@@ -111,7 +111,7 @@ function Page() {
             construction and property-services bids, so you can see what we send.
             It comes every Monday, around 7:30 AM ET, with up to 10 of the newest
             open bids: only from sources we've cleared, never past due, and across
-            all seven trades. It's not the full digest. No card is needed.
+            all eight trades. It's not the full digest. No card is needed.
             It's free, it never turns into a paid plan, and you can unsubscribe from
             any sample email in one click. Sample emails also include information
             about our paid plans.
