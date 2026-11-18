@@ -362,16 +362,16 @@ describe("trade scope lines", () => {
   });
 });
 
-describe("public pages render Bede's export as-is (2026-11-18, commit afe07e4, Statewide on county pages)", () => {
+describe("public pages render Bede's export as-is (2026-11-18, commit d41ae2a, local and statewide sections)", () => {
   const keys = Object.keys(PUBLIC_PAGES);
   const countySlugs = new Set(FLORIDA_COUNTIES.map((c) => c.slug));
   const tradeSlugs = new Set(TRADES.map((t) => t.slug));
   const more = (n?: number) => MoreForSubscribers({ more: n });
 
-  it("has 433 pages (incl. home) and 822 rows as of the export date", () => {
+  it("has 484 pages (incl. home) and 871 rows as of the export date", () => {
     expect(PUBLIC_PAGES_AS_OF).toBe("2026-11-18");
-    expect(keys).toHaveLength(433);
-    expect(keys.reduce((n, k) => n + getPageSample(k).rows.length, 0)).toBe(822);
+    expect(keys).toHaveLength(484);
+    expect(keys.reduce((n, k) => n + getPageSample(k).rows.length, 0)).toBe(871);
   });
 
   it("statewide_count never exceeds open_count; local rows come before Statewide rows", () => {
@@ -385,6 +385,25 @@ describe("public pages render Bede's export as-is (2026-11-18, commit afe07e4, S
         if (firstSw >= 0) expect(s.rows.slice(firstSw).every((r) => r.county === "Statewide")).toBe(true);
       }
     }
+  });
+
+  it("sections: local rows then statewide rows, counts add up, Statewide label only in the statewide section", () => {
+    for (const k of keys) {
+      const s = getPageSample(k);
+      expect(s.localCount + s.statewideCount).toBe(s.openCount);
+      expect([...s.localRows, ...s.statewideRows]).toEqual(s.rows);
+      expect(s.statewideRows.every((r) => r.county === "Statewide")).toBe(true);
+      expect(s.localRows.every((r) => r.county !== "Statewide")).toBe(true);
+    }
+  });
+
+  it("CFTOD maps to Orange/Osceola (local there), not Statewide", () => {
+    for (const c of ["orange", "osceola"]) {
+      const s = getPageSample(countyPageKey(c));
+      const r = s.localRows.find((x) => x.agency === "Central Florida Tourism Oversight District");
+      expect(r?.county).toBe("Orange/Osceola");
+    }
+    expect(getPageSample(countyPageKey("leon")).rows.some((x) => x.agency === "Central Florida Tourism Oversight District")).toBe(false);
   });
 
   it("page keys match route slugs", () => {
@@ -418,16 +437,17 @@ describe("public pages render Bede's export as-is (2026-11-18, commit afe07e4, S
     }
   });
 
-  it("Brevard renders 27 open (20 statewide), 3 shown in Bede's order, +24 more", () => {
+  it("Brevard renders 28 open (21 statewide, 7 local), 3 local shown in Bede's order, +25 more", () => {
     const s = getPageSample(countyPageKey("brevard"));
-    expect([s.openCount, s.shownCount, s.moreCount, s.statewideCount]).toEqual([27, 3, 24, 20]);
+    expect([s.openCount, s.shownCount, s.moreCount, s.statewideCount]).toEqual([28, 3, 25, 21]);
+    expect([s.localCount, s.localRows.length, s.statewideRows.length]).toEqual([7, 3, 0]);
     expect(s.rows.map((r) => r.id)).toEqual([
       "7d4c60615b592486",
       "4a0eccb90854566c",
       "788911130f8c6658",
     ]);
     expect(s.rows[2]?.dueDateISO).toBe("");
-    expect(moreForSubscribersText(s.moreCount)).toBe("+24 more open bids for subscribers.");
+    expect(moreForSubscribersText(s.moreCount)).toBe("+25 more open bids for subscribers.");
     expect(more(s.moreCount)).not.toBeNull();
   });
 
@@ -442,7 +462,9 @@ describe("public pages render Bede's export as-is (2026-11-18, commit afe07e4, S
 
   it("Leon (no local bids) shows only labeled Statewide rows", () => {
     const s = getPageSample(countyPageKey("leon"));
-    expect([s.openCount, s.statewideCount]).toEqual([20, 20]);
+    expect([s.openCount, s.statewideCount, s.localCount]).toEqual([21, 21, 0]);
+    expect(s.localRows).toHaveLength(0);
+    expect(s.statewideRows).toHaveLength(3);
     expect(s.rows.every((r) => r.county === "Statewide")).toBe(true);
   });
 
@@ -454,6 +476,9 @@ describe("public pages render Bede's export as-is (2026-11-18, commit afe07e4, S
       shownCount: 0,
       moreCount: 0,
       statewideCount: 0,
+      localCount: 0,
+      localRows: [],
+      statewideRows: [],
     });
     expect(getPageSample(countyTradePageKey("brevard", "painting")).openCount).toBe(0);
   });
@@ -467,6 +492,7 @@ describe("public pages render Bede's export as-is (2026-11-18, commit afe07e4, S
     expect(tradesWithBidsIn("brevard").map((t) => t.slug).sort()).toEqual([
       "commercial-general-contracting",
       "electrical",
+      "landscaping",
       "plumbing-hvac",
       "roofing",
       "sitework-heavy-civil",
@@ -488,8 +514,8 @@ describe("count line grammar", () => {
   });
   it("DeSoto reads its open count, and the statewide note is honest", () => {
     const s = getPageSample(countyPageKey("desoto"));
-    expect(countLineText(s.openCount, u)).toBe("21 open bids listed as of November 17, 2026, ET.");
-    expect(statewideIncludedText(s.statewideCount)).toBe("This includes 20 statewide bids, labeled Statewide.");
+    expect(countLineText(s.openCount, u)).toBe("22 open bids listed as of November 17, 2026, ET.");
+    expect(statewideIncludedText(s.statewideCount)).toBe("This includes 21 statewide bids, labeled Statewide.");
     expect(statewideIncludedText(1)).toBe("This includes 1 statewide bid, labeled Statewide.");
     expect(statewideIncludedText(0)).toBe("");
   });

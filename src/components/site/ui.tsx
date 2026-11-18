@@ -151,6 +151,41 @@ export function DraftNotice() {
 
 export type BidTableCols = "home" | "county" | "trade";
 
+/**
+ * County and county+trade pages: "In your area" first, then "Open statewide" (same order as the digests).
+ * A section with no shown rows is left out. Statewide rows keep their Statewide label.
+ */
+export function SectionedBidTables({
+  localRows,
+  statewideRows,
+  cols,
+}: {
+  localRows: Bid[];
+  statewideRows: Bid[];
+  cols: BidTableCols;
+}) {
+  return (
+    <>
+      {localRows.length > 0 ? (
+        <section aria-labelledby="bids-local">
+          <h2 id="bids-local" className="bid-section-heading">In your area</h2>
+          <BidTable bids={localRows} cols={cols} caption={LISTINGS_CAPTION} />
+        </section>
+      ) : null}
+      {statewideRows.length > 0 ? (
+        <section aria-labelledby="bids-statewide" className={localRows.length > 0 ? "mt-6" : undefined}>
+          <h2 id="bids-statewide" className="bid-section-heading">Open statewide</h2>
+          <BidTable
+            bids={statewideRows}
+            cols={cols}
+            caption={localRows.length > 0 ? undefined : LISTINGS_CAPTION}
+          />
+        </section>
+      ) : null}
+    </>
+  );
+}
+
 export function BidTable({
   bids,
   cols,

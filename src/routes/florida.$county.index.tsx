@@ -11,6 +11,7 @@ import {
 import { breadcrumbLd, countyMeta, countyTitle, pageHead } from "@/lib/seo";
 import {
   BidTable,
+  SectionedBidTables,
   Breadcrumbs,
   CountLine,
   EmailPanel,
@@ -103,7 +104,7 @@ function Page() {
         <NoOpenBids countyName={county.name} />
       ) : (
         <div className="mt-6">
-          <BidTable bids={sample.rows} cols="county" caption={LISTINGS_CAPTION} />
+          <SectionedBidTables localRows={sample.localRows} statewideRows={sample.statewideRows} cols="county" />
           <MoreForSubscribers more={sample.moreCount} />
         </div>
       )}

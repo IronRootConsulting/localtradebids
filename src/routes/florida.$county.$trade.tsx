@@ -18,6 +18,7 @@ import {
 } from "@/lib/seo";
 import {
   BidTable,
+  SectionedBidTables,
   Breadcrumbs,
   CountLine,
   EmailPanel,
@@ -100,7 +101,7 @@ export function CountyTradeView({
         <NoOpenBids countyName={county.name} tradeName={trade.lc} />
       ) : (
         <div className="mt-6">
-          <BidTable bids={sample.rows} cols="trade" caption={LISTINGS_CAPTION} />
+          <SectionedBidTables localRows={sample.localRows} statewideRows={sample.statewideRows} cols="trade" />
           <MoreForSubscribers more={sample.moreCount} />
         </div>
       )}

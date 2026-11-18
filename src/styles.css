@@ -474,3 +474,5 @@
     padding: 1.25rem;
   }
 }
+
+.bid-section-heading { font-size: 1.125rem; font-weight: 600; color: var(--color-ink, #0f172a); margin: 0 0 0.5rem; }
