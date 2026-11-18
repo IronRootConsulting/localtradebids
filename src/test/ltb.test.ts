@@ -389,12 +389,12 @@ describe("Fire & Life Safety 8th trade copy v2.1 (Andrew approved 8:09 AM ET Nov
     expect(fls?.sheetKey).toBe("fire_life_safety");
     expect(TRADES.indexOf(fls!)).toBe(TRADES.findIndex((t) => t.slug === "painting") + 1);
   });
-  it("statewide page SEO: 58-char title, 154-char meta, noindex while 0 bids", () => {
+  it("statewide page SEO: 58-char title, 154-char meta; 10 open bids (Bede 1632e5b)", () => {
     expect(statewideTradeTitle(fls!)).toBe("Florida Fire & Life Safety Bids by County | LocalTradeBids");
     expect(statewideTradeMeta(fls!)).toBe(
       "Public fire and life safety bids from government agencies across Florida, listed by county with due dates and official links. Get a daily or weekly email.",
     );
-    expect(getPageSample(tradePageKey("fire-life-safety")).openCount).toBe(0);
+    expect(getPageSample(tradePageKey("fire-life-safety")).openCount).toBe(10);
   });
   it("county+trade titles fit 60 for all 67 counties (Fire Safety short form only when needed)", () => {
     for (const c of FLORIDA_COUNTIES) {
@@ -405,16 +405,16 @@ describe("Fire & Life Safety 8th trade copy v2.1 (Andrew approved 8:09 AM ET Nov
   });
 });
 
-describe("public pages render Bede's export as-is (2026-11-18, commit 28e7ae0, local and statewide sections)", () => {
+describe("public pages render Bede's export as-is (2026-11-18, commit 1632e5b, local and statewide sections)", () => {
   const keys = Object.keys(PUBLIC_PAGES);
   const countySlugs = new Set(FLORIDA_COUNTIES.map((c) => c.slug));
   const tradeSlugs = new Set(TRADES.map((t) => t.slug));
   const more = (n?: number) => MoreForSubscribers({ more: n });
 
-  it("has 484 pages (incl. home) and 1004 rows as of the export date", () => {
+  it("has 490 pages (incl. home) and 1013 rows as of the export date", () => {
     expect(PUBLIC_PAGES_AS_OF).toBe("2026-11-18");
-    expect(keys).toHaveLength(484);
-    expect(keys.reduce((n, k) => n + getPageSample(k).rows.length, 0)).toBe(1004);
+    expect(keys).toHaveLength(490);
+    expect(keys.reduce((n, k) => n + getPageSample(k).rows.length, 0)).toBe(1013);
   });
 
   it("statewide_count never exceeds open_count; local rows come before Statewide rows", () => {
@@ -526,7 +526,7 @@ describe("public pages render Bede's export as-is (2026-11-18, commit 28e7ae0, l
   });
 
   it("trade-only pages are available for the statewide trade view", () => {
-    expect(tradesWithStatewideBids()).toHaveLength(7);
+    expect(tradesWithStatewideBids()).toHaveLength(8);
     expect(getPageSample(tradePageKey("roofing")).openCount).toBe(23);
   });
 
@@ -582,16 +582,16 @@ describe("legal pages: More rev3.6 Daily/Weekly sections", () => {
 });
 
 describe("LTB copy v5.3 + Home export record", () => {
-  it("Home renders Bede's home record: 760 open, 3 shown, +757", () => {
+  it("Home renders Bede's home record: 770 open, 3 shown, +767", () => {
     const s = getPageSample(HOME_PAGE_KEY);
-    expect([s.openCount, s.shownCount, s.moreCount]).toEqual([760, 3, 757]);
+    expect([s.openCount, s.shownCount, s.moreCount]).toEqual([770, 3, 767]);
     expect(s.rows.map((r) => r.agency)).toEqual([
       "City of Ocala",
       "Florida School for the Deaf and the Blind (FSDB)",
       "Lake County",
     ]);
     expect(s.rows[0]?.sourceUrl).toBe("https://florida.prorfx.com/Listings.aspx");
-    expect(moreForSubscribersText(s.moreCount)).toBe("+757 more open bids for subscribers.");
+    expect(moreForSubscribersText(s.moreCount)).toBe("+767 more open bids for subscribers.");
   });
 
   it("no-bids text for county, county+trade and Home search", () => {
