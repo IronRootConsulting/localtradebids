@@ -17,6 +17,16 @@ export function robotsContent(noindex?: boolean) {
   return noindex ? "noindex, follow" : "index, follow";
 }
 
+/**
+ * Absolute URL for canonical, og:url, and BreadcrumbList items. GitHub Pages serves
+ * each prerendered page at /path/ (directory index) and 301s /path to /path/, so every
+ * non-root path gets a trailing slash; home stays https://localtradebids.com/.
+ */
+export function pageUrl(path: string): string {
+  const p = path.startsWith("/") ? path : "/" + path;
+  return SITE.url + (p.endsWith("/") ? p : p + "/");
+}
+
 export function pageHead({
   title,
   description,
@@ -25,7 +35,7 @@ export function pageHead({
   noindex,
   jsonLd = [],
 }: HeadOpts) {
-  const url = SITE.url + path;
+  const url = pageUrl(path);
   return {
     meta: [
       { title },
@@ -50,7 +60,7 @@ export function breadcrumbLd(items: { name: string; path: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
-      item: SITE.url + it.path,
+      item: pageUrl(it.path),
     })),
   };
 }

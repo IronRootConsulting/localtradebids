@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE } from "@/config/site";
@@ -357,11 +357,11 @@ describe("canonical, og, and sitemap URLs", () => {
   it("use https://localtradebids.com without a /localtradebids/ path prefix", () => {
     expect(SITE.url).toBe("https://localtradebids.com");
     expect(new URL(SITE.url).pathname).toBe("/");
-    const sitemap = readFileSync(new URL("../../public/sitemap.xml", import.meta.url), "utf8");
-    expect(sitemap).toContain("https://localtradebids.com/pricing");
-    expect(sitemap).not.toContain("localtradebids.com/localtradebids");
+    // sitemap.xml is generated at build time (scripts/gen-sitemap.mjs); see sitemap.test.ts.
+    expect(existsSync(new URL("../../public/sitemap.xml", import.meta.url))).toBe(false);
     const seo = readFileSync(new URL("../lib/seo.ts", import.meta.url), "utf8");
-    expect(seo).toContain("const url = SITE.url + path");
+    expect(seo).toContain("const url = pageUrl(path)");
+    expect(seo).toContain("item: pageUrl(it.path)");
     expect(seo).toContain('property: "og:url"');
     expect(seo).toContain('rel: "canonical"');
   });
