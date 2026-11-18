@@ -23,3 +23,17 @@ describe("mobile overflow: bid tables and legal tables stay in their wraps", () 
     expect(src).toContain("dangerouslySetInnerHTML={{ __html: wrapLegalTables(html) }}");
   });
 });
+
+describe("bid table: stacked cards on phones", () => {
+  it("stacks rows below 700px with labeled fields and a full-width notice link", () => {
+    const css = readFileSync(new URL("../styles.css", import.meta.url), "utf8");
+    expect(css).toMatch(/@media \(max-width: 699px\)\s*\{[\s\S]*?\.bid-table tr/);
+    expect(css).toContain("content: attr(data-label)");
+    expect(css).toMatch(/\.bid-notice-link\s*\{[^}]*width:\s*100%/);
+    const src = readFileSync(new URL("../components/site/ui.tsx", import.meta.url), "utf8");
+    expect(src).toContain('data-label="County"');
+    expect(src).toContain('data-label="Due date"');
+    expect(src).toContain('data-label="Trade"');
+    expect(src).toContain("View official notice");
+  });
+});

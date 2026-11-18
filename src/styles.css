@@ -410,6 +410,29 @@
     overflow-wrap: anywhere;
   }
   .bid-table th { background: var(--muted); font-size: 0.8rem; color: var(--ink); }
+  /* Table view: keep short cells (county/trade, due date, headers) on one
+     line so they never break mid-word; agency and title take the wrap. */
+  @media (min-width: 700px) {
+    .bid-table th, .bid-table td.bid-field { white-space: nowrap; overflow-wrap: normal; }
+  }
+  /* Phones: each bid row becomes a stacked card (agency + title on top,
+     labeled County/Trade and Due date rows, full-width notice link).
+     Desktop table above 700px is unchanged. */
+  @media (max-width: 699px) {
+    .bid-table, .bid-table tbody, .bid-table tr, .bid-table td { display: block; width: 100%; }
+    .bid-table { background: transparent; border: 0; }
+    .bid-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .bid-table caption { display: block; text-align: left; }
+    .bid-table tr { background: var(--card); border: 1px solid var(--line); border-radius: 0.6rem; padding: 0.85rem 0.95rem; margin-bottom: 0.75rem; }
+    .bid-table th, .bid-table td { border: 0; padding: 0; overflow-wrap: break-word; word-break: normal; hyphens: manual; }
+    .bid-table td.bid-agency { font-size: 0.8125rem; color: var(--ink); opacity: 0.8; margin-bottom: 0.2rem; }
+    .bid-table td.bid-title { font-weight: 600; line-height: 1.35; margin-bottom: 0.6rem; }
+    .bid-table td.bid-field { display: flex; gap: 0.75rem; justify-content: space-between; padding: 0.4rem 0; border-top: 1px solid var(--line); font-size: 0.9rem; }
+    .bid-table td.bid-field::before { content: attr(data-label); font-weight: 600; flex: none; }
+    .bid-table td.bid-field { text-align: right; }
+    .bid-table td.bid-notice { margin-top: 0.6rem; }
+    .bid-table td.bid-notice .bid-notice-link { display: block; width: 100%; text-align: center; padding: 0.6rem 0.75rem; border: 1px solid var(--line); border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
+  }
   .legal-doc {
     overflow-wrap: anywhere;
     min-width: 0;

@@ -179,17 +179,17 @@ export function BidTable({
             const trade = TRADES.find((t) => t.slug === b.trade);
             return (
               <tr key={b.id}>
-                <td>{b.agency}</td>
-                <td>{b.title}</td>
-                {cols === "home" ? <td>{b.county}</td> : null}
-                {cols === "county" ? <td>{trade?.name ?? b.trade}</td> : null}
-                <td>{b.dueDateISO ? formatDue(b.dueDateISO) : b.dueDate || "Not listed"}</td>
-                <td>
+                <td className="bid-agency">{b.agency}</td>
+                <td className="bid-title">{b.title}</td>
+                {cols === "home" ? <td className="bid-field" data-label="County">{b.county}</td> : null}
+                {cols === "county" ? <td className="bid-field" data-label="Trade">{trade?.name ?? b.trade}</td> : null}
+                <td className="bid-field" data-label="Due date">{b.dueDateISO ? formatDue(b.dueDateISO) : b.dueDate || "Not listed"}</td>
+                <td className="bid-notice">
                   <a
                     href={b.sourceUrl}
                     target="_blank"
                     rel="noopener nofollow"
-                    className="link"
+                    className="link bid-notice-link"
                   >
                     View official notice
                     <span className="sr-only">: {b.title}</span>
