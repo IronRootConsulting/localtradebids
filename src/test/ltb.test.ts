@@ -65,7 +65,7 @@ import { CANCEL_FALLBACK_TEXT, CANCEL_STEPS_TEXT, PLAN_CHANGES_TEXT } from "@/ro
 import { PRIVACY_HTML } from "@/routes/privacy";
 import { COVERAGE_LINE } from "@/routes/how-it-works";
 import { DELIVERY_LINE } from "@/components/site/PricingCards";
-import { REFUND_HTML, TERMS_HTML } from "@/routes/terms";
+import { REFUND_HTML, TERMS_HTML, TERMS_LAST_UPDATED } from "@/routes/terms";
 
 describe("trades and prices", () => {
   it("has the eight approved trades and slugs (Fire & Life Safety after Painting)", () => {
@@ -664,9 +664,9 @@ describe("legal pages: More's public rev3.7.1 text (publish date November 17, 20
     }
   });
   it("fills the publish date November 17, 2026 with no open slots (More rev3.7.3)", () => {
-    for (const h of [TERMS_HTML, REFUND_HTML]) {
-      expect(h).toContain("Last updated: November 17, 2026");
-    }
+    // Terms rev3.8: Last updated comes from TERMS_LAST_UPDATED (checked by "Terms rev3.8 deploy date filled").
+    expect(REFUND_HTML).toContain("Last updated: November 17, 2026");
+    expect(TERMS_HTML).toContain("<p>Last updated: " + TERMS_LAST_UPDATED + "</p>");
     // Privacy rev3.7.6 (More, Andrew 1:48 AM ET Nov 18): last updated Nov 18, effective stays Nov 17.
     expect(PRIVACY_HTML).toContain("Last updated: November 18, 2026");
     expect(PRIVACY_HTML).toContain("<strong>Last updated:</strong> November 18, 2026");
@@ -678,7 +678,7 @@ describe("legal pages: More's public rev3.7.1 text (publish date November 17, 20
       expect(h).not.toContain("[DATE OF PUBLICATION]");
       expect(h).not.toContain("[PLACEHOLDER");
     }
-    expect(TERMS_HTML).toContain("<strong>Last updated:</strong> November 17, 2026");
+    expect(TERMS_HTML).toContain("<strong>Last updated:</strong> " + TERMS_LAST_UPDATED + "</p>");
     expect(all.match(/\[(CONFIRM|PLACEHOLDER|PENDING|OPEN|DATE)[^\]]*\]/g)).toBeNull();
     expect(TERMS_HTML).toContain(
       "If your first bank payment fails or is returned, we won't send your bid emails and we'll cancel your subscription. You're welcome to sign up again with another payment method.",
@@ -697,6 +697,31 @@ describe("legal pages: More's public rev3.7.1 text (publish date November 17, 20
     expect(privacy).toContain(
       "How LocalTradeBids, a service of IronRoot Consulting LLC, collects, uses and protects your information.",
     );
+  });
+});
+
+describe("Terms rev3.8 (More, sha 5fe09615; Andrew approved 8:10 AM ET Nov 18)", () => {
+  it("has the eight-trades sentence and 6.2 'all eight trades', byte-exact", () => {
+    expect(TERMS_HTML).toContain(
+      "We cover eight trades: Roofing, Electrical, Plumbing &amp; HVAC, Sitework &amp; Heavy Civil, Commercial General Contracting, Landscaping, Painting and Fire &amp; Life Safety.",
+    );
+    expect(TERMS_HTML).toContain(
+      "with up to 10 of the newest open bids statewide across all eight trades, only from sources we've cleared and never past due.",
+    );
+    expect(TERMS_HTML).not.toMatch(/seven trades/);
+    expect(TERMS_HTML).not.toContain("DRAFT");
+    expect(TERMS_HTML).toContain("<strong>Effective date:</strong> November 17, 2026");
+  });
+  it("Terms trades sentence lists the site trades, in order", () => {
+    const m = TERMS_HTML.match(/We cover (\w+) trades: ([^.]+)\./);
+    const names = m![2].replace(/&amp;/g, "&").split(/, | and (?=Fire)/);
+    expect(names).toEqual(TRADES.map((t) => t.name));
+  });
+  // Intentionally fails until the deploy date is filled in src/routes/terms.tsx, so the branch can't ship unfilled.
+  it("Terms rev3.8 deploy date filled", () => {
+    expect(TERMS_LAST_UPDATED).not.toContain("[");
+    expect(TERMS_LAST_UPDATED).toMatch(/^(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, 20\d\d$/);
+    expect(TERMS_HTML).not.toContain("[DEPLOY DATE");
   });
 });
 

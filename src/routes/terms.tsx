@@ -2,11 +2,19 @@ import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/lib/seo";
 import { LegalDoc } from "@/components/site/ui";
 
-// More's public terms text, verbatim (rev3.7.3-public; publish date November 17, 2026).
-// ltb-terms-of-service-PUBLIC-rev3.7.3.md sha256 8d2871bae41c2f9c3f1ea3a38fbebe4dd01bff8efa6ff260d21f0b85bbd7ea2d
+// More's terms text, verbatim: rev3.8 (eighth trade, Fire & Life Safety; Andrew approved 8:10 AM ET Nov 18).
+// More's rev3.8 terms source file (workspace ltb-legal, rev3.8 folder), sha256 5fe096151ddcc02b748534b9c703991b3474881a451b9669c98b7cf5ceb722e6
+// Differs from rev3.7.5 only in: section 2.1 eight-trades sentence, 6.2 "all eight trades", and both Last updated lines.
+// The source's leading HTML comment is not included. Effective date stays November 17, 2026.
+// Previous: rev3.7.3/3.7.5-public text (publish date November 17, 2026).
+
+/** Terms "Last updated" date, used in both Last updated lines. Fill with the real deploy date
+ *  (ET, e.g. "November 24, 2026") before shipping; the test "Terms rev3.8 deploy date filled" fails until then. */
+export const TERMS_LAST_UPDATED = "[DEPLOY DATE, ET]";
+
 export const TERMS_HTML = [
-  "<h1>LocalTradeBids \u2014 Terms of Service</h1>\n<p>Last updated: November 17, 2026</p>\n<p><strong>Effective date:</strong> November 17, 2026\n<strong>Last ",
-  "updated:</strong> November 17, 2026</p>\n<p>These Terms of Service (\"Terms\") are an agreement between you and <strong>IronRoot Consulting LLC</strong>, a ",
+  "<h1>LocalTradeBids \u2014 Terms of Service</h1>\n<p>Last updated: " + TERMS_LAST_UPDATED + "</p>\n<p><strong>Effective date:</strong> November 17, 2026\n<strong>Last ",
+  "updated:</strong> " + TERMS_LAST_UPDATED + "</p>\n<p>These Terms of Service (\"Terms\") are an agreement between you and <strong>IronRoot Consulting LLC</strong>, a ",
   "Florida limited liability company, which provides <strong>LocalTradeBids, a service of IronRoot Consulting LLC</strong> (\"LocalTradeBids,\" \"we,\" \"us\"). ",
   "IronRoot Consulting LLC is the party you contract with. They cover the localtradebids.com website, your account, the free weekly sample digest, and our paid ",
   "digest subscriptions (together, the \"Service\").</p>\n<p><strong>By subscribing at checkout, joining the waitlist, or signing up for the free sample digest, you ",
@@ -28,8 +36,8 @@ export const TERMS_HTML = [
   "digest</strong>, marked <strong>\"New\"</strong>. A bid appears once, in the first digest after we find it. We don't repeat bids that are still open, so keep the ",
   "listings you want to pursue. A bid counts as open until its due date. If the agency lists no due date, it counts as open for 30 days after we first find it. ",
   "When we don't find any new matching bids on a weekday, we don't send a daily digest that day, except your first email, which always goes out and tells you if ",
-  "we didn't find any matching bids. Weekly digests always go out, with a <strong>\"No new bids this week\"</strong> note when there are none. We cover seven ",
-  "trades: Roofing, Electrical, Plumbing &amp; HVAC, Sitework &amp; Heavy Civil, Commercial General Contracting, Landscaping and Painting. Sources include state, ",
+  "we didn't find any matching bids. Weekly digests always go out, with a <strong>\"No new bids this week\"</strong> note when there are none. We cover eight ",
+  "trades: Roofing, Electrical, Plumbing &amp; HVAC, Sitework &amp; Heavy Civil, Commercial General Contracting, Landscaping, Painting and Fire &amp; Life Safety. Sources include state, ",
   "county, city, school-district and special-district postings and federal postings on SAM.gov, only from sources we've cleared. Each listing gives basic facts, ",
   "such as the title, agency, county and due date (when the agency lists one), and a link to the agency's own public posting.</p>\n<p><strong>Switching ",
   "delivery.</strong> You can switch between daily and weekly delivery by emailing support@localtradebids.com from the email you subscribed with. We'll make the ",
@@ -96,7 +104,7 @@ export const TERMS_HTML = [
   "part of these Terms.</p>\n<h2>6. Free weekly sample digest</h2>\n<p>6.1 The free weekly sample digest is a no-cost email showing a sample of the kind of listings ",
   "our paid digest includes. It's free: <strong>no card is needed, it never turns into a paid subscription, and you'll never be charged for it.</strong>\n6.2 It's ",
   "a small sample, not matched to your trades or area. It is sent every Monday, around 7:30 AM Eastern Time, with up to 10 of the newest open bids statewide ",
-  "across all seven trades, only from sources we've cleared and never past due. It may also include information about our paid plans.\n6.3 You can unsubscribe from ",
+  "across all eight trades, only from sources we've cleared and never past due. It may also include information about our paid plans.\n6.3 You can unsubscribe from ",
   "it at any time with the link in each email. Sections 2, 7, 8, 10\u201312 and 14 of these Terms apply to the sample digest too.</p>\n<h2>7. How you may use the ",
   "digest</h2>\n<p>7.1 <strong>Allowed.</strong> You may use the digests and the site for your own business's internal purposes: finding, tracking and pursuing ",
   "bids. You may share an individual listing with your employees, or with a subcontractor or supplier you're working with on that bid.\n7.2 <strong>Not ",
