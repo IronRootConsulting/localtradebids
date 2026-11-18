@@ -60,15 +60,33 @@ function Page() {
             page. Cancellation takes effect at the end of the month you've paid for,
             and you won't be charged again.
           </p>
-          {/* More rev3.7.1 fill sheet L18 (Block 2 S7). The page can't know the
-              delivery choice, so the "Your ... digest arrives ..." sentence is
-              dropped, as the sheet directs. */}
+          {/* Ignatius go-live copy v2-final rows 1, 2 and 6 (v1.3 generic page; changed
+              after Andrew's 6:57 PM approval of v1.2, PENDING Andrew OK). States both
+              schedules because the page can't know the delivery choice; More's L18
+              facts kept. */}
           <p className="mt-4 text-slate">
-            To switch, email support@localtradebids.com and we'll change it within 2
-            business days. To change your area or trades within your plan, reply to
-            any digest email or write to support@localtradebids.com. If you paid by
-            bank, your digest and confirmation email start once your payment clears,
-            which usually takes a few business days.
+            Your picks are saved. Watch for a confirmation email from
+            bids@localtradebids.com.
+          </p>
+          <p className="mt-4 text-slate">
+            Your first email arrives on the next delivery day for the schedule you
+            picked, around 7:30 AM ET. Your confirmation email has the exact date.
+          </p>
+          <p className="mt-4 text-slate">
+            Daily emails arrive around 7:30 AM ET on weekdays (Monday to Friday) when
+            we've found new bids that match your picks. On weekdays with no new bids,
+            we don't send one, except your first email, which always goes out and
+            tells you if we didn't find any matching bids, and there's no email on
+            federal holidays. Weekly emails arrive every Monday around 7:30 AM ET, or
+            Tuesday when Monday is a federal holiday. They come even when there are no
+            new bids. To switch, email support@localtradebids.com and we'll change it
+            within 2 business days. To change your area or trades within your plan,
+            reply to any digest email or write to support@localtradebids.com. If you
+            paid by bank, your digest and confirmation email start once your payment
+            clears, which usually takes a few business days.
+          </p>
+          <p className="mt-4 text-slate">
+            Add bids@localtradebids.com to your contacts so it doesn't land in spam.
           </p>
           <p className="mt-3">
             {SITE.billingPortalUrl ? (
