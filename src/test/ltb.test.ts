@@ -472,6 +472,9 @@ describe("LTB copy v5.3 + Home export record", () => {
     );
     expect(COVERAGE_LINE).not.toMatch(/67/);
     expect(DELIVERY_LINE).toMatch(/^Choose daily or weekly delivery at the same price\./);
+    expect(DELIVERY_LINE).toBe(
+      "Choose daily or weekly delivery at the same price. Daily comes around 7:30 AM ET on weekdays (Monday to Friday) when we've found new bids for you. Weekly comes every Monday around 7:30 AM ET, or Tuesday when Monday is a federal holiday, even when there's nothing new. To switch, email us and we'll change it within 2 business days.",
+    );
   });
 });
 

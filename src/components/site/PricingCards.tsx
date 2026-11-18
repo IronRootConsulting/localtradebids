@@ -23,18 +23,19 @@ export function autorenewHtml(price: number): string {
 export const STATE_A_PLANS_OPEN_SOON =
   "County $39, Region $89 and Statewide $139 per month, billed monthly. Plans renew automatically every month until you cancel. This site is a preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Please don't enter real card or bank details. Paid plans aren't open yet.";
 
-// More rev3.3 delivery line (LTB copy v5.1, Home mini-cards + Pricing table).
+// Delivery line, Ignatius go-live copy v2-final row 9 (S1/S2, approved v1.2). Home mini-cards + Pricing table.
 export const DELIVERY_LINE =
-  "Choose daily or weekly delivery at the same price. Daily comes every weekday " +
-  "(Monday to Friday) around 7:30 AM ET. Weekly comes every Monday around 7:30 AM ET, " +
-  "or Tuesday when Monday is a federal holiday. To switch, email us and we'll change it " +
-  "within 2 business days.";
+  "Choose daily or weekly delivery at the same price. Daily comes around 7:30 AM ET " +
+  "on weekdays (Monday to Friday) when we've found new bids for you. Weekly comes every " +
+  "Monday around 7:30 AM ET, or Tuesday when Monday is a federal holiday, even when " +
+  "there's nothing new. To switch, email us and we'll change it within 2 business days.";
 
 // LTB copy v5.1 "Email delivery" helper. State A: it is the Google Form field
 // description. State B: shown on the plan card next to the button (Stripe dropdowns
 // have no helper text).
 export const EMAIL_DELIVERY_HELPER =
-  "Same price either way. To switch later, email support@localtradebids.com.";
+  "Same price either way. To switch between daily and weekly later, email us and " +
+  "we'll change it within 2 business days.";
 
 export const STATE_A_BUTTON_HELPER =
   "Preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Paid plans aren't open yet.";
