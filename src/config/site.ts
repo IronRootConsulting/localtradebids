@@ -52,6 +52,11 @@ export const SITE = {
     textVersion: "entry.1376231362",
     formName: "entry.692823903",
     pageUrl: "entry.1057969194",
+    // Added Nov 17, 2026 (free weekly sample, Andrew 9:50 PM ET via Bernard; format agreed with Bede).
+    state: "entry.453038927",
+    county: "entry.282808761",
+    trades: "entry.929925252",
+    schema: "entry.151158185",
   },
 };
 
@@ -64,7 +69,20 @@ export type ConsentLogInput = {
   textVersion: string;
   formName: string;
   pageUrl: string;
+  /** USPS code: always "FL" on sample-band rows; the chosen state on waitlist rows. */
+  state?: string;
+  /** County slug or "any" (sample-band); blank on waitlist rows. */
+  county?: string;
+  /** One trade slug or "all" (sample-band); blank on waitlist rows. */
+  trades?: string;
 };
+
+export const CONSENT_LOG_SCHEMA = "v2";
+
+/** Sample-band values per Bede: blank dropdowns become the "all"/"any" sentinels. */
+export function sampleFilters(trade: string, county: string) {
+  return { state: "FL", trades: trade || "all", county: county || "any" };
+}
 
 export function buildConsentLogPayload(input: ConsentLogInput): URLSearchParams {
   const e = SITE.consentLogEntries;
@@ -75,6 +93,10 @@ export function buildConsentLogPayload(input: ConsentLogInput): URLSearchParams 
   body.set(e.textVersion, input.textVersion);
   body.set(e.formName, input.formName);
   body.set(e.pageUrl, input.pageUrl);
+  body.set(e.state, input.state ?? "");
+  body.set(e.county, input.county ?? "");
+  body.set(e.trades, input.trades ?? "");
+  body.set(e.schema, CONSENT_LOG_SCHEMA);
   return body;
 }
 

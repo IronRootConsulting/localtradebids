@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type FormEvent, type ReactNode } from "react";
-import { SITE, submitConsentLog } from "@/config/site";
+import { SITE, sampleFilters, submitConsentLog } from "@/config/site";
 import { formatDue } from "@/data/helpers";
 import { FLORIDA_COUNTIES, TRADES, type Bid } from "@/data/ltb";
 
@@ -257,6 +257,10 @@ export function SampleBand() {
       textVersion: MARKETING_OPT_IN_VERSION,
       formName: "sample-band",
       pageUrl: typeof location !== "undefined" ? location.href : "",
+      ...sampleFilters(
+        (form.elements.namedItem("trade") as HTMLSelectElement | null)?.value ?? "",
+        (form.elements.namedItem("county") as HTMLSelectElement | null)?.value ?? "",
+      ),
     });
     setStatus("ok");
   }

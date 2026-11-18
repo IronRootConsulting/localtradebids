@@ -59,7 +59,7 @@ import {
   statewideTradeMeta,
   robotsContent,
 } from "@/lib/seo";
-import { SITE, buildConsentLogPayload } from "@/config/site";
+import { SITE, buildConsentLogPayload, sampleFilters } from "@/config/site";
 import { CANCEL_FALLBACK_TEXT, CANCEL_STEPS_TEXT, PLAN_CHANGES_TEXT } from "@/routes/manage";
 import { PRIVACY_HTML } from "@/routes/privacy";
 import { COVERAGE_LINE } from "@/routes/how-it-works";
@@ -272,7 +272,7 @@ describe("build date", () => {
 });
 
 describe("consent log", () => {
-  it("builds a payload with all 6 Google Form entry fields", () => {
+  it("builds a payload with all 10 Google Form entry fields", () => {
     const body = buildConsentLogPayload({
       email: "you@company.com",
       marketingChecked: false,
@@ -291,7 +291,9 @@ describe("consent log", () => {
     expect([...body.keys()].sort()).toEqual(
       Object.values(ids).slice().sort(),
     );
-    expect([...body.keys()]).toHaveLength(6);
+    expect([...body.keys()]).toHaveLength(10);
+    expect(body.get(ids.schema)).toBe("v2");
+    expect(body.get(ids.state)).toBe("");
     const checked = buildConsentLogPayload({
       email: "you@company.com",
       marketingChecked: true,
@@ -301,6 +303,41 @@ describe("consent log", () => {
       pageUrl: "https://localtradebids.com/coming-soon",
     });
     expect(checked.get(ids.marketingOptIn)).toBe("checked");
+  });
+
+  it("records sample trade/county with all/any sentinels, checked or not (Bede format)", () => {
+    expect(sampleFilters("", "")).toEqual({ state: "FL", trades: "all", county: "any" });
+    expect(sampleFilters("roofing", "miami-dade")).toEqual({
+      state: "FL",
+      trades: "roofing",
+      county: "miami-dade",
+    });
+    const ids = SITE.consentLogEntries;
+    for (const marketingChecked of [false, true]) {
+      const body = buildConsentLogPayload({
+        email: "test@example.com",
+        marketingChecked,
+        checkboxText: MARKETING_OPT_IN_TEXT,
+        textVersion: MARKETING_OPT_IN_VERSION,
+        formName: "sample-band",
+        pageUrl: "https://localtradebids.com/",
+        ...sampleFilters("plumbing-hvac", "st-johns"),
+      });
+      expect(body.get(ids.formName)).toBe("sample-band");
+      expect(body.get(ids.state)).toBe("FL");
+      expect(body.get(ids.trades)).toBe("plumbing-hvac");
+      expect(body.get(ids.county)).toBe("st-johns");
+      expect(body.get(ids.schema)).toBe("v2");
+      expect(body.get(ids.marketingOptIn)).toBe(marketingChecked ? "checked" : "unchecked");
+    }
+    for (const id of Object.values(ids)) expect(id).toMatch(/^entry\.\d+$/);
+  });
+
+  it("dropdown values are valid Bede slugs", () => {
+    const ok = /^[a-z]+(-[a-z]+)*$/;
+    expect(TRADES.every((t) => ok.test(t.slug))).toBe(true);
+    expect(FLORIDA_COUNTIES.every((c) => ok.test(c.slug))).toBe(true);
+    expect(FLORIDA_COUNTIES).toHaveLength(67);
   });
 
   it("keeps the marketing checkbox unchecked by default", () => {

@@ -72,6 +72,7 @@ function Page() {
       textVersion: MARKETING_OPT_IN_VERSION,
       formName: "coming-soon-waitlist",
       pageUrl: pageUrlWithState(state),
+      state,
     });
     setError("");
     setOk(`Thanks. You're on the list for ${name}.`);
