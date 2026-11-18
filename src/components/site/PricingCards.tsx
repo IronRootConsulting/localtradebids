@@ -41,6 +41,12 @@ export const EMAIL_DELIVERY_HELPER =
 export const STATE_A_BUTTON_HELPER =
   "Preview: checkout runs in Stripe's test mode, so nothing is charged and no subscription starts. Paid plans aren't open yet.";
 
+// Andrew 9:35 PM ET Nov 17, 2026 (via Bernard, More's spec): plan cards and the
+// hero Subscribe button carry only this short line; the full renewal block
+// (autorenewHtml) sits on the signup step directly above Continue.
+export const CARD_RENEWAL_LINE =
+  "Renews monthly until you cancel. Cancel anytime online. Full terms on the next step.";
+
 // More rev3.2 doc 04 A1 helper under each Subscribe button (State B).
 export const STATE_B_BUTTON_HELPER =
   "You'll check out on a page hosted by Stripe.";
@@ -141,9 +147,7 @@ export function PricingCards() {
           <PreviewCheckoutNotice variant="short" className="mt-3" />
           {SITE.checkoutLive ? (
             <>
-              <div className="mt-4">
-                <AutorenewDisclosure price={p.price} />
-              </div>
+              <p className="mt-3 text-slate">{CARD_RENEWAL_LINE}</p>
               <p className="mt-2 text-sm text-slate">{EMAIL_DELIVERY_HELPER}</p>
               <p className="mt-2 text-sm text-slate">{STATE_B_BUTTON_HELPER}</p>
             </>

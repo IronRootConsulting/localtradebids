@@ -363,12 +363,12 @@
   .skip-link:focus { left: 1rem; }
   .autorenew-box {
     border: 2px solid var(--ink);
-    background: var(--card);
+    background: var(--secondary);
     color: var(--ink);
-    padding: 0.875rem 1rem;
+    padding: 1rem 1.125rem;
     border-radius: 0.5rem;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.125rem;
+    line-height: 1.65rem;
     font-weight: 400;
   }
   /* max-width: 100% is required: HTML tables treat width: 100% as a

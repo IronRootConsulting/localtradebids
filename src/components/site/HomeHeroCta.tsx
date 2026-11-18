@@ -1,4 +1,5 @@
-import { PLANS, preferencesHref } from "@/components/site/PricingCards";
+import { CARD_RENEWAL_LINE, PLANS, preferencesHref } from "@/components/site/PricingCards";
+import { SITE } from "@/config/site";
 
 const statewidePlan = PLANS.find((plan) => plan.key === "statewide");
 if (!statewidePlan) throw new Error("Missing statewide plan");
@@ -8,11 +9,14 @@ export const HOME_HERO_CTA_LABEL = `Subscribe: ${statewidePlan.name}, $${statewi
 
 export function HomeHeroCta() {
   return (
-    <a
-      href={preferencesHref("statewide")}
-      className="btn-primary max-w-full min-w-0 whitespace-normal text-center"
-    >
-      {HOME_HERO_CTA_LABEL}
-    </a>
+    <div className="grid max-w-full min-w-0 gap-2">
+      <a
+        href={preferencesHref("statewide")}
+        className="btn-primary w-fit max-w-full min-w-0 whitespace-normal text-center"
+      >
+        {HOME_HERO_CTA_LABEL}
+      </a>
+      {SITE.checkoutLive ? <p className="max-w-xs text-slate">{CARD_RENEWAL_LINE}</p> : null}
+    </div>
   );
 }

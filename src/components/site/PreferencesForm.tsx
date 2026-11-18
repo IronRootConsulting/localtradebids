@@ -2,7 +2,8 @@ import { type FormEvent, useLayoutEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { PreviewCheckoutNotice } from "@/components/site/PreviewCheckoutNotice";
 import type { PlanKey } from "@/config/site";
-import { PLANS } from "@/components/site/PricingCards";
+import { AutorenewDisclosure, PLANS } from "@/components/site/PricingCards";
+import { SITE } from "@/config/site";
 import { TRADES } from "@/data/ltb";
 import { SIGNUP_COPY, fillCopy } from "@/data/signupCopy";
 import {
@@ -31,6 +32,8 @@ import {
 } from "@/lib/submitPicks";
 
 const PLAN_KEYS: PlanKey[] = ["statewide", "region", "county"];
+
+const FALLBACK_PRICE: Record<string, number> = { county: 39, region: 89, statewide: 139 };
 
 function planPrice(key: PlanKey): number {
   return PLANS.find((p) => p.key === key)?.price ?? 0;
@@ -505,6 +508,8 @@ export function PreferencesForm({
 
       <div className="grid gap-3">
         <PreviewCheckoutNotice variant="short" className="preview-notice-compact" />
+        {/* Full renewal block directly above Continue, always visible (Andrew 9:35 PM ET, More's spec). */}
+        {SITE.checkoutLive ? <AutorenewDisclosure price={planPrice(plan) || FALLBACK_PRICE[plan] || 139} /> : null}
         <button type="submit" className="btn-primary w-fit" disabled={submitting}>
           {SIGNUP_COPY.submit}
         </button>
