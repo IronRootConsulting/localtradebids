@@ -365,11 +365,11 @@
     border: 2px solid var(--ink);
     background: var(--card);
     color: var(--ink);
-    padding: 1.25rem;
+    padding: 0.875rem 1rem;
     border-radius: 0.5rem;
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 400;
   }
   /* max-width: 100% is required: HTML tables treat width: 100% as a
      minimum and will still grow to their min-content, which expands the

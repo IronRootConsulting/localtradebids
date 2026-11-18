@@ -128,7 +128,7 @@ export function PricingCards() {
           {/* Text block grows so every card's button block starts at the same height. */}
           <div className="flex-1">
           <h3 className="text-xl font-bold text-brand">{p.name}</h3>
-          <p className="mt-2 text-3xl font-bold text-ink">
+          <p className="mt-2 text-xl font-bold text-ink">
             ${p.price}<span className="text-base font-medium text-slate"> / month</span>
           </p>
           <p className="mt-4 text-slate">{p.coverage}.</p>
