@@ -118,3 +118,15 @@ export function getCounty(code: string, slug: string): PickerCounty | undefined 
 export function getRegion(code: string, id: string): PickerRegion | undefined {
   return regionsForState(code).find((r) => r.id === id);
 }
+
+/** Display-only short region name for the signup picker (Andrew 2:12 AM ET Nov 18).
+ *  Drops "Regional Planning Council" / "Regional Council"; ids and stored data unchanged. */
+export function shortRegionName(name: string): string {
+  return name.replace(/\s+Regional(?: Planning)? Council$/, "").trim() || name;
+}
+
+/** County names for a picker region, in the region's order. */
+export function regionCountyNames(code: string, region: PickerRegion): string[] {
+  const all = countiesForState(code);
+  return region.counties.map((slug) => all.find((c) => c.slug === slug)?.name ?? slug);
+}

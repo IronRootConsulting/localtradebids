@@ -14,6 +14,8 @@ import {
   getRegion,
   isStateEnabled,
   regionsForState,
+  shortRegionName,
+  regionCountyNames,
   stateName,
 } from "@/data/states";
 import { parseSignupPrefill } from "@/lib/signupPrefill";
@@ -414,10 +416,15 @@ export function PreferencesForm({
                 <option value="">{SIGNUP_COPY.regionPlaceholder}</option>
                 {regions.map((r) => (
                   <option key={r.id} value={r.id}>
-                    {r.name}
+                    {shortRegionName(r.name)}
                   </option>
                 ))}
               </select>
+              {getRegion(state, region) ? (
+                <p id="region-counties" className="field-help mt-1" aria-live="polite">
+                  Counties: {regionCountyNames(state, getRegion(state, region)!).join(", ")}
+                </p>
+              ) : null}
               {show && errors.region ? (
                 <p id="region-error" className="field-error" role="alert">
                   {errors.region}

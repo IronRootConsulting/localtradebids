@@ -49,3 +49,16 @@ describe("free sample form: no Trade/County fields (Andrew Nov 18 1:48 AM ET)", 
     expect(band).toContain('<MarketingOptIn formId="sample-band" />');
   });
 });
+
+import { shortRegionName, regionsForState, regionCountyNames } from "@/data/states";
+describe("signup region picker short names (Andrew Nov 18 2:12 AM ET)", () => {
+  it("shows plain region names, ids unchanged", () => {
+    const regions = regionsForState("FL");
+    expect(regions.map((r) => shortRegionName(r.name))).toEqual([
+      "Apalachee", "Central Florida", "East Central Florida", "Emerald Coast", "North Central Florida",
+      "Northeast Florida", "South Florida", "Southwest Florida", "Tampa Bay", "Treasure Coast",
+    ]);
+    expect(regions[0].id).toBe("fl-apalachee");
+    expect(regionCountyNames("FL", regions[0])[0]).toBe("Calhoun");
+  });
+});
