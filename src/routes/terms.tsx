@@ -10,7 +10,7 @@ import { LegalDoc } from "@/components/site/ui";
 
 /** Terms "Last updated" date, used in both Last updated lines. Fill with the real deploy date
  *  (ET, e.g. "November 24, 2026") before shipping; the test "Terms rev3.8 deploy date filled" fails until then. */
-export const TERMS_LAST_UPDATED = "[DEPLOY DATE, ET]";
+export const TERMS_LAST_UPDATED = "November 18, 2026";
 
 export const TERMS_HTML = [
   "<h1>LocalTradeBids \u2014 Terms of Service</h1>\n<p>Last updated: " + TERMS_LAST_UPDATED + "</p>\n<p><strong>Effective date:</strong> November 17, 2026\n<strong>Last ",
