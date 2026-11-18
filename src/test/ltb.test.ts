@@ -389,7 +389,7 @@ describe("Fire & Life Safety 8th trade copy v2.1 (Andrew approved 8:09 AM ET Nov
     expect(fls?.sheetKey).toBe("fire_life_safety");
     expect(TRADES.indexOf(fls!)).toBe(TRADES.findIndex((t) => t.slug === "painting") + 1);
   });
-  it("statewide page SEO: 58-char title, 154-char meta; 9 open bids (Bede b56423ad)", () => {
+  it("statewide page SEO: 58-char title, 154-char meta; 9 open bids (Bede 3a7224c3)", () => {
     expect(statewideTradeTitle(fls!)).toBe("Florida Fire & Life Safety Bids by County | LocalTradeBids");
     expect(statewideTradeMeta(fls!)).toBe(
       "Public fire and life safety bids from government agencies across Florida, listed by county with due dates and official links. Get a daily or weekly email.",
@@ -405,7 +405,7 @@ describe("Fire & Life Safety 8th trade copy v2.1 (Andrew approved 8:09 AM ET Nov
   });
 });
 
-describe("public pages render Bede's export as-is (2026-11-18, sha b56423ad, local and statewide sections)", () => {
+describe("public pages render Bede's export as-is (2026-11-18, sha 3a7224c3, local and statewide sections)", () => {
   const keys = Object.keys(PUBLIC_PAGES);
   const countySlugs = new Set(FLORIDA_COUNTIES.map((c) => c.slug));
   const tradeSlugs = new Set(TRADES.map((t) => t.slug));
@@ -582,16 +582,16 @@ describe("legal pages: More rev3.6 Daily/Weekly sections", () => {
 });
 
 describe("LTB copy v5.3 + Home export record", () => {
-  it("Home renders Bede's home record: 727 open, 3 shown, +724", () => {
+  it("Home renders Bede's home record: 725 open, 3 shown, +722", () => {
     const s = getPageSample(HOME_PAGE_KEY);
-    expect([s.openCount, s.shownCount, s.moreCount]).toEqual([727, 3, 724]);
+    expect([s.openCount, s.shownCount, s.moreCount]).toEqual([725, 3, 722]);
     expect(s.rows.map((r) => r.agency)).toEqual([
       "Florida School for the Deaf and the Blind (FSDB)",
       "Lake County",
       "Central Florida Tourism Oversight District",
     ]);
     expect(s.rows[0]?.sourceUrl).toBe("https://vendor.myfloridamarketplace.com/search/bids/detail/17298");
-    expect(moreForSubscribersText(s.moreCount)).toBe("+724 more open bids for subscribers.");
+    expect(moreForSubscribersText(s.moreCount)).toBe("+722 more open bids for subscribers.");
   });
 
   it("no-bids text for county, county+trade and Home search", () => {
