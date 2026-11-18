@@ -133,6 +133,10 @@ function fitMeta(full: string, shortForm?: string): string {
 }
 
 export function countyTradeMeta(trade: Trade, countyName: string, hasStatewide = false): string {
+  if (hasStatewide && trade.slug === "fire-life-safety") {
+    // Ignatius 8:22 AM ET Nov 18: PENDING More's claims check + Andrew's go before shipping.
+    return `Open public fire and life safety bids in ${countyName} County, FL, plus statewide bids, with due dates and official notice links. Emailed daily or weekly.`;
+  }
   if (hasStatewide) {
     // More (Nov 18, 2026): statewide bids are included on county pages and must not read as local.
     const mid = ` bids from public agencies in ${countyName} County, FL, plus statewide `;
