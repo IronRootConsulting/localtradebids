@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/lib/seo";
 import { LegalDoc } from "@/components/site/ui";
 
-// More's public terms text, verbatim (rev3.7.3-public; publish date November 18, 2026).
+// More's public terms text, verbatim (rev3.7.3-public; publish date November 17, 2026).
 // ltb-terms-of-service-PUBLIC-rev3.7.3.md sha256 8d2871bae41c2f9c3f1ea3a38fbebe4dd01bff8efa6ff260d21f0b85bbd7ea2d
 export const TERMS_HTML = [
-  "<h1>LocalTradeBids \u2014 Terms of Service</h1>\n<p>Last updated: November 18, 2026</p>\n<p><strong>Effective date:</strong> November 18, 2026\n<strong>Last ",
-  "updated:</strong> November 18, 2026</p>\n<p>These Terms of Service (\"Terms\") are an agreement between you and <strong>IronRoot Consulting LLC</strong>, a ",
+  "<h1>LocalTradeBids \u2014 Terms of Service</h1>\n<p>Last updated: November 17, 2026</p>\n<p><strong>Effective date:</strong> November 17, 2026\n<strong>Last ",
+  "updated:</strong> November 17, 2026</p>\n<p>These Terms of Service (\"Terms\") are an agreement between you and <strong>IronRoot Consulting LLC</strong>, a ",
   "Florida limited liability company, which provides <strong>LocalTradeBids, a service of IronRoot Consulting LLC</strong> (\"LocalTradeBids,\" \"we,\" \"us\"). ",
   "IronRoot Consulting LLC is the party you contract with. They cover the localtradebids.com website, your account, the free weekly sample digest, and our paid ",
   "digest subscriptions (together, the \"Service\").</p>\n<p><strong>By subscribing at checkout, joining the waitlist, or signing up for the free sample digest, you ",
@@ -134,10 +134,10 @@ export const TERMS_HTML = [
   "support@localtradebids.com.</p>",
 ].join("");
 
-// More's public refund text, verbatim (rev3.7.3-public; publish date November 18, 2026). Headings demoted one level so /terms keeps one H1.
+// More's public refund text, verbatim (rev3.7.3-public; publish date November 17, 2026). Headings demoted one level so /terms keeps one H1.
 // ltb-refund-policy-PUBLIC-rev3.7.3.md sha256 505793144a03d3c86fec26d21669d3535ffe8a890d0b716d89480f5270f65b47
 export const REFUND_HTML = [
-  "<h2>LocalTradeBids \u2014 Refund Policy</h2>\n<p>Last updated: November 18, 2026</p>\n<p><strong>Effective date:</strong> November 18, 2026</p>\n<p>This Refund Policy ",
+  "<h2>LocalTradeBids \u2014 Refund Policy</h2>\n<p>Last updated: November 17, 2026</p>\n<p><strong>Effective date:</strong> November 17, 2026</p>\n<p>This Refund Policy ",
   "is part of the LocalTradeBids Terms of Service. LocalTradeBids is a service of IronRoot Consulting LLC, a Florida limited liability company, which operates ",
   "it.</p>\n<h3>1. Cancel any time, no future charges</h3>\n<p>You can cancel your monthly subscription online at any time. To cancel: 1) Click <strong>Manage ",
   "billing</strong> at the bottom of any page. 2) Enter the email you subscribed with, and Stripe will email you a sign-in link. 3) Open the link and click ",

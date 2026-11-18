@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/lib/seo";
 import { LegalDoc } from "@/components/site/ui";
 
-// More's public privacy text, verbatim (rev3.7.3-public; publish date November 18, 2026).
+// More's public privacy text, verbatim (rev3.7.3-public; publish date November 17, 2026).
 // ltb-privacy-policy-PUBLIC-rev3.7.3.md sha256 fddcf28f6b775f8703cbbadcb5a75c3b45a22313620bce1d143c327d01b35bac
 export const PRIVACY_HTML = [
-  "<h1>LocalTradeBids \u2014 Privacy Policy</h1>\n<p>Last updated: November 18, 2026</p>\n<p><strong>Effective date:</strong> November 18, 2026\n<strong>Last ",
-  "updated:</strong> November 18, 2026</p>\n<p>This Privacy Policy explains how <strong>LocalTradeBids, a service of IronRoot Consulting LLC</strong> ",
+  "<h1>LocalTradeBids \u2014 Privacy Policy</h1>\n<p>Last updated: November 17, 2026</p>\n<p><strong>Effective date:</strong> November 17, 2026\n<strong>Last ",
+  "updated:</strong> November 17, 2026</p>\n<p>This Privacy Policy explains how <strong>LocalTradeBids, a service of IronRoot Consulting LLC</strong> ",
   "(\"LocalTradeBids,\" \"we,\" \"us\"), collects, uses and shares information when you visit localtradebids.com, join our waitlist, sign up for our free weekly sample ",
   "digest, subscribe, or contact us. IronRoot Consulting LLC, a Florida limited liability company, is the business responsible for your ",
   "information.</p>\n<p>LocalTradeBids is an email digest of public government bid opportunities for trade contractors and other businesses. It is a business ",

@@ -518,22 +518,22 @@ describe("LTB copy v5.4", () => {
   });
 });
 
-describe("legal pages: More's public rev3.7.1 text (publish date November 18, 2026)", () => {
+describe("legal pages: More's public rev3.7.1 text (publish date November 17, 2026)", () => {
   const all = PRIVACY_HTML + TERMS_HTML + REFUND_HTML;
   it("has no internal notes or citations", () => {
     for (const bad of ["per Andrew", "relayed", "More's wording", "rev3"]) {
       expect(all).not.toContain(bad);
     }
   });
-  it("fills the publish date November 18, 2026 with no open slots (More rev3.7.3)", () => {
+  it("fills the publish date November 17, 2026 with no open slots (More rev3.7.3)", () => {
     for (const h of [PRIVACY_HTML, TERMS_HTML, REFUND_HTML]) {
-      expect(h).toContain("Last updated: November 18, 2026");
-      expect(h).toContain("<strong>Effective date:</strong> November 18, 2026");
+      expect(h).toContain("Last updated: November 17, 2026");
+      expect(h).toContain("<strong>Effective date:</strong> November 17, 2026");
       expect(h).not.toContain("[DATE OF PUBLICATION]");
       expect(h).not.toContain("[PLACEHOLDER");
     }
-    expect(PRIVACY_HTML).toContain("<strong>Last updated:</strong> November 18, 2026");
-    expect(TERMS_HTML).toContain("<strong>Last updated:</strong> November 18, 2026");
+    expect(PRIVACY_HTML).toContain("<strong>Last updated:</strong> November 17, 2026");
+    expect(TERMS_HTML).toContain("<strong>Last updated:</strong> November 17, 2026");
     expect(all.match(/\[(CONFIRM|PLACEHOLDER|PENDING|OPEN|DATE)[^\]]*\]/g)).toBeNull();
     expect(TERMS_HTML).toContain(
       "If your first bank payment fails or is returned, we won't send your bid emails and we'll cancel your subscription. You're welcome to sign up again with another payment method.",
