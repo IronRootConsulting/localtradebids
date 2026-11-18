@@ -67,8 +67,7 @@ function Page() {
             To switch, email support@localtradebids.com and we'll change it within 2
             business days. To change your area or trades within your plan, reply to
             any digest email or write to support@localtradebids.com. If you paid by
-            bank, your digest and confirmation email start once your payment clears,
-            which usually takes a few business days.
+            bank, your digest and confirmation email start once your payment clears.
           </p>
           <p className="mt-3">
             {SITE.billingPortalUrl ? (
