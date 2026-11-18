@@ -257,10 +257,10 @@ export function SampleBand() {
       textVersion: MARKETING_OPT_IN_VERSION,
       formName: "sample-band",
       pageUrl: typeof location !== "undefined" ? location.href : "",
-      ...sampleFilters(
-        (form.elements.namedItem("trade") as HTMLSelectElement | null)?.value ?? "",
-        (form.elements.namedItem("county") as HTMLSelectElement | null)?.value ?? "",
-      ),
+      // Andrew Nov 18, 1:48 AM ET: no Trade/County fields; the sample is the
+      // newest statewide bids across all trades. Columns I-L still record
+      // state FL, county any, trades all, schema v2.
+      ...sampleFilters("", ""),
     });
     setStatus("ok");
   }
@@ -287,26 +287,6 @@ export function SampleBand() {
             required
           />
         </label>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <label className="grid gap-1 text-sm font-medium text-ink">
-            Trade
-            <select className="field" name="trade" defaultValue="">
-              <option value="">All seven trades</option>
-              {TRADES.map((t) => (
-                <option key={t.slug} value={t.slug}>{t.name}</option>
-              ))}
-            </select>
-          </label>
-          <label className="grid gap-1 text-sm font-medium text-ink">
-            County
-            <select className="field" name="county" defaultValue="">
-              <option value="">Any Florida county</option>
-              {FLORIDA_COUNTIES.map((c) => (
-                <option key={c.slug} value={c.slug}>{c.name}</option>
-              ))}
-            </select>
-          </label>
-        </div>
         <button type="submit" className="btn-primary justify-self-start">Send me the sample</button>
         <p className="text-sm text-slate">
           By signing up, you agree to get the free weekly sample by email.

@@ -37,3 +37,15 @@ describe("bid table: stacked cards on phones", () => {
     expect(src).toContain("View official notice");
   });
 });
+
+describe("free sample form: no Trade/County fields (Andrew Nov 18 1:48 AM ET)", () => {
+  it("has no trade or county selects and always logs statewide/all trades", () => {
+    const src = readFileSync(new URL("../components/site/ui.tsx", import.meta.url), "utf8");
+    const band = src.slice(src.indexOf("export function SampleBand"), src.indexOf("export function DigestMockup"));
+    expect(band).not.toContain('name="trade"');
+    expect(band).not.toContain('name="county"');
+    expect(band).toContain('...sampleFilters("", "")');
+    expect(band).toContain('formName: "sample-band"');
+    expect(band).toContain('<MarketingOptIn formId="sample-band" />');
+  });
+});
