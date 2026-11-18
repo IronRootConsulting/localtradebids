@@ -86,7 +86,7 @@ export function CountyTradeView({
         ]}
       />
       <h1 className="text-3xl font-bold tracking-tight text-brand">
-        {trade.name} bids in {county.name} County, Florida
+        {trade.name} bids {sample.statewideCount > 0 ? "for" : "in"} {county.name} County, Florida
       </h1>
       <p className="mt-3 max-w-3xl text-slate">
         {sample.statewideCount > 0
