@@ -389,12 +389,12 @@ describe("Fire & Life Safety 8th trade copy v2.1 (Andrew approved 8:09 AM ET Nov
     expect(fls?.sheetKey).toBe("fire_life_safety");
     expect(TRADES.indexOf(fls!)).toBe(TRADES.findIndex((t) => t.slug === "painting") + 1);
   });
-  it("statewide page SEO: 58-char title, 154-char meta; 10 open bids (Bede 1632e5b)", () => {
+  it("statewide page SEO: 58-char title, 154-char meta; 9 open bids (Bede ad9e425)", () => {
     expect(statewideTradeTitle(fls!)).toBe("Florida Fire & Life Safety Bids by County | LocalTradeBids");
     expect(statewideTradeMeta(fls!)).toBe(
       "Public fire and life safety bids from government agencies across Florida, listed by county with due dates and official links. Get a daily or weekly email.",
     );
-    expect(getPageSample(tradePageKey("fire-life-safety")).openCount).toBe(10);
+    expect(getPageSample(tradePageKey("fire-life-safety")).openCount).toBe(9);
   });
   it("county+trade titles fit 60 for all 67 counties (Fire Safety short form only when needed)", () => {
     for (const c of FLORIDA_COUNTIES) {
@@ -405,16 +405,16 @@ describe("Fire & Life Safety 8th trade copy v2.1 (Andrew approved 8:09 AM ET Nov
   });
 });
 
-describe("public pages render Bede's export as-is (2026-11-18, commit 1632e5b, local and statewide sections)", () => {
+describe("public pages render Bede's export as-is (2026-11-18, commit ad9e425, local and statewide sections)", () => {
   const keys = Object.keys(PUBLIC_PAGES);
   const countySlugs = new Set(FLORIDA_COUNTIES.map((c) => c.slug));
   const tradeSlugs = new Set(TRADES.map((t) => t.slug));
   const more = (n?: number) => MoreForSubscribers({ more: n });
 
-  it("has 490 pages (incl. home) and 1013 rows as of the export date", () => {
+  it("has 487 pages (incl. home) and 1008 rows as of the export date", () => {
     expect(PUBLIC_PAGES_AS_OF).toBe("2026-11-18");
-    expect(keys).toHaveLength(490);
-    expect(keys.reduce((n, k) => n + getPageSample(k).rows.length, 0)).toBe(1013);
+    expect(keys).toHaveLength(487);
+    expect(keys.reduce((n, k) => n + getPageSample(k).rows.length, 0)).toBe(1008);
   });
 
   it("statewide_count never exceeds open_count; local rows come before Statewide rows", () => {
@@ -480,16 +480,16 @@ describe("public pages render Bede's export as-is (2026-11-18, commit 1632e5b, l
     }
   });
 
-  it("Brevard renders 36 open (28 statewide, 8 local), 3 local shown in Bede's order, +33 more", () => {
+  it("Brevard renders 37 open (29 statewide, 8 local), 3 local shown in Bede's order, +34 more", () => {
     const s = getPageSample(countyPageKey("brevard"));
-    expect([s.openCount, s.shownCount, s.moreCount, s.statewideCount]).toEqual([36, 3, 33, 28]);
+    expect([s.openCount, s.shownCount, s.moreCount, s.statewideCount]).toEqual([37, 3, 34, 29]);
     expect([s.localCount, s.localRows.length, s.statewideRows.length]).toEqual([8, 3, 0]);
     expect(s.rows.map((r) => r.id)).toEqual([
       "7d4c60615b592486",
       "4a0eccb90854566c",
       "0950c210e0386bfb",
     ]);
-    expect(moreForSubscribersText(s.moreCount)).toBe("+33 more open bids for subscribers.");
+    expect(moreForSubscribersText(s.moreCount)).toBe("+34 more open bids for subscribers.");
     expect(more(s.moreCount)).not.toBeNull();
   });
 
@@ -504,7 +504,7 @@ describe("public pages render Bede's export as-is (2026-11-18, commit 1632e5b, l
 
   it("Baker (no local bids) shows only labeled Statewide rows", () => {
     const s = getPageSample(countyPageKey("baker"));
-    expect([s.openCount, s.statewideCount, s.localCount]).toEqual([28, 28, 0]);
+    expect([s.openCount, s.statewideCount, s.localCount]).toEqual([29, 29, 0]);
     expect(s.localRows).toHaveLength(0);
     expect(s.statewideRows).toHaveLength(3);
     expect(s.rows.every((r) => r.county === "Statewide")).toBe(true);
@@ -527,7 +527,7 @@ describe("public pages render Bede's export as-is (2026-11-18, commit 1632e5b, l
 
   it("trade-only pages are available for the statewide trade view", () => {
     expect(tradesWithStatewideBids()).toHaveLength(8);
-    expect(getPageSample(tradePageKey("roofing")).openCount).toBe(23);
+    expect(getPageSample(tradePageKey("roofing")).openCount).toBe(22);
   });
 
   it("county trade links and county list come from the export", () => {
@@ -556,8 +556,8 @@ describe("count line grammar", () => {
   });
   it("DeSoto reads its open count, and the statewide note is honest", () => {
     const s = getPageSample(countyPageKey("desoto"));
-    expect(countLineText(s.openCount, u)).toBe("29 open bids listed as of November 17, 2026, ET.");
-    expect(statewideIncludedText(s.statewideCount)).toBe("This includes 28 statewide bids, labeled Statewide.");
+    expect(countLineText(s.openCount, u)).toBe("30 open bids listed as of November 17, 2026, ET.");
+    expect(statewideIncludedText(s.statewideCount)).toBe("This includes 29 statewide bids, labeled Statewide.");
     expect(statewideIncludedText(1)).toBe("This includes 1 statewide bid, labeled Statewide.");
     expect(statewideIncludedText(0)).toBe("");
   });
@@ -582,16 +582,16 @@ describe("legal pages: More rev3.6 Daily/Weekly sections", () => {
 });
 
 describe("LTB copy v5.3 + Home export record", () => {
-  it("Home renders Bede's home record: 770 open, 3 shown, +767", () => {
+  it("Home renders Bede's home record: 756 open, 3 shown, +753", () => {
     const s = getPageSample(HOME_PAGE_KEY);
-    expect([s.openCount, s.shownCount, s.moreCount]).toEqual([770, 3, 767]);
+    expect([s.openCount, s.shownCount, s.moreCount]).toEqual([756, 3, 753]);
     expect(s.rows.map((r) => r.agency)).toEqual([
       "City of Ocala",
       "Florida School for the Deaf and the Blind (FSDB)",
       "Lake County",
     ]);
     expect(s.rows[0]?.sourceUrl).toBe("https://florida.prorfx.com/Listings.aspx");
-    expect(moreForSubscribersText(s.moreCount)).toBe("+767 more open bids for subscribers.");
+    expect(moreForSubscribersText(s.moreCount)).toBe("+753 more open bids for subscribers.");
   });
 
   it("no-bids text for county, county+trade and Home search", () => {
