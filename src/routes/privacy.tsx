@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/lib/seo";
 import { LegalDoc } from "@/components/site/ui";
 
-// More's public privacy text, verbatim (rev3.7.3-public; publish date November 17, 2026).
+// More's public privacy text, verbatim (rev3.7.6-public, sha 93c93dae…a7a5; last updated November 18, 2026; effective November 17, 2026).
 // ltb-privacy-policy-PUBLIC-rev3.7.3.md sha256 fddcf28f6b775f8703cbbadcb5a75c3b45a22313620bce1d143c327d01b35bac
 export const PRIVACY_HTML = [
-  "<h1>LocalTradeBids \u2014 Privacy Policy</h1>\n<p>Last updated: November 17, 2026</p>\n<p><strong>Effective date:</strong> November 17, 2026\n<strong>Last ",
-  "updated:</strong> November 17, 2026</p>\n<p>This Privacy Policy explains how <strong>LocalTradeBids, a service of IronRoot Consulting LLC</strong> ",
+  "<h1>LocalTradeBids \u2014 Privacy Policy</h1>\n<p>Last updated: November 18, 2026</p>\n<p><strong>Effective date:</strong> November 17, 2026\n<strong>Last ",
+  "updated:</strong> November 18, 2026</p>\n<p>This Privacy Policy explains how <strong>LocalTradeBids, a service of IronRoot Consulting LLC</strong> ",
   "(\"LocalTradeBids,\" \"we,\" \"us\"), collects, uses and shares information when you visit localtradebids.com, join our waitlist, sign up for our free weekly sample ",
   "digest, subscribe, or contact us. IronRoot Consulting LLC, a Florida limited liability company, is the business responsible for your ",
   "information.</p>\n<p>LocalTradeBids is an email digest of public government bid opportunities for trade contractors and other businesses. It is a business ",
@@ -54,7 +54,7 @@ export const PRIVACY_HTML = [
   "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</td>\n</tr>\n<tr>\n<td><strong>Google LLC (Google Forms and Google ",
   "Sheets)</strong></td>\n<td>Receives the sign-up and preference forms on our site and stores the responses in a private spreadsheet only we can access. Responses ",
   "include your name, business name and email address, your email choices, a record of any consent you gave, and the subscription choices you make before checkout ",
-  "(coverage area, trades and delivery schedule) with their reference number. Google also receives your IP address and browser information when a form is sent. ",
+  "(coverage area, trades and delivery schedule) with their reference number. If you signed up for the free sample while our sample form briefly asked for a trade and county, those answers are stored with your response; we don't use them to choose your sample. Google also receives your IP address and browser information when a form is sent. ",
   "https://policies.google.com/privacy</td>\n</tr>\n<tr>\n<td><strong>Cloudflare, Inc. (Cloudflare Web Analytics)</strong></td>\n<td>To measure site traffic without ",
   "cookies. https://www.cloudflare.com/privacypolicy/</td>\n</tr>\n<tr>\n<td><strong>Professional advisers</strong></td>\n<td>Lawyers, insurers and similar advisers, ",
   "under confidentiality</td>\n</tr>\n<tr>\n<td><strong>Authorities</strong></td>\n<td>When the law requires it, or to protect rights, safety or ",

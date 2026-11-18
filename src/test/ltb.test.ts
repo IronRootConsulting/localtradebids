@@ -563,13 +563,20 @@ describe("legal pages: More's public rev3.7.1 text (publish date November 17, 20
     }
   });
   it("fills the publish date November 17, 2026 with no open slots (More rev3.7.3)", () => {
-    for (const h of [PRIVACY_HTML, TERMS_HTML, REFUND_HTML]) {
+    for (const h of [TERMS_HTML, REFUND_HTML]) {
       expect(h).toContain("Last updated: November 17, 2026");
+    }
+    // Privacy rev3.7.6 (More, Andrew 1:48 AM ET Nov 18): last updated Nov 18, effective stays Nov 17.
+    expect(PRIVACY_HTML).toContain("Last updated: November 18, 2026");
+    expect(PRIVACY_HTML).toContain("<strong>Last updated:</strong> November 18, 2026");
+    expect(PRIVACY_HTML).toContain(
+      "with their reference number. If you signed up for the free sample while our sample form briefly asked for a trade and county, those answers are stored with your response; we don't use them to choose your sample. Google also",
+    );
+    for (const h of [PRIVACY_HTML, TERMS_HTML, REFUND_HTML]) {
       expect(h).toContain("<strong>Effective date:</strong> November 17, 2026");
       expect(h).not.toContain("[DATE OF PUBLICATION]");
       expect(h).not.toContain("[PLACEHOLDER");
     }
-    expect(PRIVACY_HTML).toContain("<strong>Last updated:</strong> November 17, 2026");
     expect(TERMS_HTML).toContain("<strong>Last updated:</strong> November 17, 2026");
     expect(all.match(/\[(CONFIRM|PLACEHOLDER|PENDING|OPEN|DATE)[^\]]*\]/g)).toBeNull();
     expect(TERMS_HTML).toContain(
