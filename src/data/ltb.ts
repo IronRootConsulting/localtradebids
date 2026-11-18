@@ -81,7 +81,7 @@ export const TRADES: Trade[] = [
     lc: "landscaping",
     lcShort: "landscaping",
     sheetKey: "landscaping",
-    scope: "Mowing, edging, planting, mulch, lawn care and grounds maintenance. Not landscape architecture or design, or equipment, plant and mulch purchases.",
+    scope: "Mowing, edging, planting, mulch, lawn care and grounds maintenance, plus tree trimming and removal, right-of-way vegetation and debris clearing, and herbicide spraying. Not landscape architecture or design, pest control, tree sales, or equipment, plant, mulch, tree and herbicide purchases (supply only).",
   },
   {
     slug: "painting",

@@ -362,6 +362,14 @@ describe("trade scope lines", () => {
   });
 });
 
+describe("Landscaping blurb v1 (Andrew approved 7:28 AM ET Nov 18, Ignatius sha 52ec7d1e)", () => {
+  it("uses the approved text verbatim", () => {
+    expect(TRADES.find((tr) => tr.slug === "landscaping")?.scope).toBe(
+      "Mowing, edging, planting, mulch, lawn care and grounds maintenance, plus tree trimming and removal, right-of-way vegetation and debris clearing, and herbicide spraying. Not landscape architecture or design, pest control, tree sales, or equipment, plant, mulch, tree and herbicide purchases (supply only).",
+    );
+  });
+});
+
 describe("public pages render Bede's export as-is (2026-11-18, commit d41ae2a, local and statewide sections)", () => {
   const keys = Object.keys(PUBLIC_PAGES);
   const countySlugs = new Set(FLORIDA_COUNTIES.map((c) => c.slug));
