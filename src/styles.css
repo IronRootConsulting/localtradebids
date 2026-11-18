@@ -188,6 +188,20 @@
     cursor: pointer;
   }
   .btn-primary:hover { background: var(--accent-dark); }
+  /* Plan-card Subscribe buttons (Andrew 10:01 PM ET Nov 17): one centered line at phone
+     widths, balanced padding; font scales down slightly on narrow screens. */
+  .plan-btn {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    white-space: nowrap;
+    font-size: clamp(0.8125rem, 3.9vw, 1rem);
+    line-height: 1.25;
+  }
+  /* Tablet 3-column cards are narrower than a phone card: allow a centered, balanced wrap there. */
+  @media (min-width: 768px) and (max-width: 1099px) {
+    .plan-btn { white-space: normal; text-wrap: balance; font-size: 0.9375rem; }
+  }
   .btn-outline {
     display: inline-flex;
     min-height: 44px;

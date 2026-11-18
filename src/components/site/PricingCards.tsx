@@ -104,7 +104,7 @@ export function PlanButton({ plan }: { plan: (typeof PLANS)[number] }) {
   return (
     <a
       href={href}
-      className="btn-primary mt-6"
+      className="btn-primary plan-btn mt-6"
       target={external ? "_blank" : undefined}
       rel={external ? "noopener" : undefined}
     >
