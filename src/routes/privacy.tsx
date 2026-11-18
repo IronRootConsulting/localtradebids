@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { pageHead } from "@/lib/seo";
-import { DraftNotice, LegalDoc } from "@/components/site/ui";
+import { LegalDoc } from "@/components/site/ui";
 
-// More's public privacy text, verbatim (rev3.7.1-public; publish date November 18, 2026).
-// ltb-privacy-policy-PUBLIC-rev3.7.1.md sha256 fddcf28f6b775f8703cbbadcb5a75c3b45a22313620bce1d143c327d01b35bac
+// More's public privacy text, verbatim (rev3.7.3-public; publish date November 18, 2026).
+// ltb-privacy-policy-PUBLIC-rev3.7.3.md sha256 fddcf28f6b775f8703cbbadcb5a75c3b45a22313620bce1d143c327d01b35bac
 export const PRIVACY_HTML = [
   "<h1>LocalTradeBids \u2014 Privacy Policy</h1>\n<p>Last updated: November 18, 2026</p>\n<p><strong>Effective date:</strong> November 18, 2026\n<strong>Last ",
   "updated:</strong> November 18, 2026</p>\n<p>This Privacy Policy explains how <strong>LocalTradeBids, a service of IronRoot Consulting LLC</strong> ",
@@ -110,12 +110,11 @@ export const Route = createFileRoute("/privacy")({
     pageHead({
       title: "Privacy Policy | LocalTradeBids",
       description:
-        "How LocalTradeBids collects, uses and shares information. Draft privacy policy under review.",
+        "How LocalTradeBids, a service of IronRoot Consulting LLC, collects, uses and protects your information.",
       path: "/privacy",
     }),
   component: () => (
     <>
-      <DraftNotice />
       <LegalDoc html={PRIVACY_HTML} />
     </>
   ),

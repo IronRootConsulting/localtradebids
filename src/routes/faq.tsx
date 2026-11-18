@@ -134,6 +134,15 @@ function Page() {
         {SITE.checkoutLive ? (
           <>
             <section>
+              {/* Question: Ignatius v2-final row 16. Answer: More rev3.7.3 fill sheet L16, verbatim. */}
+              <h2 className="text-lg font-semibold text-ink">What if I pay by bank?</h2>
+              <p className="mt-2">
+                Your first billing month starts when you check out, even if a bank
+                payment takes a few business days to clear. If you pay by bank, we
+                start your confirmation email and digests once your payment clears.
+              </p>
+            </section>
+            <section>
               <h2 className="text-lg font-semibold text-ink">
                 Can I cancel? Is there a refund? Does it renew automatically?
               </h2>

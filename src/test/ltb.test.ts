@@ -525,7 +525,7 @@ describe("legal pages: More's public rev3.7.1 text (publish date November 18, 20
       expect(all).not.toContain(bad);
     }
   });
-  it("fills the publish date November 18, 2026 and keeps only the two open Terms slots (T1/T2)", () => {
+  it("fills the publish date November 18, 2026 with no open slots (More rev3.7.3)", () => {
     for (const h of [PRIVACY_HTML, TERMS_HTML, REFUND_HTML]) {
       expect(h).toContain("Last updated: November 18, 2026");
       expect(h).toContain("<strong>Effective date:</strong> November 18, 2026");
@@ -534,12 +534,24 @@ describe("legal pages: More's public rev3.7.1 text (publish date November 18, 20
     }
     expect(PRIVACY_HTML).toContain("<strong>Last updated:</strong> November 18, 2026");
     expect(TERMS_HTML).toContain("<strong>Last updated:</strong> November 18, 2026");
-    expect(TERMS_HTML).toContain("[CONFIRM with Stripe: billing period starts at checkout for ACH]");
-    expect(TERMS_HTML).toContain("[CONFIRM in Stripe test mode]");
-    expect(all.match(/\[(CONFIRM|PLACEHOLDER|PENDING|OPEN|DATE)[^\]]*\]/g)).toEqual([
-      "[CONFIRM with Stripe: billing period starts at checkout for ACH]",
-      "[CONFIRM in Stripe test mode]",
-    ]);
+    expect(all.match(/\[(CONFIRM|PLACEHOLDER|PENDING|OPEN|DATE)[^\]]*\]/g)).toBeNull();
+    expect(TERMS_HTML).toContain(
+      "If your first bank payment fails or is returned, we won't send your bid emails and we'll cancel your subscription. You're welcome to sign up again with another payment method.",
+    );
+  });
+  it("legal pages ship without the DRAFT badge and with More's L31/L32 meta descriptions", () => {
+    const terms = readFileSync(new URL("../routes/terms.tsx", import.meta.url), "utf8");
+    const privacy = readFileSync(new URL("../routes/privacy.tsx", import.meta.url), "utf8");
+    for (const f of [terms, privacy]) {
+      expect(f).not.toContain("<DraftNotice");
+      expect(f).not.toMatch(/Draft|under review/i);
+    }
+    expect(terms).toContain(
+      "Terms of Service and Refund Policy for LocalTradeBids, a service of IronRoot Consulting LLC: subscriptions, billing, cancellation, refunds and bid emails.",
+    );
+    expect(privacy).toContain(
+      "How LocalTradeBids, a service of IronRoot Consulting LLC, collects, uses and protects your information.",
+    );
   });
 });
 
