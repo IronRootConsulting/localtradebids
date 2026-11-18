@@ -9,7 +9,8 @@ export function autorenewHtml(price: number): string {
     "<strong>$" +
     String(price) +
     " per month, billed monthly. Renews automatically every month at this " +
-    "price until you cancel.</strong> Cancel online anytime from " +
+    "price until you cancel. We'll email you at least 30 days before any " +
+    "price change.</strong> Cancel online anytime from " +
     "<strong>Manage billing</strong> at the bottom of any page. Cancellation " +
     "takes effect at the end of the month you've paid for, and you won't be " +
     "charged again. No refunds except billing errors, or a renewal you " +

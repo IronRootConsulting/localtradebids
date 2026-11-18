@@ -56,7 +56,7 @@ function Page() {
           <p className="mt-4 text-slate">
             Thanks for subscribing. Your {plan} plan is ${price} per month, billed
             monthly, and renews automatically every month at this price until you
-            cancel. Cancel anytime online from Manage billing at the bottom of any
+            cancel. We'll email you at least 30 days before any price change. Cancel anytime online from Manage billing at the bottom of any
             page. Cancellation takes effect at the end of the month you've paid for,
             and you won't be charged again.
           </p>
