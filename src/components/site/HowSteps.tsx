@@ -9,7 +9,7 @@ const STEPS = [
   },
   {
     t: "Get your bids by email, daily or weekly.",
-    d: 'Your matching open bids, with new ones marked "New", each with the agency, due date and a link to the official notice.',
+    d: "New bids for your trades and area. Your first email covers the past week.",
   },
 ];
 

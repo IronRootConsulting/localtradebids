@@ -328,21 +328,28 @@ export function DigestMockup({ bids }: { bids: Bid[] }) {
         Your bid email: daily or weekly
       </h2>
       <p className="mt-2 text-slate">
-        One email on the schedule you choose, daily or weekly, with the open bids
-        that match your trades and area. Daily comes every weekday (Monday to
-        Friday) around 7:30 AM ET. Weekly comes every Monday around 7:30 AM ET, or
-        Tuesday when Monday is a federal holiday. Bids added since your last email
-        are marked "New". Each bid shows the agency, title, county, due date and a
-        link. Email only. No texts or sales calls.
+        One email on the schedule you choose, daily or weekly, with the new bids
+        that match your trades and area. Daily comes around 7:30 AM ET on weekdays
+        (Monday to Friday) when we've found new bids for you. Weekly comes every
+        Monday around 7:30 AM ET, or Tuesday when Monday is a federal holiday. Your
+        first email lists matching open bids we found in the past week, or tells
+        you if there weren't any. After that, each email lists only the new bids
+        we've found since your last one, marked "New". Each bid shows the agency,
+        title, county, due date and a link. Email only. No texts or sales calls.
       </p>
       <p className="mt-2 text-slate">
-        You get the email even when there are no new bids. Your open bids are
-        listed under a "No new bids today" note (daily) or a "No new bids this
-        week" note (weekly).
+        No new bids? There's no daily email that day, except your first email,
+        which always goes out and tells you if we didn't find any matching bids.
+        The weekly email always comes, with a "No new bids this week" note when
+        there's nothing new.
       </p>
       <p className="mt-2 text-slate">
         No email on federal holidays. Weekly emails move to Tuesday when Monday is
         a federal holiday.
+      </p>
+      <p className="mt-2 text-slate">
+        Your weekly email lists the new bids we've found since your last weekly
+        email, newest first.
       </p>
       <div className="email-frame mt-4">
         <ul className="grid gap-2">

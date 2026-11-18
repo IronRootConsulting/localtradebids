@@ -4,19 +4,16 @@ import { SITE } from "@/config/site";
 import { LogoMark } from "./ui";
 
 export const FOOTER_OPERATED_BY =
-  "Operated by IronRoot Consulting LLC d/b/a LocalTradeBids " +
-  "[subject to fictitious-name registration].";
+  "LocalTradeBids is a service of IronRoot Consulting LLC.";
 
 export const FOOTER_AFFILIATION =
-  "LocalTradeBids is an independent service of IronRoot Consulting LLC d/b/a " +
-  "LocalTradeBids [subject to fictitious-name registration]. We are not a " +
+  "LocalTradeBids is an independent service of IronRoot Consulting LLC. We are not a " +
   "government agency or an official bid portal, and we are not affiliated with " +
   "or endorsed by any agency we list. Agency names identify the source of each " +
   "notice and belong to their owners.";
 
 export const FOOTER_COPYRIGHT =
-  "\u00A9 2026 IronRoot Consulting LLC d/b/a LocalTradeBids " +
-  "[subject to fictitious-name registration]";
+  "\u00A9 2026 IronRoot Consulting LLC";
 
 const NAV = [
   { to: "/how-it-works", label: "How it works" },

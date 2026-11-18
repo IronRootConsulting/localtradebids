@@ -207,10 +207,9 @@ describe("v5 copy strings (verbatim)", () => {
     expect(MARKETING_OPT_IN_VERSION).toBe("more-rev2-marketing-optin-v1");
   });
 
-  it("matches the v3 footer non-affiliation line", () => {
+  it("matches the footer non-affiliation line (More rev3.7.1 fill sheet L6)", () => {
     expect(FOOTER_AFFILIATION).toBe(
-      "LocalTradeBids is an independent service of IronRoot Consulting LLC d/b/a " +
-        "LocalTradeBids [subject to fictitious-name registration]. We are not a " +
+      "LocalTradeBids is an independent service of IronRoot Consulting LLC. We are not a " +
         "government agency or an official bid portal, and we are not affiliated with " +
         "or endorsed by any agency we list. Agency names identify the source of each " +
         "notice and belong to their owners.",
@@ -233,13 +232,16 @@ describe("v5 copy strings (verbatim)", () => {
     expect(autorenewHtml(39)).toMatch(/Refund Policy<\/a>\.$/);
   });
 
-  it("keeps unfilled plan-change and cancel wording from More rev2 / v3", () => {
+  it("plan-change and cancel wording (More rev3.7.1 fill sheet L9: no preferences link)", () => {
     expect(PLAN_CHANGES_TEXT).toContain("Upgrades take effect right away");
     expect(PLAN_CHANGES_TEXT).toContain(
       "Downgrades take effect on your next billing date",
     );
     expect(PLAN_CHANGES_TEXT).toContain("no credit or refund is given for the change");
-    expect(PLAN_CHANGES_TEXT).toContain("[PLACEHOLDER: preferences form link]");
+    expect(PLAN_CHANGES_TEXT).not.toContain("[PLACEHOLDER");
+    expect(PLAN_CHANGES_TEXT).toContain(
+      "To change your area or trades within your plan, reply to any digest email or write to support@localtradebids.com.",
+    );
     expect(PLAN_CHANGES_TEXT).not.toContain("[PENDING Andrew: downgrade credits]");
     expect(CANCEL_STEPS_TEXT).toContain(
       "Open the link and click Cancel subscription.",
@@ -436,7 +438,7 @@ describe("legal pages: More rev3.6 Daily/Weekly sections", () => {
     expect(PRIVACY_HTML).toContain("Google LLC (Google Forms and Google Sheets)");
   });
   it("Refund 2 no longer says weekday digest", () => {
-    expect(REFUND_HTML).toContain("Agencies decide when to post, and you still get your digest.");
+    expect(REFUND_HTML).toContain("Agencies decide when to post. On a weekday with no new matching bids, we don't send a daily digest");
     expect(REFUND_HTML).not.toContain("weekday digest");
   });
 });
@@ -513,20 +515,28 @@ describe("LTB copy v5.4", () => {
   });
 });
 
-describe("legal pages: More's public rev3.6 text (preview)", () => {
+describe("legal pages: More's public rev3.7.1 text (publish date November 18, 2026)", () => {
   const all = PRIVACY_HTML + TERMS_HTML + REFUND_HTML;
   it("has no internal notes or citations", () => {
     for (const bad of ["per Andrew", "relayed", "More's wording", "rev3"]) {
       expect(all).not.toContain(bad);
     }
   });
-  it("keeps More's placeholders and both Last updated lines unfilled", () => {
+  it("fills the publish date November 18, 2026 and keeps only the two open Terms slots (T1/T2)", () => {
     for (const h of [PRIVACY_HTML, TERMS_HTML, REFUND_HTML]) {
-      expect(h).toContain("Last updated: [DATE OF PUBLICATION]");
-      expect(h).toContain("[PLACEHOLDER: publish date]");
+      expect(h).toContain("Last updated: November 18, 2026");
+      expect(h).toContain("<strong>Effective date:</strong> November 18, 2026");
+      expect(h).not.toContain("[DATE OF PUBLICATION]");
+      expect(h).not.toContain("[PLACEHOLDER");
     }
-    expect(PRIVACY_HTML).toContain("<strong>Last updated:</strong> [PLACEHOLDER: publish date]");
-    expect(TERMS_HTML).toContain("<strong>Last updated:</strong> [PLACEHOLDER: publish date]");
+    expect(PRIVACY_HTML).toContain("<strong>Last updated:</strong> November 18, 2026");
+    expect(TERMS_HTML).toContain("<strong>Last updated:</strong> November 18, 2026");
+    expect(TERMS_HTML).toContain("[CONFIRM with Stripe: billing period starts at checkout for ACH]");
+    expect(TERMS_HTML).toContain("[CONFIRM in Stripe test mode]");
+    expect(all.match(/\[(CONFIRM|PLACEHOLDER|PENDING|OPEN|DATE)[^\]]*\]/g)).toEqual([
+      "[CONFIRM with Stripe: billing period starts at checkout for ACH]",
+      "[CONFIRM in Stripe test mode]",
+    ]);
   });
 });
 
@@ -563,8 +573,14 @@ describe("More preview wording (Andrew 5:52 PM ET Nov 17)", () => {
   it("uses More's preview strings verbatim", () => {
     expect(STATE_A_BUTTON_HELPER).toBe(BUTTON_HELPER);
     expect(STATE_A_PLANS_OPEN_SOON).toBe(PLANS_OPEN_SOON);
-    expect(TERMS_HTML).toContain(TERMS_42);
-    expect(PRIVACY_HTML).toContain("<li>" + SIGNUP_USE + "</li>");
+    // Go-live (More rev3.7.1 whole pages): the preview Terms 4.2 and the Privacy
+    // test-mode sentence are gone.
+    expect(TERMS_HTML).not.toContain(TERMS_42);
+    expect(TERMS_HTML).toContain("4.2 <strong>No introductory offers.</strong> We don't offer founders' or other introductory discounts.");
+    expect(PRIVACY_HTML).not.toContain(SIGNUP_USE);
+    expect(PRIVACY_HTML).toContain(
+      "<li>If you use our sign-up step: to set up your subscription and match your choices to your payment. If you don't finish checkout, we may send you one reminder to finish signing up (see section 6).</li>",
+    );
     expect(PRIVACY_HTML).toContain("<li>" + WAITLIST_USE + "</li>");
     expect(PRIVACY_HTML).toContain(COOKIES);
   });
@@ -602,7 +618,9 @@ describe("More preview wording (Andrew 5:52 PM ET Nov 17)", () => {
   });
 
   it("Privacy says there is no website login, with no placeholder", () => {
-    expect(PRIVACY_HTML).toContain("- We don't have website accounts or a login on our site.\n- Messages you send us");
+    expect(PRIVACY_HTML).toContain(
+      "- We don't have website accounts or a login on our site. You manage billing through Stripe's secure billing portal, which signs you in with a link sent to your email.\n",
+    );
     expect(PRIVACY_HTML).not.toContain("confirm no site login at launch");
   });
 });

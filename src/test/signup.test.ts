@@ -480,11 +480,9 @@ describe("privacy policy: unfinished sign-ups and Google row", () => {
     const { PRIVACY_HTML } = await import("@/routes/privacy");
     expect(PRIVACY_HTML).toContain(SUBSCRIBE_BULLET);
     expect(PRIVACY_HTML).toContain(GOOGLE_TD);
-    const privacy = readFileSync(new URL("../routes/privacy.tsx", import.meta.url), "utf8");
-    expect(privacy).toContain(SUBSCRIBE_BULLET);
-    expect(privacy).toContain(GOOGLE_TD);
-    expect(privacy).toContain(
-      "Unfinished sign-ups (details entered on our sign-up step without completing checkout): 90 days, then deleted. We keep only your email address, the date of any reminder we sent and any unsubscribe request, so we never send a second reminder or email you after you've opted out.",
+    // rev3.7.1 whole page is regenerated in 160-char chunks, so check the joined HTML.
+    expect(PRIVACY_HTML).toContain(
+      "Unfinished sign-ups (details entered on our sign-up step without completing checkout): 90 days, then deleted. After that we keep only a scrambled (one-way hashed) form of your email address, with the date of any reminder we sent and any unsubscribe request, so we never send a second reminder or email you after you've opted out.",
     );
   });
 });

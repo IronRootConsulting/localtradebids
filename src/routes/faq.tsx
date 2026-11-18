@@ -42,9 +42,8 @@ function Page() {
             Are you a government agency or bid portal?
           </h2>
           <p className="mt-2">
-            No. LocalTradeBids is an independent service of IronRoot Consulting LLC
-            d/b/a LocalTradeBids [subject to fictitious-name registration]. We're
-            not affiliated with or endorsed by any government agency. To get bid
+            No. LocalTradeBids is an independent service of IronRoot Consulting LLC.
+            We're not affiliated with or endorsed by any government agency. To get bid
             documents, register as a vendor or submit a bid, use the agency's own
             website.
           </p>
@@ -74,21 +73,26 @@ function Page() {
         <section>
           <h2 className="text-lg font-semibold text-ink">When does the email arrive?</h2>
           <p className="mt-2">
-            It depends on the delivery you chose. Daily comes every weekday (Monday to
-            Friday) around 7:30 AM ET, with no email on federal holidays. Weekly comes
-            every Monday around 7:30 AM ET, or Tuesday when Monday is a federal
-            holiday. Both cost the same. To switch, email support@localtradebids.com
-            and we'll change it within 2 business days. Bids added since your last
-            email are marked "New". When there are no new bids you still get the
-            email, with your open bids listed under a "No new bids today" note
-            (daily) or a "No new bids this week" note (weekly).
+            It depends on the delivery you chose. Daily comes around 7:30 AM ET on
+            weekdays (Monday to Friday) when we've found new bids for you, with no
+            email on federal holidays. Weekly comes every Monday around 7:30 AM ET, or
+            Tuesday when Monday is a federal holiday, even when there's nothing new.
+            Both cost the same. To switch, email support@localtradebids.com and we'll
+            change it within 2 business days. Your first email lists matching open
+            bids we found in the past week, or tells you if there weren't any. After
+            that, each email lists only the new bids we've found since your last one,
+            marked "New". On a weekday with no new bids, there's no daily email,
+            except your first email, which always goes out and tells you if we didn't
+            find any matching bids. The weekly email still comes, with a "No new bids
+            this week" note. If you think an email is missing, write to
+            support@localtradebids.com.
           </p>
         </section>
         <section>
           <h2 className="text-lg font-semibold text-ink">What's in the weekly email?</h2>
           <p className="mt-2">
-            Your weekly email lists every bid added since your last one, newest first,
-            followed by the other bids still open. It covers your trades and area, and
+            Your weekly email lists the new bids we've found since your last weekly
+            email, newest first. It covers your trades and area, and
             it's part of your paid plan. It's separate from the free weekly sample,
             which shows up to 10 of the newest open bids statewide.
           </p>

@@ -8,8 +8,8 @@ export const PLAN_CHANGES_TEXT =
   "right away, and Stripe charges the prorated difference for the rest of " +
   "the current month. Downgrades take effect on your next billing date. You " +
   "keep your current plan until then, and no credit or refund is given for " +
-  "the change. To change your trades or counties within your plan, use the " +
-  "preferences link in any digest email. [PLACEHOLDER: preferences form link]";
+  "the change. To change your area or trades within your plan, reply to any " +
+  "digest email or write to support@localtradebids.com.";
 
 export const CANCEL_FALLBACK_TEXT =
   "If you can't use Manage billing, email support@localtradebids.com with " +

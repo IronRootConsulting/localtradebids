@@ -60,17 +60,15 @@ function Page() {
             page. Cancellation takes effect at the end of the month you've paid for,
             and you won't be charged again.
           </p>
+          {/* More rev3.7.1 fill sheet L18 (Block 2 S7). The page can't know the
+              delivery choice, so the "Your ... digest arrives ..." sentence is
+              dropped, as the sheet directs. */}
           <p className="mt-4 text-slate">
-            Next, set your trades and coverage so we can match bids to you.
-            [CONFIRM: preferences form link] Your [Daily/Weekly] digest arrives
-            [every weekday (Monday to Friday) around 7:30 AM ET / every Monday around
-            7:30 AM ET, or Tuesday when Monday is a federal holiday]. To switch, email
-            support@localtradebids.com and we'll change it within 2 business days.
-          </p>
-          <p className="mt-4">
-            <a className="btn-primary" href="[CONFIRM: preferences form link]">
-              Set my preferences
-            </a>
+            To switch, email support@localtradebids.com and we'll change it within 2
+            business days. To change your area or trades within your plan, reply to
+            any digest email or write to support@localtradebids.com. If you paid by
+            bank, your digest and confirmation email start once your payment clears,
+            which usually takes a few business days.
           </p>
           <p className="mt-3">
             {SITE.billingPortalUrl ? (
