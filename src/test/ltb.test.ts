@@ -405,10 +405,12 @@ describe("Fire & Life Safety 8th trade copy v2.1 (Andrew approved 8:09 AM ET Nov
   });
 });
 
-type ExportPage = { page_key: string; open_count: number; shown_count: number; more_count: number; statewide_count?: number; local_count?: number; rows: unknown[] };
-const EXPORT_DIR = process.env.LTB_EXPORT_DIR ?? "/workspace/gov-contracts-alert/output/public/daily";
-const EXPORT = JSON.parse(readFileSync(EXPORT_DIR + "/ltb_public_pages.json", "utf8")) as { as_of: string; exported_rows: number; pages: ExportPage[] };
-const MANIFEST = JSON.parse(readFileSync(EXPORT_DIR + "/manifest.json", "utf8")) as { open: number; statewide: number; page_count: number; per_trade: Record<string, number> };
+type ExportPage = { page_key: string; open_count: number; shown_count: number; more_count: number; statewide_count?: number; local_count?: number; rows?: unknown[]; local_rows?: { opportunity_id: string; url?: string }[]; statewide_rows?: { opportunity_id: string }[] };
+type ExportSnapshot = { as_of: string; exported_rows: number; open: number; statewide: number; page_count: number; per_trade: Record<string, number>; pages: ExportPage[] };
+// In-repo snapshot written next to ltb.ts by capbuild/gen_public_pages.py. Never an absolute box path.
+const SNAPSHOT = JSON.parse(readFileSync(new URL("../data/ltb-export-manifest.json", import.meta.url), "utf8")) as ExportSnapshot;
+const EXPORT = SNAPSHOT;
+const MANIFEST = SNAPSHOT;
 const exp = (key: string) => EXPORT.pages.find((p) => p.page_key === key);
 const expOpen = (key: string) => exp(key)?.open_count ?? 0;
 const expSw = (key: string) => exp(key)?.statewide_count ?? 0;
