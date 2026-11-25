@@ -42,11 +42,14 @@ Cost: $0 (Apps Script and Sheets are included in Google Workspace; no Cloudflare
 - Push/merge to main only on Andrew's go (fast-forward only); Pages deploys as usual.
 
 ## Post-deploy checks (with a TEST hash, then delete nothing: test rows are marked)
-Use tokens for a dummy hash (e.g. sha256 of "ltb-unsub-selftest") signed with K1. The
+Use tokens for a dummy hash (e.g. sha256 of "ltb-unsub-selftest") signed with K1.
+Curl note: use `-d` WITHOUT `-X POST`. With `-X POST -L`, curl re-POSTs to Google's 302 target and
+prints an HTML error page even though the write already succeeded; plain `-d -L` POSTs once and
+follows the 302 with a GET, which returns the JSON (Bede, Nov 25). The
 /unsubscribe/ page is the only unsubscribe path for Dec 7, so these checks cover that path.
-- `curl -s "<exec>?health=1"` → `{"ok":true,"service":"ltb-unsub",...}`
+- `curl -s -L "<exec>?health=1"` (-L: JSON output is served via a 302) → `{"ok":true,"service":"ltb-unsub",...}`
 - `curl -s -L "<exec>?t=<token>"` (GET) → HTML link only; ledger unchanged.
-- PRIMARY: `curl -s -L -X POST -d "t=<token>&src=landing" "<exec>"` →
+- PRIMARY: `curl -s -L -d "t=<token>&src=landing" "<exec>"` →
   `{"ok":true,"status":"unsubscribed","list":"sample"}` and one `landing_post` row; repeat →
   `already_unsubscribed`, still one row.
 - Real browser (Chrome, DevTools Network tab open), after the site push with
@@ -60,8 +63,8 @@ Use tokens for a dummy hash (e.g. sha256 of "ltb-unsub-selftest") signed with K1
   BODY link opens `/unsubscribe/?t=<token>`; Confirm writes one `landing_post` row; a second
   click (or reload + Confirm) shows already-unsubscribed and writes no row.
 - OPTIONAL (one-click handling kept in the code but not used on Dec 7):
-  `curl -s -L -X POST -d "List-Unsubscribe=One-Click" "<exec>?t=<token3>"` → `unsubscribed`;
-  `curl -s -o /dev/null -w "%{http_code}" -X POST -d "List-Unsubscribe=One-Click" "<exec>?t=<token4>"`
+  `curl -s -L -d "List-Unsubscribe=One-Click" "<exec>?t=<token3>"` → `unsubscribed`;
+  `curl -s -o /dev/null -w "%{http_code}" -d "List-Unsubscribe=One-Click" "<exec>?t=<token4>"`
   prints 302 and token4's row exists (write happens before the redirect).
 Who runs these and which rows count as test rows is Bede's call (he excludes them from
 suppression counts, e.g. by the known self-test hash).
