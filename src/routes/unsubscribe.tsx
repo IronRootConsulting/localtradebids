@@ -1,27 +1,36 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { SITE } from "@/config/site";
 import { pageHead } from "@/lib/seo";
 import { PageIntro } from "@/components/site/ui";
+import { UNSUB_COPY, UNSUB_PAID_LINE } from "@/config/unsubscribeCopy";
 import { readUnsubToken, submitUnsubscribe, type UnsubOutcome } from "@/lib/unsubscribe";
 
-// [IGNATIUS] Placeholder copy, minimal and neutral. Ignatius owns the final wording;
-// replace these strings only with his approved text. Nothing else on the page is copy.
-export const UNSUB_COPY = {
-  title: "Unsubscribe",
-  intro: "Confirm to stop the free weekly sample emails.",
-  button: "Unsubscribe",
-  working: "Working…",
-  paidNote:
-    "This doesn't cancel a paid plan. To cancel a paid plan, use Manage billing.",
-  unsubscribed: "You're unsubscribed from the free weekly sample emails.",
-  already: "You're already unsubscribed from the free weekly sample emails.",
-  invalid: "This unsubscribe link isn't valid.",
-  expired: "This unsubscribe link has expired.",
-  error: "We couldn't confirm your request right now.",
-  fallback: "To unsubscribe, email",
-  fallbackSubject: "Unsubscribe",
-} as const;
+// All page copy lives in src/config/unsubscribeCopy.ts (one-file swap for Ignatius's next version).
+export { UNSUB_COPY, UNSUB_PAID_LINE };
+
+const LINK_RE = /(bids@localtradebids\.com|https:\/\/localtradebids\.com\/manage\/)/;
+
+/** Renders a copy string unchanged, turning the email address into a mailto link and the URL into a link. */
+export function CopyText({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(LINK_RE).map((part, i) =>
+        part === "bids@localtradebids.com" ? (
+          <a key={i} className="link" href={`mailto:${part}`}>
+            {part}
+          </a>
+        ) : part === "https://localtradebids.com/manage/" ? (
+          <a key={i} className="link" href={part}>
+            {part}
+          </a>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  );
+}
 
 export const Route = createFileRoute("/unsubscribe")({
   head: () => {
@@ -39,16 +48,60 @@ export const Route = createFileRoute("/unsubscribe")({
 
 type View = "loading" | "confirm" | "working" | "missing" | UnsubOutcome;
 
-function Fallback() {
-  const href = `mailto:${SITE.contactEmail}?subject=${encodeURIComponent(UNSUB_COPY.fallbackSubject)}`;
-  return (
-    <p className="mt-3">
-      {UNSUB_COPY.fallback}{" "}
-      <a className="link" href={href}>
-        {SITE.contactEmail}
-      </a>
-      .
+/**
+ * State -> copy slot:
+ *   loading (prerendered HTML, before JS) : intro + disabled button; <noscript> shows no-token copy
+ *   confirm / working                     : intro + button (disabled while working)
+ *   unsubscribed / already_unsubscribed   : success
+ *   invalid_token / expired / error       : error + button (the copy says "Try the button again")
+ *   not_configured (no endpoint set)      : error, no button (unreachable while unsubscribeEndpoint is set)
+ *   missing (no or malformed token)       : no-token
+ *   every state                           : paid line (UNSUB_PAID_LINE; omitted when "")
+ */
+export function UnsubView({ view, onConfirm }: { view: View; onConfirm?: () => void }) {
+  const button = (disabled: boolean) => (
+    <p className="mt-4">
+      <button type="button" className="btn-primary" onClick={onConfirm} disabled={disabled}>
+        {UNSUB_COPY.button}
+      </button>
     </p>
+  );
+  const retry = view === "invalid_token" || view === "expired" || view === "error";
+  return (
+    <section className="card max-w-2xl p-6 text-slate" data-unsub-view={view}>
+      {(view === "loading" || view === "confirm" || view === "working") && (
+        <>
+          <p data-slot="intro">{UNSUB_COPY.intro}</p>
+          {button(view !== "confirm")}
+          {view === "loading" && (
+            <noscript>
+              <p data-slot="no-token-noscript">
+                <CopyText text={UNSUB_COPY.noToken} />
+              </p>
+            </noscript>
+          )}
+        </>
+      )}
+      {(view === "unsubscribed" || view === "already_unsubscribed") && <p data-slot="success">{UNSUB_COPY.success}</p>}
+      {(retry || view === "not_configured") && (
+        <>
+          <p data-slot="error">
+            <CopyText text={UNSUB_COPY.error} />
+          </p>
+          {retry && button(false)}
+        </>
+      )}
+      {view === "missing" && (
+        <p data-slot="no-token">
+          <CopyText text={UNSUB_COPY.noToken} />
+        </p>
+      )}
+      {UNSUB_PAID_LINE && (
+        <p className="mt-6 text-sm" data-slot="paid">
+          <CopyText text={UNSUB_PAID_LINE} />
+        </p>
+      )}
+    </section>
   );
 }
 
@@ -72,41 +125,7 @@ function Page() {
   return (
     <>
       <PageIntro title={UNSUB_COPY.title} />
-      <section className="card max-w-2xl p-6 text-slate" data-unsub-view={view} data-copy-owner="ignatius">
-        {(view === "confirm" || view === "working") && (
-          <>
-            <p>{UNSUB_COPY.intro}</p>
-            <p className="mt-4">
-              <button type="button" className="btn-primary" onClick={confirm} disabled={view === "working"}>
-                {view === "working" ? UNSUB_COPY.working : UNSUB_COPY.button}
-              </button>
-            </p>
-          </>
-        )}
-        {view === "unsubscribed" && <p>{UNSUB_COPY.unsubscribed}</p>}
-        {view === "already_unsubscribed" && <p>{UNSUB_COPY.already}</p>}
-        {(view === "missing" || view === "invalid_token") && (
-          <>
-            <p>{UNSUB_COPY.invalid}</p>
-            <Fallback />
-          </>
-        )}
-        {view === "expired" && (
-          <>
-            <p>{UNSUB_COPY.expired}</p>
-            <Fallback />
-          </>
-        )}
-        {(view === "error" || view === "not_configured") && (
-          <>
-            {view === "error" && <p>{UNSUB_COPY.error}</p>}
-            <Fallback />
-          </>
-        )}
-        <p className="mt-6 text-sm">
-          {UNSUB_COPY.paidNote} <Link to="/manage" className="link">Manage billing</Link>
-        </p>
-      </section>
+      <UnsubView view={view} onConfirm={confirm} />
     </>
   );
 }
