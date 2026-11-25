@@ -1,73 +1,73 @@
 {
-  "as_of": "2026-11-23",
-  "exported_rows": 1017,
-  "open": 737,
-  "statewide": 20,
+  "as_of": "2026-11-25",
+  "exported_rows": 953,
+  "open": 736,
+  "statewide": 19,
   "local": 717,
-  "page_count": 487,
+  "page_count": 486,
   "per_trade": {
     "roofing": 20,
     "electrical": 91,
-    "plumbing-hvac": 26,
-    "sitework-heavy-civil": 327,
-    "commercial-general-contracting": 179,
-    "painting": 6,
+    "plumbing-hvac": 25,
+    "sitework-heavy-civil": 326,
+    "commercial-general-contracting": 181,
+    "painting": 5,
     "landscaping": 79,
     "fire-life-safety": 9
   },
   "pages": [
     {
       "page_key": "home",
-      "open_count": 737,
+      "open_count": 736,
       "shown_count": 3,
-      "more_count": 734,
-      "statewide_count": 20,
+      "more_count": 733,
+      "statewide_count": 19,
       "local_count": 717,
       "local_rows": [
         {
+          "opportunity_id": "0b2db9741861e280",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8359"
+        },
+        {
+          "opportunity_id": "915af89a13cb79c2",
+          "url": "https://www.polkfl.gov/bid-form/bid-27-025/"
+        },
+        {
           "opportunity_id": "1cd41d23fd91d186",
           "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solicitationNumber=20260219%20%28MCC%207360%29"
-        },
-        {
-          "opportunity_id": "d8dd9c52c8853aba",
-          "url": "https://c.lakecountyfl.gov/offices/procurement_services/bid_details.aspx?bid_number=27-408"
-        },
-        {
-          "opportunity_id": "940a8b86dae70b8c",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17469"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "alachua",
-      "open_count": 24,
+      "open_count": 23,
       "shown_count": 3,
-      "more_count": 21,
-      "statewide_count": 20,
+      "more_count": 20,
+      "statewide_count": 19,
       "local_count": 4,
       "local_rows": [
         {
-          "opportunity_id": "2f78a6726933b898",
-          "url": "https://www.cityofalachua.com/bids.aspx?bidID=9"
+          "opportunity_id": "89a4ff5cee6e94f8",
+          "url": "https://www.cityofalachua.com/bids.aspx?bidID=10"
         },
         {
           "opportunity_id": "2dceb560285ab605",
           "url": "https://ftp.fdot.gov/public/file/xxuzaet_c0oylyeaw8xenq/T2A63BSN.pdf"
         },
         {
-          "opportunity_id": "89a4ff5cee6e94f8",
-          "url": "https://www.cityofalachua.com/bids.aspx?bidID=10"
+          "opportunity_id": "2f78a6726933b898",
+          "url": "https://www.cityofalachua.com/bids.aspx?bidID=9"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "baker",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -87,10 +87,10 @@
     },
     {
       "page_key": "bay",
-      "open_count": 35,
+      "open_count": 34,
       "shown_count": 3,
-      "more_count": 32,
-      "statewide_count": 20,
+      "more_count": 31,
+      "statewide_count": 19,
       "local_count": 15,
       "local_rows": [
         {
@@ -110,10 +110,10 @@
     },
     {
       "page_key": "bradford",
-      "open_count": 23,
+      "open_count": 22,
       "shown_count": 3,
-      "more_count": 20,
-      "statewide_count": 20,
+      "more_count": 19,
+      "statewide_count": 19,
       "local_count": 3,
       "local_rows": [
         {
@@ -133,10 +133,10 @@
     },
     {
       "page_key": "brevard",
-      "open_count": 25,
+      "open_count": 24,
       "shown_count": 3,
-      "more_count": 22,
-      "statewide_count": 20,
+      "more_count": 21,
+      "statewide_count": 19,
       "local_count": 5,
       "local_rows": [
         {
@@ -156,10 +156,10 @@
     },
     {
       "page_key": "broward",
-      "open_count": 51,
+      "open_count": 50,
       "shown_count": 3,
-      "more_count": 48,
-      "statewide_count": 20,
+      "more_count": 47,
+      "statewide_count": 19,
       "local_count": 31,
       "local_rows": [
         {
@@ -179,10 +179,10 @@
     },
     {
       "page_key": "calhoun",
-      "open_count": 22,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 19,
-      "statewide_count": 20,
+      "more_count": 18,
+      "statewide_count": 19,
       "local_count": 2,
       "local_rows": [
         {
@@ -206,12 +206,12 @@
       "open_count": 32,
       "shown_count": 3,
       "more_count": 29,
-      "statewide_count": 20,
-      "local_count": 12,
+      "statewide_count": 19,
+      "local_count": 13,
       "local_rows": [
         {
-          "opportunity_id": "7d7ecce1ae3795a5",
-          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8354"
+          "opportunity_id": "0b2db9741861e280",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8359"
         },
         {
           "opportunity_id": "16ead96397fe630b",
@@ -226,16 +226,12 @@
     },
     {
       "page_key": "citrus",
-      "open_count": 22,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 19,
-      "statewide_count": 20,
-      "local_count": 2,
+      "more_count": 17,
+      "statewide_count": 19,
+      "local_count": 1,
       "local_rows": [
-        {
-          "opportunity_id": "248dbce1ac60eeb5",
-          "url": "https://www.inverness.gov/bids.aspx?bidID=14"
-        },
         {
           "opportunity_id": "a3393cc947ab9c4f",
           "url": "https://ftp.fdot.gov/public/file/qyaxo8cugeqejtw_ocpn-q/T7576BSN.pdf"
@@ -245,15 +241,19 @@
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+        },
+        {
+          "opportunity_id": "05c25ad092b543c9",
+          "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         }
       ]
     },
     {
       "page_key": "clay",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -273,10 +273,10 @@
     },
     {
       "page_key": "collier",
-      "open_count": 25,
+      "open_count": 24,
       "shown_count": 3,
-      "more_count": 22,
-      "statewide_count": 20,
+      "more_count": 21,
+      "statewide_count": 19,
       "local_count": 5,
       "local_rows": [
         {
@@ -296,11 +296,11 @@
     },
     {
       "page_key": "columbia",
-      "open_count": 58,
+      "open_count": 56,
       "shown_count": 3,
-      "more_count": 55,
-      "statewide_count": 20,
-      "local_count": 38,
+      "more_count": 53,
+      "statewide_count": 19,
+      "local_count": 37,
       "local_rows": [
         {
           "opportunity_id": "228dc444124210fb",
@@ -311,18 +311,18 @@
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d2/lettings/2026/apr15/e21z7-r0.pdf?sfvrsn=c280a242_1"
         },
         {
-          "opportunity_id": "619e9266f3a15ba0",
-          "url": "https://www.columbiacountyfla.com/PurchasingBid.aspx?Id=1767"
+          "opportunity_id": "2186da112840cad2",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d2/lettings/2026/dec16/e22h1-r0.pdf?sfvrsn=7530d97b_1"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "desoto",
-      "open_count": 21,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 18,
-      "statewide_count": 20,
+      "more_count": 17,
+      "statewide_count": 19,
       "local_count": 1,
       "local_rows": [
         {
@@ -343,10 +343,10 @@
     },
     {
       "page_key": "dixie",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -366,10 +366,10 @@
     },
     {
       "page_key": "duval",
-      "open_count": 25,
+      "open_count": 24,
       "shown_count": 3,
-      "more_count": 22,
-      "statewide_count": 20,
+      "more_count": 21,
+      "statewide_count": 19,
       "local_count": 5,
       "local_rows": [
         {
@@ -389,10 +389,10 @@
     },
     {
       "page_key": "escambia",
-      "open_count": 28,
+      "open_count": 27,
       "shown_count": 3,
-      "more_count": 25,
-      "statewide_count": 20,
+      "more_count": 24,
+      "statewide_count": 19,
       "local_count": 8,
       "local_rows": [
         {
@@ -412,10 +412,10 @@
     },
     {
       "page_key": "flagler",
-      "open_count": 24,
+      "open_count": 23,
       "shown_count": 3,
-      "more_count": 21,
-      "statewide_count": 20,
+      "more_count": 20,
+      "statewide_count": 19,
       "local_count": 4,
       "local_rows": [
         {
@@ -435,10 +435,10 @@
     },
     {
       "page_key": "franklin",
-      "open_count": 24,
+      "open_count": 23,
       "shown_count": 3,
-      "more_count": 21,
-      "statewide_count": 20,
+      "more_count": 20,
+      "statewide_count": 19,
       "local_count": 4,
       "local_rows": [
         {
@@ -458,10 +458,10 @@
     },
     {
       "page_key": "gadsden",
-      "open_count": 21,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 18,
-      "statewide_count": 20,
+      "more_count": 17,
+      "statewide_count": 19,
       "local_count": 1,
       "local_rows": [
         {
@@ -482,10 +482,10 @@
     },
     {
       "page_key": "gilchrist",
-      "open_count": 21,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 18,
-      "statewide_count": 20,
+      "more_count": 17,
+      "statewide_count": 19,
       "local_count": 1,
       "local_rows": [
         {
@@ -506,10 +506,10 @@
     },
     {
       "page_key": "glades",
-      "open_count": 23,
+      "open_count": 22,
       "shown_count": 3,
-      "more_count": 20,
-      "statewide_count": 20,
+      "more_count": 19,
+      "statewide_count": 19,
       "local_count": 3,
       "local_rows": [
         {
@@ -529,10 +529,10 @@
     },
     {
       "page_key": "gulf",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -552,10 +552,10 @@
     },
     {
       "page_key": "hamilton",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -575,10 +575,10 @@
     },
     {
       "page_key": "hardee",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -598,10 +598,10 @@
     },
     {
       "page_key": "hendry",
-      "open_count": 27,
+      "open_count": 26,
       "shown_count": 3,
-      "more_count": 24,
-      "statewide_count": 20,
+      "more_count": 23,
+      "statewide_count": 19,
       "local_count": 7,
       "local_rows": [
         {
@@ -621,10 +621,10 @@
     },
     {
       "page_key": "hernando",
-      "open_count": 22,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 19,
-      "statewide_count": 20,
+      "more_count": 18,
+      "statewide_count": 19,
       "local_count": 2,
       "local_rows": [
         {
@@ -645,10 +645,10 @@
     },
     {
       "page_key": "highlands",
-      "open_count": 22,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 19,
-      "statewide_count": 20,
+      "more_count": 18,
+      "statewide_count": 19,
       "local_count": 2,
       "local_rows": [
         {
@@ -669,10 +669,10 @@
     },
     {
       "page_key": "hillsborough",
-      "open_count": 57,
+      "open_count": 56,
       "shown_count": 3,
-      "more_count": 54,
-      "statewide_count": 20,
+      "more_count": 53,
+      "statewide_count": 19,
       "local_count": 37,
       "local_rows": [
         {
@@ -692,10 +692,10 @@
     },
     {
       "page_key": "holmes",
-      "open_count": 21,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 18,
-      "statewide_count": 20,
+      "more_count": 17,
+      "statewide_count": 19,
       "local_count": 1,
       "local_rows": [
         {
@@ -716,10 +716,10 @@
     },
     {
       "page_key": "indian-river",
-      "open_count": 25,
+      "open_count": 24,
       "shown_count": 3,
-      "more_count": 22,
-      "statewide_count": 20,
+      "more_count": 21,
+      "statewide_count": 19,
       "local_count": 5,
       "local_rows": [
         {
@@ -739,10 +739,10 @@
     },
     {
       "page_key": "jackson",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -762,10 +762,10 @@
     },
     {
       "page_key": "jefferson",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -785,10 +785,10 @@
     },
     {
       "page_key": "lafayette",
-      "open_count": 21,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 18,
-      "statewide_count": 20,
+      "more_count": 17,
+      "statewide_count": 19,
       "local_count": 1,
       "local_rows": [
         {
@@ -809,10 +809,10 @@
     },
     {
       "page_key": "lake",
-      "open_count": 59,
+      "open_count": 58,
       "shown_count": 3,
-      "more_count": 56,
-      "statewide_count": 20,
+      "more_count": 55,
+      "statewide_count": 19,
       "local_count": 39,
       "local_rows": [
         {
@@ -832,10 +832,10 @@
     },
     {
       "page_key": "lee",
-      "open_count": 23,
+      "open_count": 22,
       "shown_count": 3,
-      "more_count": 20,
-      "statewide_count": 20,
+      "more_count": 19,
+      "statewide_count": 19,
       "local_count": 3,
       "local_rows": [
         {
@@ -855,10 +855,10 @@
     },
     {
       "page_key": "leon",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -878,10 +878,10 @@
     },
     {
       "page_key": "levy",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -901,10 +901,10 @@
     },
     {
       "page_key": "liberty",
-      "open_count": 29,
+      "open_count": 28,
       "shown_count": 3,
-      "more_count": 26,
-      "statewide_count": 20,
+      "more_count": 25,
+      "statewide_count": 19,
       "local_count": 9,
       "local_rows": [
         {
@@ -924,10 +924,10 @@
     },
     {
       "page_key": "madison",
-      "open_count": 21,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 18,
-      "statewide_count": 20,
+      "more_count": 17,
+      "statewide_count": 19,
       "local_count": 1,
       "local_rows": [
         {
@@ -948,10 +948,10 @@
     },
     {
       "page_key": "manatee",
-      "open_count": 22,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 19,
-      "statewide_count": 20,
+      "more_count": 18,
+      "statewide_count": 19,
       "local_count": 2,
       "local_rows": [
         {
@@ -972,10 +972,10 @@
     },
     {
       "page_key": "marion",
-      "open_count": 23,
+      "open_count": 22,
       "shown_count": 3,
-      "more_count": 20,
-      "statewide_count": 20,
+      "more_count": 19,
+      "statewide_count": 19,
       "local_count": 3,
       "local_rows": [
         {
@@ -995,10 +995,10 @@
     },
     {
       "page_key": "martin",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -1018,10 +1018,10 @@
     },
     {
       "page_key": "miami-dade",
-      "open_count": 116,
+      "open_count": 115,
       "shown_count": 3,
-      "more_count": 113,
-      "statewide_count": 20,
+      "more_count": 112,
+      "statewide_count": 19,
       "local_count": 96,
       "local_rows": [
         {
@@ -1041,16 +1041,12 @@
     },
     {
       "page_key": "monroe",
-      "open_count": 27,
+      "open_count": 25,
       "shown_count": 3,
-      "more_count": 24,
-      "statewide_count": 20,
-      "local_count": 7,
+      "more_count": 22,
+      "statewide_count": 19,
+      "local_count": 6,
       "local_rows": [
-        {
-          "opportunity_id": "972de1f39562d7b3",
-          "url": "https://www.fkaa.com/bids.aspx?bidID=343"
-        },
         {
           "opportunity_id": "5a3bf674ea5f054f",
           "url": "https://www.keysenergy.com/bid-information"
@@ -1058,17 +1054,21 @@
         {
           "opportunity_id": "96d7f9c90b318dc1",
           "url": "https://www.keysmosquito.org/bid-opportunities"
+        },
+        {
+          "opportunity_id": "64bb49bc748ccf49",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d6/design-build/e6l90/schedule-of-events.pdf?sfvrsn=7bf7f772_2"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "nassau",
-      "open_count": 24,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 21,
-      "statewide_count": 20,
-      "local_count": 4,
+      "more_count": 18,
+      "statewide_count": 19,
+      "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "fe4befbb0f6af5a0",
@@ -1077,20 +1077,21 @@
         {
           "opportunity_id": "e0dcb978ebee161d",
           "url": "https://www.fbfl.us/bids.aspx?bidID=393"
-        },
-        {
-          "opportunity_id": "096a66de0fbf6b43",
-          "url": "https://www.fbfl.us/bids.aspx?bidID=395"
         }
       ],
-      "statewide_rows": []
+      "statewide_rows": [
+        {
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+        }
+      ]
     },
     {
       "page_key": "okaloosa",
-      "open_count": 23,
+      "open_count": 22,
       "shown_count": 3,
-      "more_count": 20,
-      "statewide_count": 20,
+      "more_count": 19,
+      "statewide_count": 19,
       "local_count": 3,
       "local_rows": [
         {
@@ -1110,10 +1111,10 @@
     },
     {
       "page_key": "okeechobee",
-      "open_count": 52,
+      "open_count": 51,
       "shown_count": 3,
-      "more_count": 49,
-      "statewide_count": 20,
+      "more_count": 48,
+      "statewide_count": 19,
       "local_count": 32,
       "local_rows": [
         {
@@ -1133,10 +1134,10 @@
     },
     {
       "page_key": "orange",
-      "open_count": 53,
+      "open_count": 52,
       "shown_count": 3,
-      "more_count": 50,
-      "statewide_count": 20,
+      "more_count": 49,
+      "statewide_count": 19,
       "local_count": 33,
       "local_rows": [
         {
@@ -1156,10 +1157,10 @@
     },
     {
       "page_key": "osceola",
-      "open_count": 22,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 19,
-      "statewide_count": 20,
+      "more_count": 18,
+      "statewide_count": 19,
       "local_count": 2,
       "local_rows": [
         {
@@ -1180,10 +1181,10 @@
     },
     {
       "page_key": "palm-beach",
-      "open_count": 63,
+      "open_count": 62,
       "shown_count": 3,
-      "more_count": 60,
-      "statewide_count": 20,
+      "more_count": 59,
+      "statewide_count": 19,
       "local_count": 43,
       "local_rows": [
         {
@@ -1195,7 +1196,7 @@
           "url": "https://www.hypoluxo.org/administration/page/request-proposals"
         },
         {
-          "opportunity_id": "f14df3b440c96d57",
+          "opportunity_id": "c8be0bff5d510cfe",
           "url": "https://www.wpb.org/Departments/Procurement/Solicitations"
         }
       ],
@@ -1203,10 +1204,10 @@
     },
     {
       "page_key": "pasco",
-      "open_count": 40,
+      "open_count": 39,
       "shown_count": 3,
-      "more_count": 37,
-      "statewide_count": 20,
+      "more_count": 36,
+      "statewide_count": 19,
       "local_count": 20,
       "local_rows": [
         {
@@ -1226,10 +1227,10 @@
     },
     {
       "page_key": "pinellas",
-      "open_count": 31,
+      "open_count": 30,
       "shown_count": 3,
-      "more_count": 28,
-      "statewide_count": 20,
+      "more_count": 27,
+      "statewide_count": 19,
       "local_count": 11,
       "local_rows": [
         {
@@ -1249,42 +1250,42 @@
     },
     {
       "page_key": "polk",
-      "open_count": 98,
+      "open_count": 97,
       "shown_count": 3,
-      "more_count": 95,
-      "statewide_count": 20,
+      "more_count": 94,
+      "statewide_count": 19,
       "local_count": 78,
       "local_rows": [
         {
-          "opportunity_id": "33ba7990d3d29bc9",
-          "url": "https://www.polkfl.gov/bid-form/inwood-avenue-e-nw-drainage-improvements/"
+          "opportunity_id": "915af89a13cb79c2",
+          "url": "https://www.polkfl.gov/bid-form/bid-27-025/"
         },
         {
           "opportunity_id": "809c19634f48ed7c",
           "url": "https://www.cityofbartow.net/bids.aspx?bidID=27"
         },
         {
-          "opportunity_id": "c38f70e62a82ad4a",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17108"
+          "opportunity_id": "374bcce58a8f47a9",
+          "url": "https://www.lakelandhousing.org/procurement/read/118fedb0-0ea4-405f-908e-b158982f02e9/"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "putnam",
-      "open_count": 31,
+      "open_count": 32,
       "shown_count": 3,
-      "more_count": 28,
-      "statewide_count": 20,
-      "local_count": 11,
+      "more_count": 29,
+      "statewide_count": 19,
+      "local_count": 13,
       "local_rows": [
+        {
+          "opportunity_id": "3fd2b650ab555a1c",
+          "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
+        },
         {
           "opportunity_id": "1c80778adb64bcea",
           "url": "https://crescentcity-fl.com/wp-content/uploads/2026/11/01-Bid-Advertisement-Invitation-Revised-09-Nov-26.pdf"
-        },
-        {
-          "opportunity_id": "1525b550c7ebb9c8",
-          "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
         },
         {
           "opportunity_id": "a5addb61b5b6eb46",
@@ -1295,11 +1296,11 @@
     },
     {
       "page_key": "st-johns",
-      "open_count": 23,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 20,
-      "statewide_count": 20,
-      "local_count": 3,
+      "more_count": 18,
+      "statewide_count": 19,
+      "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "931ace294c99a628",
@@ -1308,20 +1309,21 @@
         {
           "opportunity_id": "a7f293ac64231caa",
           "url": "https://www.staugbch.com/bids.aspx?bidID=2"
-        },
-        {
-          "opportunity_id": "41c20c1e0318c61f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17437"
         }
       ],
-      "statewide_rows": []
+      "statewide_rows": [
+        {
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+        }
+      ]
     },
     {
       "page_key": "st-lucie",
-      "open_count": 44,
+      "open_count": 43,
       "shown_count": 3,
-      "more_count": 41,
-      "statewide_count": 20,
+      "more_count": 40,
+      "statewide_count": 19,
       "local_count": 24,
       "local_rows": [
         {
@@ -1341,10 +1343,10 @@
     },
     {
       "page_key": "santa-rosa",
-      "open_count": 24,
+      "open_count": 23,
       "shown_count": 3,
-      "more_count": 21,
-      "statewide_count": 20,
+      "more_count": 20,
+      "statewide_count": 19,
       "local_count": 4,
       "local_rows": [
         {
@@ -1364,10 +1366,10 @@
     },
     {
       "page_key": "sarasota",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -1387,10 +1389,10 @@
     },
     {
       "page_key": "seminole",
-      "open_count": 26,
+      "open_count": 25,
       "shown_count": 3,
-      "more_count": 23,
-      "statewide_count": 20,
+      "more_count": 22,
+      "statewide_count": 19,
       "local_count": 6,
       "local_rows": [
         {
@@ -1410,10 +1412,10 @@
     },
     {
       "page_key": "sumter",
-      "open_count": 21,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 18,
-      "statewide_count": 20,
+      "more_count": 17,
+      "statewide_count": 19,
       "local_count": 1,
       "local_rows": [
         {
@@ -1434,10 +1436,10 @@
     },
     {
       "page_key": "suwannee",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -1457,10 +1459,10 @@
     },
     {
       "page_key": "taylor",
-      "open_count": 25,
+      "open_count": 24,
       "shown_count": 3,
-      "more_count": 22,
-      "statewide_count": 20,
+      "more_count": 21,
+      "statewide_count": 19,
       "local_count": 5,
       "local_rows": [
         {
@@ -1480,10 +1482,10 @@
     },
     {
       "page_key": "union",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 20,
+      "more_count": 16,
+      "statewide_count": 19,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -1503,10 +1505,10 @@
     },
     {
       "page_key": "volusia",
-      "open_count": 52,
+      "open_count": 51,
       "shown_count": 3,
-      "more_count": 49,
-      "statewide_count": 20,
+      "more_count": 48,
+      "statewide_count": 19,
       "local_count": 32,
       "local_rows": [
         {
@@ -1526,10 +1528,10 @@
     },
     {
       "page_key": "wakulla",
-      "open_count": 24,
+      "open_count": 23,
       "shown_count": 3,
-      "more_count": 21,
-      "statewide_count": 20,
+      "more_count": 20,
+      "statewide_count": 19,
       "local_count": 4,
       "local_rows": [
         {
@@ -1549,10 +1551,10 @@
     },
     {
       "page_key": "walton",
-      "open_count": 23,
+      "open_count": 22,
       "shown_count": 3,
-      "more_count": 20,
-      "statewide_count": 20,
+      "more_count": 19,
+      "statewide_count": 19,
       "local_count": 3,
       "local_rows": [
         {
@@ -1572,23 +1574,23 @@
     },
     {
       "page_key": "washington",
-      "open_count": 64,
+      "open_count": 66,
       "shown_count": 3,
-      "more_count": 61,
-      "statewide_count": 20,
-      "local_count": 44,
+      "more_count": 63,
+      "statewide_count": 19,
+      "local_count": 47,
       "local_rows": [
         {
-          "opportunity_id": "75fb8fcbf370c86d",
-          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec10/e3z70.pdf?sfvrsn=8eabcf60_1"
+          "opportunity_id": "44c428a562760b48",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec16/e304a.pdf?sfvrsn=44244558_1"
         },
         {
-          "opportunity_id": "9649ff0a4a027e93",
-          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec10/e309a-r0.pdf?sfvrsn=ad1e8820_1"
+          "opportunity_id": "8e81bc96fc9d8afe",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec16/e303a.pdf?sfvrsn=be919d12_1"
         },
         {
-          "opportunity_id": "02b7c8c4d9641507",
-          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/oct8/e3z86-r0cb495759-80fc-4b40-8407-4995281e2cb4.pdf?sfvrsn=17b1db6d_1"
+          "opportunity_id": "e2d8bad8144cc2a4",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec16/e307a.pdf?sfvrsn=c3e9a212_1"
         }
       ],
       "statewide_rows": []
@@ -1633,27 +1635,27 @@
           "url": "https://www.cityofpensacola.com/bids.aspx?bidID=654"
         },
         {
-          "opportunity_id": "2f78a6726933b898",
-          "url": "https://www.cityofalachua.com/bids.aspx?bidID=9"
+          "opportunity_id": "ca4c19a95e18d4ac",
+          "url": "https://www.stpetebeach.org/bids.aspx?bidID=129"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "plumbing-hvac",
-      "open_count": 26,
+      "open_count": 25,
       "shown_count": 3,
-      "more_count": 23,
-      "statewide_count": 6,
+      "more_count": 22,
+      "statewide_count": 5,
       "local_count": 20,
       "local_rows": [
         {
-          "opportunity_id": "b4bc99d40e02bf96",
-          "url": "https://www.winterspringsfl.org/bids.aspx?bidID=7"
+          "opportunity_id": "0b2db9741861e280",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8359"
         },
         {
-          "opportunity_id": "c38f70e62a82ad4a",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17108"
+          "opportunity_id": "b4bc99d40e02bf96",
+          "url": "https://www.winterspringsfl.org/bids.aspx?bidID=7"
         },
         {
           "opportunity_id": "a1ac6228be233d92",
@@ -1664,11 +1666,11 @@
     },
     {
       "page_key": "sitework-heavy-civil",
-      "open_count": 327,
+      "open_count": 326,
       "shown_count": 3,
-      "more_count": 324,
+      "more_count": 323,
       "statewide_count": 5,
-      "local_count": 322,
+      "local_count": 321,
       "local_rows": [
         {
           "opportunity_id": "1cd41d23fd91d186",
@@ -1687,12 +1689,16 @@
     },
     {
       "page_key": "commercial-general-contracting",
-      "open_count": 179,
+      "open_count": 181,
       "shown_count": 3,
-      "more_count": 176,
+      "more_count": 178,
       "statewide_count": 4,
-      "local_count": 175,
+      "local_count": 177,
       "local_rows": [
+        {
+          "opportunity_id": "13205c3d62f8f9ea",
+          "url": "https://www.polkfl.gov/bid-form/bid-27-052/"
+        },
         {
           "opportunity_id": "16d773518108e98a",
           "url": "https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solicitationNumber=20260223%20%28MCC%207360%29"
@@ -1700,26 +1706,18 @@
         {
           "opportunity_id": "fe4befbb0f6af5a0",
           "url": "https://www.fbfl.us/bids.aspx?bidID=396"
-        },
-        {
-          "opportunity_id": "863935bb38062432",
-          "url": "https://jacksonhealth.org/library/procurement/solicitation-notices.pdf"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "painting",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
       "statewide_count": 0,
-      "local_count": 6,
+      "local_count": 5,
       "local_rows": [
-        {
-          "opportunity_id": "41c20c1e0318c61f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17437"
-        },
         {
           "opportunity_id": "ff1ad7a1dee92980",
           "url": "https://www.polkfl.gov/bid-form/cq-26-442/"
@@ -1740,16 +1738,16 @@
       "local_count": 76,
       "local_rows": [
         {
+          "opportunity_id": "915af89a13cb79c2",
+          "url": "https://www.polkfl.gov/bid-form/bid-27-025/"
+        },
+        {
           "opportunity_id": "d8dd9c52c8853aba",
           "url": "https://c.lakecountyfl.gov/offices/procurement_services/bid_details.aspx?bid_number=27-408"
         },
         {
           "opportunity_id": "5b417c52b36d2bc5",
           "url": "https://www.hypoluxo.org/administration/page/request-proposals"
-        },
-        {
-          "opportunity_id": "248dbce1ac60eeb5",
-          "url": "https://www.inverness.gov/bids.aspx?bidID=14"
         }
       ],
       "statewide_rows": []
@@ -1813,10 +1811,10 @@
     },
     {
       "page_key": "alachua/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -1827,10 +1825,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -1920,10 +1914,10 @@
     },
     {
       "page_key": "baker/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -1934,10 +1928,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -1974,8 +1964,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -2026,10 +2016,10 @@
     },
     {
       "page_key": "bay/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -2040,10 +2030,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -2141,10 +2127,10 @@
     },
     {
       "page_key": "bradford/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -2155,10 +2141,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -2263,10 +2245,10 @@
     },
     {
       "page_key": "brevard/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -2277,10 +2259,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -2321,8 +2299,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -2381,10 +2359,10 @@
     },
     {
       "page_key": "broward/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -2395,10 +2373,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -2495,10 +2469,10 @@
     },
     {
       "page_key": "calhoun/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -2509,10 +2483,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -2554,8 +2524,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -2613,9 +2583,14 @@
       "open_count": 6,
       "shown_count": 3,
       "more_count": 3,
-      "statewide_count": 6,
-      "local_count": 0,
-      "local_rows": [],
+      "statewide_count": 5,
+      "local_count": 1,
+      "local_rows": [
+        {
+          "opportunity_id": "0b2db9741861e280",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8359"
+        }
+      ],
       "statewide_rows": [
         {
           "opportunity_id": "f5ecfa3e2914239f",
@@ -2624,10 +2599,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -2663,16 +2634,16 @@
       "local_count": 3,
       "local_rows": [
         {
-          "opportunity_id": "dcac885530dd97af",
-          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8345"
+          "opportunity_id": "ed34167076e2322a",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8329"
         },
         {
           "opportunity_id": "8493ffdc20d709fb",
           "url": "https://www.wcind.net/rfp/"
         },
         {
-          "opportunity_id": "ed34167076e2322a",
-          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8329"
+          "opportunity_id": "dcac885530dd97af",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8345"
         }
       ],
       "statewide_rows": []
@@ -2724,10 +2695,10 @@
     },
     {
       "page_key": "citrus/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -2738,10 +2709,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -2783,24 +2750,19 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
     {
       "page_key": "citrus/landscaping",
-      "open_count": 4,
-      "shown_count": 2,
+      "open_count": 3,
+      "shown_count": 1,
       "more_count": 2,
       "statewide_count": 3,
-      "local_count": 1,
-      "local_rows": [
-        {
-          "opportunity_id": "248dbce1ac60eeb5",
-          "url": "https://www.inverness.gov/bids.aspx?bidID=14"
-        }
-      ],
+      "local_count": 0,
+      "local_rows": [],
       "statewide_rows": [
         {
           "opportunity_id": "bca243be66f4f7b3",
@@ -2840,10 +2802,10 @@
     },
     {
       "page_key": "clay/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -2854,10 +2816,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -2894,8 +2852,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -2946,10 +2904,10 @@
     },
     {
       "page_key": "collier/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -2960,10 +2918,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -3063,10 +3017,10 @@
     },
     {
       "page_key": "columbia/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3077,20 +3031,16 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
     {
       "page_key": "columbia/sitework-heavy-civil",
-      "open_count": 28,
+      "open_count": 27,
       "shown_count": 3,
-      "more_count": 25,
+      "more_count": 24,
       "statewide_count": 5,
-      "local_count": 23,
+      "local_count": 22,
       "local_rows": [
         {
           "opportunity_id": "228dc444124210fb",
@@ -3101,8 +3051,8 @@
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d2/lettings/2026/apr15/e21z7-r0.pdf?sfvrsn=c280a242_1"
         },
         {
-          "opportunity_id": "619e9266f3a15ba0",
-          "url": "https://www.columbiacountyfla.com/PurchasingBid.aspx?Id=1767"
+          "opportunity_id": "1e36f4ee18e42b4d",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d2/lettings/2026/jan21/e21s8-r01b705735586d4fe2bc1e20f22caa0c12.pdf?sfvrsn=631d18c5_1"
         }
       ],
       "statewide_rows": []
@@ -3186,10 +3136,10 @@
     },
     {
       "page_key": "desoto/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3200,10 +3150,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -3240,8 +3186,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -3292,10 +3238,10 @@
     },
     {
       "page_key": "dixie/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3306,10 +3252,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -3346,8 +3288,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -3398,10 +3340,10 @@
     },
     {
       "page_key": "duval/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3412,10 +3354,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -3510,10 +3448,10 @@
     },
     {
       "page_key": "escambia/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3524,10 +3462,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -3625,10 +3559,10 @@
     },
     {
       "page_key": "flagler/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3639,10 +3573,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -3741,10 +3671,10 @@
     },
     {
       "page_key": "franklin/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3755,10 +3685,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -3857,10 +3783,10 @@
     },
     {
       "page_key": "gadsden/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3871,10 +3797,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -3916,8 +3838,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -3968,10 +3890,10 @@
     },
     {
       "page_key": "gilchrist/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -3982,10 +3904,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4022,8 +3940,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -4074,10 +3992,10 @@
     },
     {
       "page_key": "glades/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4088,10 +4006,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4186,10 +4100,10 @@
     },
     {
       "page_key": "gulf/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4200,10 +4114,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4240,8 +4150,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -4292,10 +4202,10 @@
     },
     {
       "page_key": "hamilton/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4306,10 +4216,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4346,8 +4252,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -4398,10 +4304,10 @@
     },
     {
       "page_key": "hardee/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4412,10 +4318,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4452,8 +4354,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -4504,10 +4406,10 @@
     },
     {
       "page_key": "hendry/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4518,10 +4420,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4618,10 +4516,10 @@
     },
     {
       "page_key": "hernando/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4632,10 +4530,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4730,10 +4624,10 @@
     },
     {
       "page_key": "highlands/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4744,10 +4638,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4789,8 +4679,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -4845,10 +4735,10 @@
     },
     {
       "page_key": "hillsborough/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4859,10 +4749,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -4967,10 +4853,10 @@
     },
     {
       "page_key": "holmes/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -4981,10 +4867,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5021,8 +4903,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -5073,10 +4955,10 @@
     },
     {
       "page_key": "indian-river/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5087,10 +4969,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5188,10 +5066,10 @@
     },
     {
       "page_key": "jackson/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5202,10 +5080,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5242,8 +5116,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -5294,10 +5168,10 @@
     },
     {
       "page_key": "jefferson/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5308,10 +5182,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5348,8 +5218,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -5400,10 +5270,10 @@
     },
     {
       "page_key": "lafayette/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5414,10 +5284,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5459,8 +5325,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -5511,10 +5377,10 @@
     },
     {
       "page_key": "lake/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5525,10 +5391,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5541,8 +5403,8 @@
       "local_count": 21,
       "local_rows": [
         {
-          "opportunity_id": "750809dbe2cbbb62",
-          "url": "https://c.lakecountyfl.gov/offices/procurement_services/bid_details.aspx?bid_number=27-602"
+          "opportunity_id": "84543007de9451ed",
+          "url": "https://c.lakecountyfl.gov/offices/procurement_services/bid_details.aspx?bid_number=26-707"
         },
         {
           "opportunity_id": "78931beed522dae9",
@@ -5633,10 +5495,10 @@
     },
     {
       "page_key": "lee/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5647,10 +5509,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5744,10 +5602,10 @@
     },
     {
       "page_key": "leon/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5758,10 +5616,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5798,8 +5652,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -5850,10 +5704,10 @@
     },
     {
       "page_key": "levy/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5864,10 +5718,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -5904,8 +5754,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -5956,10 +5806,10 @@
     },
     {
       "page_key": "liberty/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -5970,10 +5820,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -6070,10 +5916,10 @@
     },
     {
       "page_key": "madison/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -6084,10 +5930,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -6177,10 +6019,10 @@
     },
     {
       "page_key": "manatee/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -6191,10 +6033,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -6231,8 +6069,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -6288,10 +6126,10 @@
     },
     {
       "page_key": "marion/plumbing-hvac",
-      "open_count": 7,
+      "open_count": 6,
       "shown_count": 3,
-      "more_count": 4,
-      "statewide_count": 6,
+      "more_count": 3,
+      "statewide_count": 5,
       "local_count": 1,
       "local_rows": [
         {
@@ -6400,10 +6238,10 @@
     },
     {
       "page_key": "martin/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -6414,10 +6252,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -6454,8 +6288,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -6514,10 +6348,10 @@
     },
     {
       "page_key": "miami-dade/plumbing-hvac",
-      "open_count": 7,
+      "open_count": 6,
       "shown_count": 3,
-      "more_count": 4,
-      "statewide_count": 6,
+      "more_count": 3,
+      "statewide_count": 5,
       "local_count": 1,
       "local_rows": [
         {
@@ -6641,10 +6475,10 @@
     },
     {
       "page_key": "monroe/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -6655,26 +6489,17 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
     {
       "page_key": "monroe/sitework-heavy-civil",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
       "statewide_count": 5,
-      "local_count": 1,
-      "local_rows": [
-        {
-          "opportunity_id": "972de1f39562d7b3",
-          "url": "https://www.fkaa.com/bids.aspx?bidID=343"
-        }
-      ],
+      "local_count": 0,
+      "local_rows": [],
       "statewide_rows": [
         {
           "opportunity_id": "c1f8cd9f94cd96f0",
@@ -6768,10 +6593,10 @@
     },
     {
       "page_key": "nassau/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -6782,34 +6607,25 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
     {
       "page_key": "nassau/sitework-heavy-civil",
-      "open_count": 7,
-      "shown_count": 3,
-      "more_count": 4,
+      "open_count": 5,
+      "shown_count": 2,
+      "more_count": 3,
       "statewide_count": 5,
-      "local_count": 2,
-      "local_rows": [
-        {
-          "opportunity_id": "096a66de0fbf6b43",
-          "url": "https://www.fbfl.us/bids.aspx?bidID=395"
-        },
-        {
-          "opportunity_id": "21b7ef40dfa6112e",
-          "url": "https://www.fbfl.us/bids.aspx?bidID=394"
-        }
-      ],
+      "local_count": 0,
+      "local_rows": [],
       "statewide_rows": [
         {
           "opportunity_id": "c1f8cd9f94cd96f0",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
+        },
+        {
+          "opportunity_id": "112dfa3fb2304e51",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17102"
         }
       ]
     },
@@ -6884,10 +6700,10 @@
     },
     {
       "page_key": "okaloosa/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -6898,10 +6714,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -6942,8 +6754,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -6994,10 +6806,10 @@
     },
     {
       "page_key": "okeechobee/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -7008,10 +6820,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -7117,10 +6925,10 @@
     },
     {
       "page_key": "orange/plumbing-hvac",
-      "open_count": 7,
+      "open_count": 6,
       "shown_count": 3,
-      "more_count": 4,
-      "statewide_count": 6,
+      "more_count": 3,
+      "statewide_count": 5,
       "local_count": 1,
       "local_rows": [
         {
@@ -7236,10 +7044,10 @@
     },
     {
       "page_key": "osceola/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -7250,10 +7058,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -7290,8 +7094,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -7327,16 +7131,12 @@
     },
     {
       "page_key": "palm-beach/electrical",
-      "open_count": 4,
-      "shown_count": 2,
+      "open_count": 3,
+      "shown_count": 1,
       "more_count": 2,
       "statewide_count": 1,
-      "local_count": 3,
+      "local_count": 2,
       "local_rows": [
-        {
-          "opportunity_id": "d32774c76c7a84da",
-          "url": "https://www.wpb.org/Bids/ITB-26-27-100MB"
-        },
         {
           "opportunity_id": "0940da5f01cd8303",
           "url": "https://www.wpb.org/Departments/Procurement/Solicitations"
@@ -7346,10 +7146,10 @@
     },
     {
       "page_key": "palm-beach/plumbing-hvac",
-      "open_count": 9,
+      "open_count": 8,
       "shown_count": 3,
-      "more_count": 6,
-      "statewide_count": 6,
+      "more_count": 5,
+      "statewide_count": 5,
       "local_count": 3,
       "local_rows": [
         {
@@ -7392,15 +7192,15 @@
     },
     {
       "page_key": "palm-beach/commercial-general-contracting",
-      "open_count": 19,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 16,
+      "more_count": 17,
       "statewide_count": 4,
-      "local_count": 15,
+      "local_count": 16,
       "local_rows": [
         {
-          "opportunity_id": "0c98ddf13b6a4a06",
-          "url": "https://www.wpb.org/Bids/ITB-26.27.106MB"
+          "opportunity_id": "c8be0bff5d510cfe",
+          "url": "https://www.wpb.org/Departments/Procurement/Solicitations"
         },
         {
           "opportunity_id": "5549246627a8655d",
@@ -7494,10 +7294,10 @@
     },
     {
       "page_key": "pasco/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -7508,10 +7308,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -7624,10 +7420,10 @@
     },
     {
       "page_key": "pinellas/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -7638,10 +7434,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -7738,16 +7530,12 @@
     },
     {
       "page_key": "polk/plumbing-hvac",
-      "open_count": 8,
+      "open_count": 6,
       "shown_count": 3,
-      "more_count": 5,
-      "statewide_count": 6,
-      "local_count": 2,
+      "more_count": 3,
+      "statewide_count": 5,
+      "local_count": 1,
       "local_rows": [
-        {
-          "opportunity_id": "c38f70e62a82ad4a",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17108"
-        },
         {
           "opportunity_id": "6971dce0c19c48b0",
           "url": "https://www.polkfl.gov/bid-form/cs-25-303/"
@@ -7757,6 +7545,10 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+        },
+        {
+          "opportunity_id": "a46eb75f25f1bc63",
+          "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
         }
       ]
     },
@@ -7792,8 +7584,8 @@
       "local_count": 24,
       "local_rows": [
         {
-          "opportunity_id": "79ce9c8ba30bd832",
-          "url": "https://www.polkfl.gov/bid-form/bid-26-227/"
+          "opportunity_id": "13205c3d62f8f9ea",
+          "url": "https://www.polkfl.gov/bid-form/bid-27-052/"
         },
         {
           "opportunity_id": "4142415b63c46239",
@@ -7823,12 +7615,16 @@
     },
     {
       "page_key": "polk/landscaping",
-      "open_count": 19,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 16,
+      "more_count": 17,
       "statewide_count": 3,
-      "local_count": 16,
+      "local_count": 17,
       "local_rows": [
+        {
+          "opportunity_id": "915af89a13cb79c2",
+          "url": "https://www.polkfl.gov/bid-form/bid-27-025/"
+        },
         {
           "opportunity_id": "6cad733cc48f3bff",
           "url": "https://cityoffrostproof.com/wp-content/uploads/2025/07/2025-RFP-ad-Mowing-and-Landscaping.pdf"
@@ -7836,10 +7632,6 @@
         {
           "opportunity_id": "02bf2dc3951a13ef",
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d1/lettings/2026/may21/e1y25.pdf?sfvrsn=44238f82_1"
-        },
-        {
-          "opportunity_id": "0ba58398d844ebbd",
-          "url": "https://www.polkfl.gov/bid-form/cs-24-195/"
         }
       ],
       "statewide_rows": []
@@ -7876,10 +7668,10 @@
     },
     {
       "page_key": "putnam/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -7890,23 +7682,19 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
     {
       "page_key": "putnam/sitework-heavy-civil",
-      "open_count": 11,
+      "open_count": 13,
       "shown_count": 3,
-      "more_count": 8,
+      "more_count": 10,
       "statewide_count": 5,
-      "local_count": 6,
+      "local_count": 8,
       "local_rows": [
         {
-          "opportunity_id": "1525b550c7ebb9c8",
+          "opportunity_id": "3fd2b650ab555a1c",
           "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
         },
         {
@@ -7914,7 +7702,7 @@
           "url": "https://crescentcity-fl.com/wp-content/uploads/2025/10/Adv._for_Bids_-_Cherry_Street_Sewer_Exts._-_Crescent_City.pdf"
         },
         {
-          "opportunity_id": "3a199f1c9f9b5d73",
+          "opportunity_id": "58823b730bf00d24",
           "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
         }
       ],
@@ -7990,10 +7778,10 @@
     },
     {
       "page_key": "st-johns/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -8004,10 +7792,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -8049,25 +7833,10 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
-    },
-    {
-      "page_key": "st-johns/painting",
-      "open_count": 1,
-      "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 0,
-      "local_count": 1,
-      "local_rows": [
-        {
-          "opportunity_id": "41c20c1e0318c61f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17437"
-        }
-      ],
-      "statewide_rows": []
     },
     {
       "page_key": "st-johns/landscaping",
@@ -8116,10 +7885,10 @@
     },
     {
       "page_key": "st-lucie/plumbing-hvac",
-      "open_count": 9,
+      "open_count": 8,
       "shown_count": 3,
-      "more_count": 6,
-      "statewide_count": 6,
+      "more_count": 5,
+      "statewide_count": 5,
       "local_count": 3,
       "local_rows": [
         {
@@ -8272,10 +8041,10 @@
     },
     {
       "page_key": "santa-rosa/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -8286,10 +8055,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -8383,10 +8148,10 @@
     },
     {
       "page_key": "sarasota/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -8397,10 +8162,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -8437,8 +8198,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -8489,10 +8250,10 @@
     },
     {
       "page_key": "seminole/plumbing-hvac",
-      "open_count": 8,
+      "open_count": 7,
       "shown_count": 3,
-      "more_count": 5,
-      "statewide_count": 6,
+      "more_count": 4,
+      "statewide_count": 5,
       "local_count": 2,
       "local_rows": [
         {
@@ -8606,10 +8367,10 @@
     },
     {
       "page_key": "sumter/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -8620,10 +8381,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -8713,10 +8470,10 @@
     },
     {
       "page_key": "suwannee/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -8727,10 +8484,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -8767,8 +8520,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -8819,10 +8572,10 @@
     },
     {
       "page_key": "taylor/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -8833,10 +8586,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -8934,10 +8683,10 @@
     },
     {
       "page_key": "union/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -8948,10 +8697,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -8988,8 +8733,8 @@
           "url": "https://sam.gov/opp/df93a7b5166540ac81704134fcc6493c/view"
         },
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "b14e65918e4b57f1",
+          "url": "https://sam.gov/opp/38d2b18e02e54bc090dcaa0fa22989b6/view"
         }
       ]
     },
@@ -9056,10 +8801,10 @@
     },
     {
       "page_key": "volusia/plumbing-hvac",
-      "open_count": 13,
+      "open_count": 12,
       "shown_count": 3,
-      "more_count": 10,
-      "statewide_count": 6,
+      "more_count": 9,
+      "statewide_count": 5,
       "local_count": 7,
       "local_rows": [
         {
@@ -9185,10 +8930,10 @@
     },
     {
       "page_key": "wakulla/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -9199,10 +8944,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -9296,10 +9037,10 @@
     },
     {
       "page_key": "walton/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -9310,10 +9051,6 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
@@ -9388,12 +9125,16 @@
     },
     {
       "page_key": "washington/electrical",
-      "open_count": 6,
+      "open_count": 7,
       "shown_count": 3,
-      "more_count": 3,
+      "more_count": 4,
       "statewide_count": 1,
-      "local_count": 5,
+      "local_count": 6,
       "local_rows": [
+        {
+          "opportunity_id": "8e81bc96fc9d8afe",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec16/e303a.pdf?sfvrsn=be919d12_1"
+        },
         {
           "opportunity_id": "9649ff0a4a027e93",
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec10/e309a-r0.pdf?sfvrsn=ad1e8820_1"
@@ -9401,20 +9142,16 @@
         {
           "opportunity_id": "0f2b55626db30967",
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/nov13/z3045-r0.pdf?sfvrsn=5341ebab_1"
-        },
-        {
-          "opportunity_id": "376eb5af23af4d1c",
-          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/nov13/e3z71.pdf?sfvrsn=1ea0eb0c_1"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "washington/plumbing-hvac",
-      "open_count": 6,
-      "shown_count": 3,
+      "open_count": 5,
+      "shown_count": 2,
       "more_count": 3,
-      "statewide_count": 6,
+      "statewide_count": 5,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
@@ -9425,21 +9162,21 @@
         {
           "opportunity_id": "a46eb75f25f1bc63",
           "url": "https://sam.gov/opp/003ae35990da41e89edfb102f6b9cda0/view"
-        },
-        {
-          "opportunity_id": "331c6eae828ee575",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16616"
         }
       ]
     },
     {
       "page_key": "washington/sitework-heavy-civil",
-      "open_count": 26,
+      "open_count": 27,
       "shown_count": 3,
-      "more_count": 23,
+      "more_count": 24,
       "statewide_count": 5,
-      "local_count": 21,
+      "local_count": 22,
       "local_rows": [
+        {
+          "opportunity_id": "e2d8bad8144cc2a4",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec16/e307a.pdf?sfvrsn=c3e9a212_1"
+        },
         {
           "opportunity_id": "02b7c8c4d9641507",
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/oct8/e3z86-r0cb495759-80fc-4b40-8407-4995281e2cb4.pdf?sfvrsn=17b1db6d_1"
@@ -9447,22 +9184,22 @@
         {
           "opportunity_id": "03aca9c240ccbae7",
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/sep10/e3z75-r0.pdf?sfvrsn=42b175d4_2"
-        },
-        {
-          "opportunity_id": "226886cdcd37b7d3",
-          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/mar12/e3y50.pdf?sfvrsn=4ed01b70_1"
         }
       ],
       "statewide_rows": []
     },
     {
       "page_key": "washington/commercial-general-contracting",
-      "open_count": 11,
+      "open_count": 12,
       "shown_count": 3,
-      "more_count": 8,
+      "more_count": 9,
       "statewide_count": 4,
-      "local_count": 7,
+      "local_count": 8,
       "local_rows": [
+        {
+          "opportunity_id": "44c428a562760b48",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec16/e304a.pdf?sfvrsn=44244558_1"
+        },
         {
           "opportunity_id": "75fb8fcbf370c86d",
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/dec10/e3z70.pdf?sfvrsn=8eabcf60_1"
@@ -9470,10 +9207,6 @@
         {
           "opportunity_id": "0abb29ca85736a53",
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/jun11/e3z24.pdf?sfvrsn=bbeaa8dd_1"
-        },
-        {
-          "opportunity_id": "10410e8568c4ca13",
-          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d3/lettings/2026/sep10/e3z76.pdf?sfvrsn=181e282b_1"
         }
       ],
       "statewide_rows": []
