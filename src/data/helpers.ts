@@ -1,6 +1,6 @@
 import {
   FLORIDA_COUNTIES, PUBLIC_PAGES, REGIONS, STATES, TRADES,
-  type Bid, type PublicRow, type Region,
+  type Bid, type PublicPage, type PublicRow, type Region,
 } from "./ltb";
 
 export const getCounty = (slug: string) => FLORIDA_COUNTIES.find((c) => c.slug === slug);
@@ -44,12 +44,20 @@ export type PageSample = {
   shownCount: number;
   moreCount: number;
   statewideCount: number;
-  /** Bids inside openCount that are local to the page (localCount + statewideCount = openCount). */
+  /** Bids inside openCount that are local to the page (localCount + statewideCount + unlistedCount = openCount). */
   localCount: number;
   /** Shown sample rows in the "In your area" section (rows before any statewide rows). */
   localRows: Bid[];
   /** Shown sample rows in the "Open statewide" section, labeled Statewide. */
   statewideRows: Bid[];
+  /**
+   * Bids inside openCount with no county listed ("Federal, location not listed" or
+   * "Florida (county not listed)", SAM.gov badge Option A). Only home and statewide
+   * trade pages have them; always 0 on county and county+trade pages.
+   */
+  unlistedCount: number;
+  /** Shown unlisted rows (after local and statewide rows), each keeping its own label. */
+  unlistedRows: Bid[];
 };
 
 export const HOME_PAGE_KEY = "home";
@@ -67,7 +75,7 @@ export function pageTypeOf(pageKey: string): PageType {
 export const hasPublicPage = (pageKey: string) =>
   Object.prototype.hasOwnProperty.call(PUBLIC_PAGES, pageKey);
 
-function rowToBid(r: PublicRow): Bid {
+export function rowToBid(r: PublicRow): Bid {
   const [title, agency, county, trade, due, url, id] = r;
   const iso = /^\d{4}-\d{2}-\d{2}$/.test(due) ? due : "";
   const c = FLORIDA_COUNTIES.find((x) => x.name === county);
@@ -84,25 +92,41 @@ function rowToBid(r: PublicRow): Bid {
   };
 }
 
+const EMPTY_SAMPLE: PageSample = {
+  rows: [], openCount: 0, shownCount: 0, moreCount: 0, statewideCount: 0,
+  localCount: 0, localRows: [], statewideRows: [], unlistedCount: 0, unlistedRows: [],
+};
+
+/**
+ * One export page tuple to a PageSample. Older exports have 7 elements (no unlisted
+ * section); the unlisted-county export adds statewide_shown and unlisted_count.
+ * Rows are local, then statewide, then unlisted, in Bede's order.
+ */
+export function pageSampleFromTuple(page: PublicPage): PageSample {
+  const [openCount, shownCount, moreCount, raw] = page;
+  const statewideCount = page[4] ?? 0;
+  const localShown = page[6] ?? raw.length;
+  const statewideShown = page[7] ?? raw.length - localShown;
+  const unlistedCount = page[8] ?? 0;
+  const localCount = page[5] ?? openCount - statewideCount - unlistedCount;
+  const rows = raw.map(rowToBid);
+  return {
+    rows, openCount, shownCount, moreCount, statewideCount, localCount,
+    localRows: rows.slice(0, localShown),
+    statewideRows: rows.slice(localShown, localShown + statewideShown),
+    unlistedCount,
+    unlistedRows: rows.slice(localShown + statewideShown),
+  };
+}
+
 /**
  * Lookup into Bede's export. Rows keep Bede's order. A page missing from the export
  * has 0 open bids.
  */
 export function getPageSample(pageKey: string): PageSample {
   const page = hasPublicPage(pageKey) ? PUBLIC_PAGES[pageKey] : undefined;
-  if (!page) {
-    return {
-      rows: [], openCount: 0, shownCount: 0, moreCount: 0, statewideCount: 0,
-      localCount: 0, localRows: [], statewideRows: [],
-    };
-  }
-  const [openCount, shownCount, moreCount, raw, statewideCount = 0, localCount = openCount - statewideCount, localShown = raw.length] = page;
-  const rows = raw.map(rowToBid);
-  return {
-    rows, openCount, shownCount, moreCount, statewideCount, localCount,
-    localRows: rows.slice(0, localShown),
-    statewideRows: rows.slice(localShown),
-  };
+  if (!page) return { ...EMPTY_SAMPLE, rows: [], localRows: [], statewideRows: [], unlistedRows: [] };
+  return pageSampleFromTuple(page);
 }
 
 export const countiesWithBids = () =>

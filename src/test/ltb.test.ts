@@ -1,3 +1,4 @@
+import { isUnlistedLabel } from "@/data/locationLabels";
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import {
@@ -438,6 +439,9 @@ describe("public pages render Bede's export as-is (checked against the export JS
       if (t === "county" || t === "county_trade") {
         const firstSw = s.rows.findIndex((r) => r.county === "Statewide");
         if (firstSw >= 0) expect(s.rows.slice(firstSw).every((r) => r.county === "Statewide")).toBe(true);
+        // SAM.gov badge Option A: no unlisted bids on county or county+trade pages.
+        expect(s.unlistedCount).toBe(0);
+        expect(s.unlistedRows).toEqual([]);
       }
     }
   });
@@ -445,10 +449,11 @@ describe("public pages render Bede's export as-is (checked against the export JS
   it("sections: local rows then statewide rows, counts add up, Statewide label only in the statewide section", () => {
     for (const k of keys) {
       const s = getPageSample(k);
-      expect(s.localCount + s.statewideCount).toBe(s.openCount);
-      expect([...s.localRows, ...s.statewideRows]).toEqual(s.rows);
+      expect(s.localCount + s.statewideCount + s.unlistedCount).toBe(s.openCount);
+      expect([...s.localRows, ...s.statewideRows, ...s.unlistedRows]).toEqual(s.rows);
       expect(s.statewideRows.every((r) => r.county === "Statewide")).toBe(true);
-      expect(s.localRows.every((r) => r.county !== "Statewide")).toBe(true);
+      expect(s.localRows.every((r) => r.county !== "Statewide" && !isUnlistedLabel(r.county))).toBe(true);
+      expect(s.unlistedRows.every((r) => isUnlistedLabel(r.county))).toBe(true);
     }
   });
 
@@ -531,6 +536,8 @@ describe("public pages render Bede's export as-is (checked against the export JS
       localCount: 0,
       localRows: [],
       statewideRows: [],
+      unlistedCount: 0,
+      unlistedRows: [],
     });
     expect(getPageSample(countyTradePageKey("brevard", "painting")).openCount).toBe(0);
   });

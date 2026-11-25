@@ -412,10 +412,15 @@
   .bid-table th { background: var(--muted); font-size: 0.8rem; color: var(--ink); }
   /* "Statewide" label on county and county+trade pages (Andrew 2:01 AM ET Nov 18). */
   .bid-statewide { display: inline-block; margin-left: 0.5rem; padding: 0.05rem 0.45rem; border: 1px solid var(--line); border-radius: 999px; background: var(--muted); color: var(--ink); font-size: 0.75rem; font-weight: 600; line-height: 1.4; white-space: nowrap; vertical-align: 0.1em; }
+  /* Unlisted-location badge: same pill as Statewide, but allowed to wrap on narrow cards. */
+  .bid-statewide.bid-unlisted { white-space: normal; max-width: 100%; }
   /* Table view: keep short cells (county/trade, due date, headers) on one
      line so they never break mid-word; agency and title take the wrap. */
   @media (min-width: 700px) {
     .bid-table th, .bid-table td.bid-field { white-space: nowrap; overflow-wrap: normal; }
+    /* "Federal, location not listed" / "Florida (county not listed)" (SAM.gov badge
+       Option A) are long for a County cell: let them wrap at spaces, never mid-word. */
+    .bid-table td.bid-field.bid-unlisted-cell { white-space: normal; min-width: 9rem; }
   }
   /* Phones: each bid row becomes a stacked card (agency + title on top,
      labeled County/Trade and Due date rows, full-width notice link).

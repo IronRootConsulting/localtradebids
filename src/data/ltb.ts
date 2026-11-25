@@ -473,12 +473,13 @@ export const REGIONS: Region[] = [
 // 486 pages, 953 rows. Rule: shown = min(3, max(1, floor(open/2))); pages with open_count=0 are omitted; county-local bids first, then Statewide
 // Regenerate: python3 /workspace/vincent/ltb-site/capbuild/gen_public_pages.py
 // Page key: county slug, trade slug, or county/trade. Missing key = 0 open bids.
-// Page: [open_count, shown_count, more_count, rows, statewide_count, local_count, local_shown]. Rows in Bede's order, never re-sorted.
-// rows = local_rows then statewide_rows; the first local_shown rows are section 'local', the rest 'statewide'.
+// Page: [open_count, shown_count, more_count, rows, statewide_count, local_count, local_shown(, statewide_shown, unlisted_count)]. Rows in Bede's order, never re-sorted.
+// rows = local_rows, then statewide_rows, then unlisted_rows; the last two elements are present only when the page has unlisted bids.
 // statewide_count: Statewide-only bids inside open_count (county pages include them; label them Statewide).
+// unlisted_count: bids with no county listed ('Federal, location not listed' / 'Florida (county not listed)'); home and statewide trade pages only.
 // Row: [title, agency, county, trade, due (YYYY-MM-DD, blank, or verbatim), url, opportunity_id]
 export type PublicRow = [string, string, string, string, string, string, string];
-export type PublicPage = [number, number, number, PublicRow[], number, number, number];
+export type PublicPage = [number, number, number, PublicRow[], number, number, number, number?, number?];
 export const PUBLIC_PAGES_AS_OF = "2026-11-25";
 export const PUBLIC_PAGES: Record<string, PublicPage> = {
   "home": [736,3,733,[["Ackerman Vacuum Sewer Zone 4 - Plumbing Contract 2","Charlotte County","Charlotte","plumbing-hvac","2027-01-06","https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8359","0b2db9741861e280"],["Bid 27-025 Mowing & Maintenance for Various Natural Resources Sites","Polk County","Polk","landscaping","2026-12-16","https://www.polkfl.gov/bid-form/bid-27-025/","915af89a13cb79c2"],["7360: Sidewalk Improvements-Multiple Sites - 1","Miami-Dade County","Miami-Dade","sitework-heavy-civil","2026-12-30","https://www.miamidade.gov/apps/isd/StratProc/Home/SolicitationDetails?solicitationNumber=20260219%20%28MCC%207360%29","1cd41d23fd91d186"]],19,717,3],

@@ -3,6 +3,7 @@ import { useState, type FormEvent, type ReactNode } from "react";
 import { SITE, sampleFilters, submitConsentLog } from "@/config/site";
 import { formatDue } from "@/data/helpers";
 import { FLORIDA_COUNTIES, TRADES, type Bid } from "@/data/ltb";
+import { isUnlistedLabel, locationBadge } from "@/data/locationLabels";
 
 export const SAMPLE_CONDITIONS =
   "No card needed, and it never turns into a paid plan. " +
@@ -217,11 +218,20 @@ export function BidTable({
                 <td className="bid-agency">{b.agency}</td>
                 <td className="bid-title">
                   {b.title}
-                  {cols !== "home" && b.county === "Statewide" ? (
-                    <span className="bid-statewide">Statewide</span>
+                  {cols !== "home" && locationBadge(b.county) ? (
+                    <span className={isUnlistedLabel(b.county) ? "bid-statewide bid-unlisted" : "bid-statewide"}>
+                      {locationBadge(b.county)}
+                    </span>
                   ) : null}
                 </td>
-                {cols === "home" ? <td className="bid-field" data-label="County">{b.county}</td> : null}
+                {cols === "home" ? (
+                  <td
+                    className={isUnlistedLabel(b.county) ? "bid-field bid-unlisted-cell" : "bid-field"}
+                    data-label="County"
+                  >
+                    {b.county}
+                  </td>
+                ) : null}
                 {cols === "county" ? <td className="bid-field" data-label="Trade">{trade?.name ?? b.trade}</td> : null}
                 <td className="bid-field" data-label="Due date">{b.dueDateISO ? formatDue(b.dueDateISO) : b.dueDate || "Not listed"}</td>
                 <td className="bid-notice">
