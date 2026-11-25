@@ -65,12 +65,12 @@ function loadGs(opts: { keys?: Record<string, string> } = {}) {
   vm.runInContext(GS, ctx);
   const deps = {
     now: () => new Date(NOW * 1000),
-    keys: ctx.loadKeys_ as () => unknown,
+    keys: ctx["loadKeys_"] as () => unknown,
     sheet: () => sheet,
     lock: () => ({ tryLock: () => true, releaseLock: () => {} }),
   };
   const post = (parameter: Record<string, string>) =>
-    (ctx.handlePost_ as (e: unknown, d: unknown) => { ok: boolean; status: string })({ parameter }, deps);
+    (ctx["handlePost_"] as (e: unknown, d: unknown) => { ok: boolean; status: string })({ parameter }, deps);
   return {
     ctx,
     post,
@@ -89,7 +89,7 @@ describe("unsubscribe endpoint (Apps Script Code.gs, local vm)", () => {
     const t = tok();
     expect(g.post({ t, "List-Unsubscribe": "One-Click" })).toMatchObject({ ok: true, status: "unsubscribed" });
     expect(g.rows).toHaveLength(1);
-    const r = g.rows[0];
+    const r = g.rows[0]!;
     expect(r[2]).toBe("sample");
     expect(r[3]).toBe(H);
     expect(r[4]).toBe("one_click_post");
@@ -108,7 +108,7 @@ describe("unsubscribe endpoint (Apps Script Code.gs, local vm)", () => {
   it("landing-page POST is recorded as landing_post", () => {
     const g = loadGs();
     g.post({ t: tok(), src: "landing" });
-    expect(g.rows[0][4]).toBe("landing_post");
+    expect(g.rows[0]![4]).toBe("landing_post");
   });
 
   it("rejects bad signatures, wrong key ids, tampered claims and unknown lists", () => {
@@ -149,10 +149,10 @@ describe("unsubscribe endpoint (Apps Script Code.gs, local vm)", () => {
   it("GET never unsubscribes: it only links to the confirm page", () => {
     const g = loadGs();
     const t = tok();
-    const out = (g.ctx.doGet as (e: unknown) => { body: string })({ parameter: { t } });
+    const out = (g.ctx["doGet"] as (e: unknown) => { body: string })({ parameter: { t } });
     expect(out.body).toContain(`https://localtradebids.com/unsubscribe/?t=${t}`);
     expect(g.rows).toHaveLength(0);
-    const evil = (g.ctx.doGet as (e: unknown) => { body: string })({ parameter: { t: '"><script>x</script>' } });
+    const evil = (g.ctx["doGet"] as (e: unknown) => { body: string })({ parameter: { t: '"><script>x</script>' } });
     expect(evil.body).not.toContain("<script>");
   });
 
