@@ -24,9 +24,10 @@ export const SITE = {
   cloudflareBeaconExcludedPaths: ["/signup", "/thank-you", "/unsubscribe"],
   // Sample-list unsubscribe endpoint: the Google Apps Script web app /exec URL that
   // Bede deploys (contract: /workspace/vincent/ltb-unsub-contract.md). Not a secret.
-  // [PLACEHOLDER: Apps Script /exec URL, set at deploy] Empty = /unsubscribe/ shows
-  // the email-us fallback instead of the confirm button.
-  unsubscribeEndpoint: "",
+  // Deployed by Andrew 9:20 AM ET Nov 25, 2026 (via Bernard). Empty = /unsubscribe/
+  // shows the email-us fallback instead of the confirm button.
+  unsubscribeEndpoint:
+    "https://script.google.com/macros/s/AKfycbyCvrhGDv-y1aLV7TfRwK302LoZe9QqmGDp7tYRbP5UL_DR-_6nH8jqRRL1zyRhRJNzfw/exec",
   // go-live branch (held; flips only on Andrew's own go). checkoutLive=true:
   // plan buttons still go to the on-site preferences step (/signup/), which
   // posts picks to LIVE_PICKS_FORM (src/lib/submitPicks.ts) and then sends the

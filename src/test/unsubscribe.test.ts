@@ -188,8 +188,8 @@ describe("/unsubscribe/ static page helpers", () => {
     expect(await submitUnsubscribe(t, "https://x.invalid/exec", odd as unknown as typeof fetch)).toBe("error");
   });
 
-  it("does not call anything until the endpoint is configured (placeholder, no fake URL)", async () => {
-    expect(SITE.unsubscribeEndpoint).toBe("");
+  it("uses Andrew's deployed Apps Script /exec URL, and calls nothing when no endpoint is set", async () => {
+    expect(SITE.unsubscribeEndpoint).toMatch(/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/);
     const f = vi.fn();
     expect(await submitUnsubscribe(tok(), "", f as unknown as typeof fetch)).toBe("not_configured");
     expect(f).not.toHaveBeenCalled();
