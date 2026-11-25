@@ -19,8 +19,14 @@ export const SITE = {
   // Cloudflare Web Analytics (cookieless JS beacon; Andrew's token, sent by Bernard
   // 6:52 PM ET Nov 17, 2026; public site token, not a secret). Empty = no beacon.
   cloudflareBeaconToken: "e7f6d1677ea94e93b250059483f5bdc6",
-  // Pages that never load the beacon (signup step and post-checkout page).
-  cloudflareBeaconExcludedPaths: ["/signup", "/thank-you"],
+  // Pages that never load the beacon (signup step, post-checkout page, and the
+  // unsubscribe page, whose URL carries the unsubscribe token).
+  cloudflareBeaconExcludedPaths: ["/signup", "/thank-you", "/unsubscribe"],
+  // Sample-list unsubscribe endpoint: the Google Apps Script web app /exec URL that
+  // Bede deploys (contract: /workspace/vincent/ltb-unsub-contract.md). Not a secret.
+  // [PLACEHOLDER: Apps Script /exec URL, set at deploy] Empty = /unsubscribe/ shows
+  // the email-us fallback instead of the confirm button.
+  unsubscribeEndpoint: "",
   // go-live branch (held; flips only on Andrew's own go). checkoutLive=true:
   // plan buttons still go to the on-site preferences step (/signup/), which
   // posts picks to LIVE_PICKS_FORM (src/lib/submitPicks.ts) and then sends the

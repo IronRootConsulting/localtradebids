@@ -20,7 +20,7 @@ export default defineConfig({
     prerender: { enabled: true, crawlLinks: false, autoSubfolderIndex: true },
     pages: [
       { path: "/" }, { path: "/coming-soon" }, { path: "/contact" }, { path: "/faq" }, { path: "/florida" }, { path: "/how-it-works" }, { path: "/pricing" }, { path: "/privacy" },
-      { path: "/signup" }, { path: "/terms" }, { path: "/thank-you" }, { path: "/manage" }, { path: "/florida/alachua" }, { path: "/florida/baker" }, { path: "/florida/bay" },
+      { path: "/signup" }, { path: "/terms" }, { path: "/thank-you" }, { path: "/manage" }, { path: "/unsubscribe" }, { path: "/florida/alachua" }, { path: "/florida/baker" }, { path: "/florida/bay" },
       { path: "/florida/bradford" }, { path: "/florida/brevard" }, { path: "/florida/broward" }, { path: "/florida/calhoun" }, { path: "/florida/charlotte" }, { path: "/florida/citrus" },
       { path: "/florida/clay" }, { path: "/florida/collier" }, { path: "/florida/columbia" }, { path: "/florida/desoto" }, { path: "/florida/dixie" }, { path: "/florida/duval" },
       { path: "/florida/escambia" }, { path: "/florida/flagler" }, { path: "/florida/franklin" }, { path: "/florida/gadsden" }, { path: "/florida/gilchrist" }, { path: "/florida/glades" },

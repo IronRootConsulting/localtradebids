@@ -20,6 +20,7 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
 import { Route as FloridaIndexRouteImport } from './routes/florida.index'
 import { Route as FloridaCountyIndexRouteImport } from './routes/florida.$county.index'
 import { Route as FloridaCountyTradeRouteImport } from './routes/florida.$county.$trade'
@@ -80,6 +81,11 @@ const ThankYouRoute = ThankYouRouteImport.update({
   path: '/thank-you',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UnsubscribeRoute = UnsubscribeRouteImport.update({
+  id: '/unsubscribe',
+  path: '/unsubscribe',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FloridaIndexRoute = FloridaIndexRouteImport.update({
   id: '/florida/',
   path: '/florida/',
@@ -113,6 +119,7 @@ export interface FileRoutesByFullPath {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/florida/': typeof FloridaIndexRoute
   '/florida/$county/$trade': typeof FloridaCountyTradeRoute
   '/florida/trade/$trade': typeof FloridaTradeTradeRoute
@@ -130,6 +137,7 @@ export interface FileRoutesByTo {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/florida': typeof FloridaIndexRoute
   '/florida/$county/$trade': typeof FloridaCountyTradeRoute
   '/florida/trade/$trade': typeof FloridaTradeTradeRoute
@@ -148,6 +156,7 @@ export interface FileRoutesById {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/thank-you': typeof ThankYouRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/florida/': typeof FloridaIndexRoute
   '/florida/$county/$trade': typeof FloridaCountyTradeRoute
   '/florida/trade/$trade': typeof FloridaTradeTradeRoute
@@ -167,6 +176,7 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/thank-you'
+    | '/unsubscribe'
     | '/florida/'
     | '/florida/$county/$trade'
     | '/florida/trade/$trade'
@@ -184,6 +194,7 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/thank-you'
+    | '/unsubscribe'
     | '/florida'
     | '/florida/$county/$trade'
     | '/florida/trade/$trade'
@@ -201,6 +212,7 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/thank-you'
+    | '/unsubscribe'
     | '/florida/'
     | '/florida/$county/$trade'
     | '/florida/trade/$trade'
@@ -219,6 +231,7 @@ export interface RootRouteChildren {
   SignupRoute: typeof SignupRoute
   TermsRoute: typeof TermsRoute
   ThankYouRoute: typeof ThankYouRoute
+  UnsubscribeRoute: typeof UnsubscribeRoute
   FloridaIndexRoute: typeof FloridaIndexRoute
   FloridaCountyTradeRoute: typeof FloridaCountyTradeRoute
   FloridaTradeTradeRoute: typeof FloridaTradeTradeRoute
@@ -304,6 +317,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ThankYouRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/unsubscribe': {
+      id: '/unsubscribe'
+      path: '/unsubscribe'
+      fullPath: '/unsubscribe'
+      preLoaderRoute: typeof UnsubscribeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/florida/': {
       id: '/florida/'
       path: '/florida'
@@ -347,6 +367,7 @@ const rootRouteChildren: RootRouteChildren = {
   SignupRoute: SignupRoute,
   TermsRoute: TermsRoute,
   ThankYouRoute: ThankYouRoute,
+  UnsubscribeRoute: UnsubscribeRoute,
   FloridaIndexRoute: FloridaIndexRoute,
   FloridaCountyTradeRoute: FloridaCountyTradeRoute,
   FloridaTradeTradeRoute: FloridaTradeTradeRoute,
