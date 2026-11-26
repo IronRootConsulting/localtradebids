@@ -1,18 +1,18 @@
 {
-  "as_of": "2026-11-25",
-  "exported_rows": 824,
+  "as_of": "2026-11-26",
+  "exported_rows": 834,
   "open": 736,
-  "statewide": 14,
-  "local": 717,
+  "statewide": 15,
+  "local": 716,
   "unlisted": 5,
-  "page_count": 486,
+  "page_count": 485,
   "per_trade": {
-    "roofing": 20,
+    "roofing": 19,
     "electrical": 91,
     "plumbing-hvac": 25,
-    "sitework-heavy-civil": 326,
-    "commercial-general-contracting": 181,
-    "painting": 5,
+    "sitework-heavy-civil": 325,
+    "commercial-general-contracting": 184,
+    "painting": 4,
     "landscaping": 79,
     "fire-life-safety": 9
   },
@@ -22,8 +22,8 @@
       "open_count": 736,
       "shown_count": 3,
       "more_count": 733,
-      "statewide_count": 14,
-      "local_count": 717,
+      "statewide_count": 15,
+      "local_count": 716,
       "local_rows": [
         {
           "opportunity_id": "0b2db9741861e280",
@@ -44,23 +44,23 @@
     },
     {
       "page_key": "alachua",
-      "open_count": 18,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 15,
-      "statewide_count": 14,
+      "more_count": 16,
+      "statewide_count": 15,
       "local_count": 4,
       "local_rows": [
         {
-          "opportunity_id": "89a4ff5cee6e94f8",
-          "url": "https://www.cityofalachua.com/bids.aspx?bidID=10"
+          "opportunity_id": "2f78a6726933b898",
+          "url": "https://www.cityofalachua.com/bids.aspx?bidID=9"
         },
         {
           "opportunity_id": "2dceb560285ab605",
           "url": "https://ftp.fdot.gov/public/file/xxuzaet_c0oylyeaw8xenq/T2A63BSN.pdf"
         },
         {
-          "opportunity_id": "2f78a6726933b898",
-          "url": "https://www.cityofalachua.com/bids.aspx?bidID=9"
+          "opportunity_id": "89a4ff5cee6e94f8",
+          "url": "https://www.cityofalachua.com/bids.aspx?bidID=10"
         }
       ],
       "statewide_rows": [],
@@ -69,13 +69,17 @@
     },
     {
       "page_key": "baker",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -83,10 +87,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -94,10 +94,10 @@
     },
     {
       "page_key": "bay",
-      "open_count": 29,
+      "open_count": 30,
       "shown_count": 3,
-      "more_count": 26,
-      "statewide_count": 14,
+      "more_count": 27,
+      "statewide_count": 15,
       "local_count": 15,
       "local_rows": [
         {
@@ -119,10 +119,10 @@
     },
     {
       "page_key": "bradford",
-      "open_count": 17,
+      "open_count": 18,
       "shown_count": 3,
-      "more_count": 14,
-      "statewide_count": 14,
+      "more_count": 15,
+      "statewide_count": 15,
       "local_count": 3,
       "local_rows": [
         {
@@ -144,10 +144,10 @@
     },
     {
       "page_key": "brevard",
-      "open_count": 19,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 16,
-      "statewide_count": 14,
+      "more_count": 17,
+      "statewide_count": 15,
       "local_count": 5,
       "local_rows": [
         {
@@ -169,10 +169,10 @@
     },
     {
       "page_key": "broward",
-      "open_count": 45,
+      "open_count": 46,
       "shown_count": 3,
-      "more_count": 42,
-      "statewide_count": 14,
+      "more_count": 43,
+      "statewide_count": 15,
       "local_count": 31,
       "local_rows": [
         {
@@ -194,10 +194,10 @@
     },
     {
       "page_key": "calhoun",
-      "open_count": 16,
+      "open_count": 17,
       "shown_count": 3,
-      "more_count": 13,
-      "statewide_count": 14,
+      "more_count": 14,
+      "statewide_count": 15,
       "local_count": 2,
       "local_rows": [
         {
@@ -211,8 +211,8 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -223,8 +223,8 @@
       "open_count": 27,
       "shown_count": 3,
       "more_count": 24,
-      "statewide_count": 14,
-      "local_count": 13,
+      "statewide_count": 15,
+      "local_count": 12,
       "local_rows": [
         {
           "opportunity_id": "0b2db9741861e280",
@@ -245,10 +245,10 @@
     },
     {
       "page_key": "citrus",
-      "open_count": 15,
+      "open_count": 16,
       "shown_count": 3,
-      "more_count": 12,
-      "statewide_count": 14,
+      "more_count": 13,
+      "statewide_count": 15,
       "local_count": 1,
       "local_rows": [
         {
@@ -258,12 +258,12 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         },
         {
-          "opportunity_id": "f5ecfa3e2914239f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
         }
       ],
       "unlisted_count": 0,
@@ -271,13 +271,17 @@
     },
     {
       "page_key": "clay",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -285,10 +289,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -296,10 +296,10 @@
     },
     {
       "page_key": "collier",
-      "open_count": 19,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 16,
-      "statewide_count": 14,
+      "more_count": 17,
+      "statewide_count": 15,
       "local_count": 5,
       "local_rows": [
         {
@@ -321,10 +321,10 @@
     },
     {
       "page_key": "columbia",
-      "open_count": 51,
+      "open_count": 52,
       "shown_count": 3,
-      "more_count": 48,
-      "statewide_count": 14,
+      "more_count": 49,
+      "statewide_count": 15,
       "local_count": 37,
       "local_rows": [
         {
@@ -346,10 +346,10 @@
     },
     {
       "page_key": "desoto",
-      "open_count": 15,
+      "open_count": 16,
       "shown_count": 3,
-      "more_count": 12,
-      "statewide_count": 14,
+      "more_count": 13,
+      "statewide_count": 15,
       "local_count": 1,
       "local_rows": [
         {
@@ -359,12 +359,12 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         },
         {
-          "opportunity_id": "f5ecfa3e2914239f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
         }
       ],
       "unlisted_count": 0,
@@ -372,13 +372,17 @@
     },
     {
       "page_key": "dixie",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -386,10 +390,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -397,10 +397,10 @@
     },
     {
       "page_key": "duval",
-      "open_count": 19,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 16,
-      "statewide_count": 14,
+      "more_count": 17,
+      "statewide_count": 15,
       "local_count": 5,
       "local_rows": [
         {
@@ -422,10 +422,10 @@
     },
     {
       "page_key": "escambia",
-      "open_count": 22,
+      "open_count": 23,
       "shown_count": 3,
-      "more_count": 19,
-      "statewide_count": 14,
+      "more_count": 20,
+      "statewide_count": 15,
       "local_count": 8,
       "local_rows": [
         {
@@ -447,10 +447,10 @@
     },
     {
       "page_key": "flagler",
-      "open_count": 18,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 15,
-      "statewide_count": 14,
+      "more_count": 16,
+      "statewide_count": 15,
       "local_count": 4,
       "local_rows": [
         {
@@ -472,10 +472,10 @@
     },
     {
       "page_key": "franklin",
-      "open_count": 18,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 15,
-      "statewide_count": 14,
+      "more_count": 16,
+      "statewide_count": 15,
       "local_count": 4,
       "local_rows": [
         {
@@ -497,10 +497,10 @@
     },
     {
       "page_key": "gadsden",
-      "open_count": 15,
+      "open_count": 16,
       "shown_count": 3,
-      "more_count": 12,
-      "statewide_count": 14,
+      "more_count": 13,
+      "statewide_count": 15,
       "local_count": 1,
       "local_rows": [
         {
@@ -510,12 +510,12 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         },
         {
-          "opportunity_id": "f5ecfa3e2914239f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
         }
       ],
       "unlisted_count": 0,
@@ -523,10 +523,10 @@
     },
     {
       "page_key": "gilchrist",
-      "open_count": 15,
+      "open_count": 16,
       "shown_count": 3,
-      "more_count": 12,
-      "statewide_count": 14,
+      "more_count": 13,
+      "statewide_count": 15,
       "local_count": 1,
       "local_rows": [
         {
@@ -536,12 +536,12 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         },
         {
-          "opportunity_id": "f5ecfa3e2914239f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
         }
       ],
       "unlisted_count": 0,
@@ -549,10 +549,10 @@
     },
     {
       "page_key": "glades",
-      "open_count": 17,
+      "open_count": 18,
       "shown_count": 3,
-      "more_count": 14,
-      "statewide_count": 14,
+      "more_count": 15,
+      "statewide_count": 15,
       "local_count": 3,
       "local_rows": [
         {
@@ -574,13 +574,17 @@
     },
     {
       "page_key": "gulf",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -588,10 +592,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -599,13 +599,17 @@
     },
     {
       "page_key": "hamilton",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -613,10 +617,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -624,13 +624,17 @@
     },
     {
       "page_key": "hardee",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -638,10 +642,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -649,10 +649,10 @@
     },
     {
       "page_key": "hendry",
-      "open_count": 21,
+      "open_count": 22,
       "shown_count": 3,
-      "more_count": 18,
-      "statewide_count": 14,
+      "more_count": 19,
+      "statewide_count": 15,
       "local_count": 7,
       "local_rows": [
         {
@@ -674,10 +674,10 @@
     },
     {
       "page_key": "hernando",
-      "open_count": 16,
+      "open_count": 17,
       "shown_count": 3,
-      "more_count": 13,
-      "statewide_count": 14,
+      "more_count": 14,
+      "statewide_count": 15,
       "local_count": 2,
       "local_rows": [
         {
@@ -691,8 +691,8 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -700,10 +700,10 @@
     },
     {
       "page_key": "highlands",
-      "open_count": 16,
+      "open_count": 17,
       "shown_count": 3,
-      "more_count": 13,
-      "statewide_count": 14,
+      "more_count": 14,
+      "statewide_count": 15,
       "local_count": 2,
       "local_rows": [
         {
@@ -717,8 +717,8 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -726,10 +726,10 @@
     },
     {
       "page_key": "hillsborough",
-      "open_count": 51,
+      "open_count": 52,
       "shown_count": 3,
-      "more_count": 48,
-      "statewide_count": 14,
+      "more_count": 49,
+      "statewide_count": 15,
       "local_count": 37,
       "local_rows": [
         {
@@ -751,10 +751,10 @@
     },
     {
       "page_key": "holmes",
-      "open_count": 15,
+      "open_count": 16,
       "shown_count": 3,
-      "more_count": 12,
-      "statewide_count": 14,
+      "more_count": 13,
+      "statewide_count": 15,
       "local_count": 1,
       "local_rows": [
         {
@@ -764,12 +764,12 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         },
         {
-          "opportunity_id": "f5ecfa3e2914239f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
         }
       ],
       "unlisted_count": 0,
@@ -777,10 +777,10 @@
     },
     {
       "page_key": "indian-river",
-      "open_count": 19,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 16,
-      "statewide_count": 14,
+      "more_count": 17,
+      "statewide_count": 15,
       "local_count": 5,
       "local_rows": [
         {
@@ -802,13 +802,17 @@
     },
     {
       "page_key": "jackson",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -816,10 +820,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -827,13 +827,17 @@
     },
     {
       "page_key": "jefferson",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -841,10 +845,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -852,10 +852,10 @@
     },
     {
       "page_key": "lafayette",
-      "open_count": 15,
+      "open_count": 16,
       "shown_count": 3,
-      "more_count": 12,
-      "statewide_count": 14,
+      "more_count": 13,
+      "statewide_count": 15,
       "local_count": 1,
       "local_rows": [
         {
@@ -865,12 +865,12 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         },
         {
-          "opportunity_id": "f5ecfa3e2914239f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
         }
       ],
       "unlisted_count": 0,
@@ -878,10 +878,10 @@
     },
     {
       "page_key": "lake",
-      "open_count": 53,
+      "open_count": 54,
       "shown_count": 3,
-      "more_count": 50,
-      "statewide_count": 14,
+      "more_count": 51,
+      "statewide_count": 15,
       "local_count": 39,
       "local_rows": [
         {
@@ -903,10 +903,10 @@
     },
     {
       "page_key": "lee",
-      "open_count": 17,
+      "open_count": 18,
       "shown_count": 3,
-      "more_count": 14,
-      "statewide_count": 14,
+      "more_count": 15,
+      "statewide_count": 15,
       "local_count": 3,
       "local_rows": [
         {
@@ -928,13 +928,17 @@
     },
     {
       "page_key": "leon",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -942,10 +946,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -953,13 +953,17 @@
     },
     {
       "page_key": "levy",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -967,10 +971,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -978,10 +978,10 @@
     },
     {
       "page_key": "liberty",
-      "open_count": 23,
+      "open_count": 24,
       "shown_count": 3,
-      "more_count": 20,
-      "statewide_count": 14,
+      "more_count": 21,
+      "statewide_count": 15,
       "local_count": 9,
       "local_rows": [
         {
@@ -1003,10 +1003,10 @@
     },
     {
       "page_key": "madison",
-      "open_count": 15,
+      "open_count": 16,
       "shown_count": 3,
-      "more_count": 12,
-      "statewide_count": 14,
+      "more_count": 13,
+      "statewide_count": 15,
       "local_count": 1,
       "local_rows": [
         {
@@ -1016,12 +1016,12 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         },
         {
-          "opportunity_id": "f5ecfa3e2914239f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
         }
       ],
       "unlisted_count": 0,
@@ -1029,10 +1029,10 @@
     },
     {
       "page_key": "manatee",
-      "open_count": 16,
+      "open_count": 17,
       "shown_count": 3,
-      "more_count": 13,
-      "statewide_count": 14,
+      "more_count": 14,
+      "statewide_count": 15,
       "local_count": 2,
       "local_rows": [
         {
@@ -1046,8 +1046,8 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -1055,10 +1055,10 @@
     },
     {
       "page_key": "marion",
-      "open_count": 17,
+      "open_count": 18,
       "shown_count": 3,
-      "more_count": 14,
-      "statewide_count": 14,
+      "more_count": 15,
+      "statewide_count": 15,
       "local_count": 3,
       "local_rows": [
         {
@@ -1080,13 +1080,17 @@
     },
     {
       "page_key": "martin",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -1094,10 +1098,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -1105,11 +1105,11 @@
     },
     {
       "page_key": "miami-dade",
-      "open_count": 110,
+      "open_count": 112,
       "shown_count": 3,
-      "more_count": 107,
-      "statewide_count": 14,
-      "local_count": 96,
+      "more_count": 109,
+      "statewide_count": 15,
+      "local_count": 97,
       "local_rows": [
         {
           "opportunity_id": "1cd41d23fd91d186",
@@ -1130,10 +1130,10 @@
     },
     {
       "page_key": "monroe",
-      "open_count": 20,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 14,
+      "more_count": 18,
+      "statewide_count": 15,
       "local_count": 6,
       "local_rows": [
         {
@@ -1155,10 +1155,10 @@
     },
     {
       "page_key": "nassau",
-      "open_count": 16,
+      "open_count": 17,
       "shown_count": 3,
-      "more_count": 13,
-      "statewide_count": 14,
+      "more_count": 14,
+      "statewide_count": 15,
       "local_count": 2,
       "local_rows": [
         {
@@ -1172,8 +1172,8 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -1181,10 +1181,10 @@
     },
     {
       "page_key": "okaloosa",
-      "open_count": 17,
+      "open_count": 18,
       "shown_count": 3,
-      "more_count": 14,
-      "statewide_count": 14,
+      "more_count": 15,
+      "statewide_count": 15,
       "local_count": 3,
       "local_rows": [
         {
@@ -1206,10 +1206,10 @@
     },
     {
       "page_key": "okeechobee",
-      "open_count": 46,
+      "open_count": 47,
       "shown_count": 3,
-      "more_count": 43,
-      "statewide_count": 14,
+      "more_count": 44,
+      "statewide_count": 15,
       "local_count": 32,
       "local_rows": [
         {
@@ -1231,10 +1231,10 @@
     },
     {
       "page_key": "orange",
-      "open_count": 47,
+      "open_count": 48,
       "shown_count": 3,
-      "more_count": 44,
-      "statewide_count": 14,
+      "more_count": 45,
+      "statewide_count": 15,
       "local_count": 33,
       "local_rows": [
         {
@@ -1256,10 +1256,10 @@
     },
     {
       "page_key": "osceola",
-      "open_count": 16,
+      "open_count": 17,
       "shown_count": 3,
-      "more_count": 13,
-      "statewide_count": 14,
+      "more_count": 14,
+      "statewide_count": 15,
       "local_count": 2,
       "local_rows": [
         {
@@ -1273,8 +1273,8 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -1282,10 +1282,10 @@
     },
     {
       "page_key": "palm-beach",
-      "open_count": 57,
+      "open_count": 58,
       "shown_count": 3,
-      "more_count": 54,
-      "statewide_count": 14,
+      "more_count": 55,
+      "statewide_count": 15,
       "local_count": 43,
       "local_rows": [
         {
@@ -1307,10 +1307,10 @@
     },
     {
       "page_key": "pasco",
-      "open_count": 34,
+      "open_count": 35,
       "shown_count": 3,
-      "more_count": 31,
-      "statewide_count": 14,
+      "more_count": 32,
+      "statewide_count": 15,
       "local_count": 20,
       "local_rows": [
         {
@@ -1332,10 +1332,10 @@
     },
     {
       "page_key": "pinellas",
-      "open_count": 25,
+      "open_count": 26,
       "shown_count": 3,
-      "more_count": 22,
-      "statewide_count": 14,
+      "more_count": 23,
+      "statewide_count": 15,
       "local_count": 11,
       "local_rows": [
         {
@@ -1357,11 +1357,11 @@
     },
     {
       "page_key": "polk",
-      "open_count": 92,
+      "open_count": 91,
       "shown_count": 3,
-      "more_count": 89,
-      "statewide_count": 14,
-      "local_count": 78,
+      "more_count": 88,
+      "statewide_count": 15,
+      "local_count": 76,
       "local_rows": [
         {
           "opportunity_id": "915af89a13cb79c2",
@@ -1382,14 +1382,14 @@
     },
     {
       "page_key": "putnam",
-      "open_count": 27,
+      "open_count": 29,
       "shown_count": 3,
-      "more_count": 24,
-      "statewide_count": 14,
-      "local_count": 13,
+      "more_count": 26,
+      "statewide_count": 15,
+      "local_count": 14,
       "local_rows": [
         {
-          "opportunity_id": "3fd2b650ab555a1c",
+          "opportunity_id": "ea180dc6aa3391c6",
           "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
         },
         {
@@ -1407,10 +1407,10 @@
     },
     {
       "page_key": "st-johns",
-      "open_count": 16,
+      "open_count": 17,
       "shown_count": 3,
-      "more_count": 13,
-      "statewide_count": 14,
+      "more_count": 14,
+      "statewide_count": 15,
       "local_count": 2,
       "local_rows": [
         {
@@ -1424,8 +1424,8 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -1433,10 +1433,10 @@
     },
     {
       "page_key": "st-lucie",
-      "open_count": 38,
+      "open_count": 39,
       "shown_count": 3,
-      "more_count": 35,
-      "statewide_count": 14,
+      "more_count": 36,
+      "statewide_count": 15,
       "local_count": 24,
       "local_rows": [
         {
@@ -1458,10 +1458,10 @@
     },
     {
       "page_key": "santa-rosa",
-      "open_count": 18,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 15,
-      "statewide_count": 14,
+      "more_count": 16,
+      "statewide_count": 15,
       "local_count": 4,
       "local_rows": [
         {
@@ -1483,13 +1483,17 @@
     },
     {
       "page_key": "sarasota",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -1497,10 +1501,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -1508,10 +1508,10 @@
     },
     {
       "page_key": "seminole",
-      "open_count": 20,
+      "open_count": 21,
       "shown_count": 3,
-      "more_count": 17,
-      "statewide_count": 14,
+      "more_count": 18,
+      "statewide_count": 15,
       "local_count": 6,
       "local_rows": [
         {
@@ -1533,10 +1533,10 @@
     },
     {
       "page_key": "sumter",
-      "open_count": 15,
+      "open_count": 16,
       "shown_count": 3,
-      "more_count": 12,
-      "statewide_count": 14,
+      "more_count": 13,
+      "statewide_count": 15,
       "local_count": 1,
       "local_rows": [
         {
@@ -1546,12 +1546,12 @@
       ],
       "statewide_rows": [
         {
-          "opportunity_id": "bca243be66f4f7b3",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         },
         {
-          "opportunity_id": "f5ecfa3e2914239f",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
+          "opportunity_id": "bca243be66f4f7b3",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
         }
       ],
       "unlisted_count": 0,
@@ -1559,13 +1559,17 @@
     },
     {
       "page_key": "suwannee",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -1573,10 +1577,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -1584,10 +1584,10 @@
     },
     {
       "page_key": "taylor",
-      "open_count": 19,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 16,
-      "statewide_count": 14,
+      "more_count": 17,
+      "statewide_count": 15,
       "local_count": 5,
       "local_rows": [
         {
@@ -1609,13 +1609,17 @@
     },
     {
       "page_key": "union",
-      "open_count": 14,
+      "open_count": 15,
       "shown_count": 3,
-      "more_count": 11,
-      "statewide_count": 14,
+      "more_count": 12,
+      "statewide_count": 15,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
+        {
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
+        },
         {
           "opportunity_id": "bca243be66f4f7b3",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17505"
@@ -1623,10 +1627,6 @@
         {
           "opportunity_id": "f5ecfa3e2914239f",
           "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17480"
-        },
-        {
-          "opportunity_id": "c1f8cd9f94cd96f0",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17484"
         }
       ],
       "unlisted_count": 0,
@@ -1634,10 +1634,10 @@
     },
     {
       "page_key": "volusia",
-      "open_count": 46,
+      "open_count": 47,
       "shown_count": 3,
-      "more_count": 43,
-      "statewide_count": 14,
+      "more_count": 44,
+      "statewide_count": 15,
       "local_count": 32,
       "local_rows": [
         {
@@ -1659,10 +1659,10 @@
     },
     {
       "page_key": "wakulla",
-      "open_count": 18,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 15,
-      "statewide_count": 14,
+      "more_count": 16,
+      "statewide_count": 15,
       "local_count": 4,
       "local_rows": [
         {
@@ -1684,10 +1684,10 @@
     },
     {
       "page_key": "walton",
-      "open_count": 17,
+      "open_count": 18,
       "shown_count": 3,
-      "more_count": 14,
-      "statewide_count": 14,
+      "more_count": 15,
+      "statewide_count": 15,
       "local_count": 3,
       "local_rows": [
         {
@@ -1709,10 +1709,10 @@
     },
     {
       "page_key": "washington",
-      "open_count": 61,
+      "open_count": 62,
       "shown_count": 3,
-      "more_count": 58,
-      "statewide_count": 14,
+      "more_count": 59,
+      "statewide_count": 15,
       "local_count": 47,
       "local_rows": [
         {
@@ -1734,11 +1734,11 @@
     },
     {
       "page_key": "roofing",
-      "open_count": 20,
+      "open_count": 19,
       "shown_count": 3,
-      "more_count": 17,
+      "more_count": 16,
       "statewide_count": 1,
-      "local_count": 19,
+      "local_count": 18,
       "local_rows": [
         {
           "opportunity_id": "940a8b86dae70b8c",
@@ -1749,8 +1749,8 @@
           "url": "https://www.southpalmbeach.com/bids.aspx?bidID=1"
         },
         {
-          "opportunity_id": "a388fd2ad8457d53",
-          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8350"
+          "opportunity_id": "0a6f202e3459b801",
+          "url": "https://www.cchafl.org/procurement-bids-rfps"
         }
       ],
       "statewide_rows": [],
@@ -1774,8 +1774,8 @@
           "url": "https://www.cityofpensacola.com/bids.aspx?bidID=654"
         },
         {
-          "opportunity_id": "ca4c19a95e18d4ac",
-          "url": "https://www.stpetebeach.org/bids.aspx?bidID=129"
+          "opportunity_id": "0f5f9a45c48b694c",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8348"
         }
       ],
       "statewide_rows": [],
@@ -1809,11 +1809,11 @@
     },
     {
       "page_key": "sitework-heavy-civil",
-      "open_count": 326,
+      "open_count": 325,
       "shown_count": 3,
-      "more_count": 323,
+      "more_count": 322,
       "statewide_count": 5,
-      "local_count": 321,
+      "local_count": 320,
       "local_rows": [
         {
           "opportunity_id": "1cd41d23fd91d186",
@@ -1834,11 +1834,11 @@
     },
     {
       "page_key": "commercial-general-contracting",
-      "open_count": 181,
+      "open_count": 184,
       "shown_count": 3,
-      "more_count": 178,
-      "statewide_count": 1,
-      "local_count": 177,
+      "more_count": 181,
+      "statewide_count": 2,
+      "local_count": 179,
       "local_rows": [
         {
           "opportunity_id": "13205c3d62f8f9ea",
@@ -1859,19 +1859,19 @@
     },
     {
       "page_key": "painting",
-      "open_count": 5,
+      "open_count": 4,
       "shown_count": 2,
-      "more_count": 3,
+      "more_count": 2,
       "statewide_count": 0,
-      "local_count": 5,
+      "local_count": 4,
       "local_rows": [
-        {
-          "opportunity_id": "ff1ad7a1dee92980",
-          "url": "https://www.polkfl.gov/bid-form/cq-26-442/"
-        },
         {
           "opportunity_id": "992877fd3991023e",
           "url": "https://www.pbchafl.org/current-bids-and-solicitations/"
+        },
+        {
+          "opportunity_id": "ea04f99a5acdc5c5",
+          "url": "https://www.keysmosquito.org/bid-opportunities"
         }
       ],
       "statewide_rows": [],
@@ -2006,10 +2006,10 @@
     },
     {
       "page_key": "alachua/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -2112,16 +2112,16 @@
     },
     {
       "page_key": "baker/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -2222,15 +2222,19 @@
     },
     {
       "page_key": "bay/commercial-general-contracting",
-      "open_count": 3,
-      "shown_count": 1,
+      "open_count": 4,
+      "shown_count": 2,
       "more_count": 2,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "d0b5ff79b27cb367",
           "url": "https://www.cityoflynnhaven.gov/bids.aspx?bidID=167"
+        },
+        {
+          "opportunity_id": "ff363ac3441256e6",
+          "url": "https://mexicobeachfl.gov/uploads/2025/02/RFP-Amphitheater-2025-04-2.pdf"
         }
       ],
       "statewide_rows": [],
@@ -2328,10 +2332,10 @@
     },
     {
       "page_key": "bradford/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -2455,16 +2459,16 @@
     },
     {
       "page_key": "brevard/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -2573,10 +2577,10 @@
     },
     {
       "page_key": "broward/commercial-general-contracting",
-      "open_count": 9,
+      "open_count": 10,
       "shown_count": 3,
-      "more_count": 6,
-      "statewide_count": 1,
+      "more_count": 7,
+      "statewide_count": 2,
       "local_count": 8,
       "local_rows": [
         {
@@ -2692,16 +2696,16 @@
     },
     {
       "page_key": "calhoun/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -2726,18 +2730,18 @@
     },
     {
       "page_key": "charlotte/roofing",
-      "open_count": 2,
+      "open_count": 1,
       "shown_count": 1,
-      "more_count": 1,
+      "more_count": 0,
       "statewide_count": 1,
-      "local_count": 1,
-      "local_rows": [
+      "local_count": 0,
+      "local_rows": [],
+      "statewide_rows": [
         {
-          "opportunity_id": "a388fd2ad8457d53",
-          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8350"
+          "opportunity_id": "41568f21469d4b90",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/14026"
         }
       ],
-      "statewide_rows": [],
       "unlisted_count": 0,
       "unlisted_rows": []
     },
@@ -2750,8 +2754,8 @@
       "local_count": 3,
       "local_rows": [
         {
-          "opportunity_id": "c9324f23d1fe4b3e",
-          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8349"
+          "opportunity_id": "0f5f9a45c48b694c",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8348"
         },
         {
           "opportunity_id": "0427be3458dc9934",
@@ -2811,15 +2815,15 @@
     },
     {
       "page_key": "charlotte/commercial-general-contracting",
-      "open_count": 4,
+      "open_count": 5,
       "shown_count": 2,
-      "more_count": 2,
-      "statewide_count": 1,
+      "more_count": 3,
+      "statewide_count": 2,
       "local_count": 3,
       "local_rows": [
         {
-          "opportunity_id": "ed34167076e2322a",
-          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8329"
+          "opportunity_id": "dcac885530dd97af",
+          "url": "https://purchasingbids.charlottecountyfl.gov/ContractsCatalogs/DetailsTabs/8345"
         },
         {
           "opportunity_id": "8493ffdc20d709fb",
@@ -2926,16 +2930,16 @@
     },
     {
       "page_key": "citrus/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -3032,16 +3036,16 @@
     },
     {
       "page_key": "clay/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -3143,10 +3147,10 @@
     },
     {
       "page_key": "collier/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -3258,15 +3262,19 @@
     },
     {
       "page_key": "columbia/commercial-general-contracting",
-      "open_count": 3,
-      "shown_count": 1,
+      "open_count": 4,
+      "shown_count": 2,
       "more_count": 2,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "2c01257c3a9d2cb0",
           "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d2/lettings/2026/sep16/e21z0.pdf?sfvrsn=ac92ec0c_1"
+        },
+        {
+          "opportunity_id": "99c584e7c63e19dc",
+          "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/contracts/d2/lettings/2026/feb18/e21y4.pdf?sfvrsn=b4d0b9b4_1"
         }
       ],
       "statewide_rows": [],
@@ -3372,16 +3380,16 @@
     },
     {
       "page_key": "desoto/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -3478,16 +3486,16 @@
     },
     {
       "page_key": "dixie/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -3589,10 +3597,10 @@
     },
     {
       "page_key": "duval/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -3700,10 +3708,10 @@
     },
     {
       "page_key": "escambia/commercial-general-contracting",
-      "open_count": 6,
+      "open_count": 7,
       "shown_count": 3,
-      "more_count": 3,
-      "statewide_count": 1,
+      "more_count": 4,
+      "statewide_count": 2,
       "local_count": 5,
       "local_rows": [
         {
@@ -3819,10 +3827,10 @@
     },
     {
       "page_key": "flagler/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -3934,15 +3942,19 @@
     },
     {
       "page_key": "franklin/commercial-general-contracting",
-      "open_count": 3,
-      "shown_count": 1,
+      "open_count": 4,
+      "shown_count": 2,
       "more_count": 2,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "bd84591c5a2e42dc",
           "url": "https://www.franklincountyflorida.com/resources/county-bids-awards/"
+        },
+        {
+          "opportunity_id": "1b55a743f28e686d",
+          "url": "https://www.franklincountyflorida.com/wp-content/uploads/2026/10/ITB-West-Hangar-Development-Project-at-Airport.pdf"
         }
       ],
       "statewide_rows": [],
@@ -4045,16 +4057,16 @@
     },
     {
       "page_key": "gadsden/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -4151,16 +4163,16 @@
     },
     {
       "page_key": "gilchrist/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -4262,10 +4274,10 @@
     },
     {
       "page_key": "glades/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -4368,16 +4380,16 @@
     },
     {
       "page_key": "gulf/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -4474,16 +4486,16 @@
     },
     {
       "page_key": "hamilton/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -4580,16 +4592,16 @@
     },
     {
       "page_key": "hardee/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -4690,10 +4702,10 @@
     },
     {
       "page_key": "hendry/commercial-general-contracting",
-      "open_count": 4,
+      "open_count": 5,
       "shown_count": 2,
-      "more_count": 2,
-      "statewide_count": 1,
+      "more_count": 3,
+      "statewide_count": 2,
       "local_count": 3,
       "local_rows": [
         {
@@ -4805,10 +4817,10 @@
     },
     {
       "page_key": "hernando/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -4916,16 +4928,16 @@
     },
     {
       "page_key": "highlands/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -5030,10 +5042,10 @@
     },
     {
       "page_key": "hillsborough/commercial-general-contracting",
-      "open_count": 5,
-      "shown_count": 2,
+      "open_count": 6,
+      "shown_count": 3,
       "more_count": 3,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 4,
       "local_rows": [
         {
@@ -5043,6 +5055,10 @@
         {
           "opportunity_id": "59ad4bae687df67e",
           "url": "https://ftp.fdot.gov/public/file/yosqdnqdpkkpjgzddxscug/E7V18.pdf"
+        },
+        {
+          "opportunity_id": "e878335e77892140",
+          "url": "https://hcfl.gov/businesses/doing-business-with-hillsborough/vendors/notice-of-select-upcoming-procurements"
         }
       ],
       "statewide_rows": [],
@@ -5148,16 +5164,16 @@
     },
     {
       "page_key": "holmes/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -5259,10 +5275,10 @@
     },
     {
       "page_key": "indian-river/commercial-general-contracting",
-      "open_count": 4,
+      "open_count": 5,
       "shown_count": 2,
-      "more_count": 2,
-      "statewide_count": 1,
+      "more_count": 3,
+      "statewide_count": 2,
       "local_count": 3,
       "local_rows": [
         {
@@ -5369,16 +5385,16 @@
     },
     {
       "page_key": "jackson/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -5475,16 +5491,16 @@
     },
     {
       "page_key": "jefferson/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -5586,16 +5602,16 @@
     },
     {
       "page_key": "lafayette/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -5696,10 +5712,10 @@
     },
     {
       "page_key": "lake/commercial-general-contracting",
-      "open_count": 11,
+      "open_count": 12,
       "shown_count": 3,
-      "more_count": 8,
-      "statewide_count": 1,
+      "more_count": 9,
+      "statewide_count": 2,
       "local_count": 10,
       "local_rows": [
         {
@@ -5818,15 +5834,19 @@
     },
     {
       "page_key": "lee/commercial-general-contracting",
-      "open_count": 3,
-      "shown_count": 1,
+      "open_count": 4,
+      "shown_count": 2,
       "more_count": 2,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "4a1e7eb68e793e5c",
           "url": "https://www.fgcu.edu/adminservices/officeofthecontroller/procurementservices/purchasing/solicitations/"
+        },
+        {
+          "opportunity_id": "19036a612ca433b4",
+          "url": "https://www.leecountyha.org/doing-business-us/"
         }
       ],
       "statewide_rows": [],
@@ -5924,16 +5944,16 @@
     },
     {
       "page_key": "leon/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -6030,16 +6050,16 @@
     },
     {
       "page_key": "levy/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -6140,10 +6160,10 @@
     },
     {
       "page_key": "liberty/commercial-general-contracting",
-      "open_count": 4,
+      "open_count": 5,
       "shown_count": 2,
-      "more_count": 2,
-      "statewide_count": 1,
+      "more_count": 3,
+      "statewide_count": 2,
       "local_count": 3,
       "local_rows": [
         {
@@ -6250,10 +6270,10 @@
     },
     {
       "page_key": "madison/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -6356,16 +6376,16 @@
     },
     {
       "page_key": "manatee/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -6472,15 +6492,19 @@
     },
     {
       "page_key": "marion/commercial-general-contracting",
-      "open_count": 3,
-      "shown_count": 1,
+      "open_count": 4,
+      "shown_count": 2,
       "more_count": 2,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "3f077d0b715ab16f",
           "url": "https://www.marionschools.net/departments/purchasing/i_t_b__r_f_p_opportunities"
+        },
+        {
+          "opportunity_id": "cec943dcefdc4026",
+          "url": "https://ftp.fdot.gov/public/file/xgl0ocnx9koodfaq2qkahg/T9049BSN.pdf"
         }
       ],
       "statewide_rows": [],
@@ -6578,16 +6602,16 @@
     },
     {
       "page_key": "martin/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -6701,11 +6725,11 @@
     },
     {
       "page_key": "miami-dade/commercial-general-contracting",
-      "open_count": 29,
+      "open_count": 31,
       "shown_count": 3,
-      "more_count": 26,
-      "statewide_count": 1,
-      "local_count": 28,
+      "more_count": 28,
+      "statewide_count": 2,
+      "local_count": 29,
       "local_rows": [
         {
           "opportunity_id": "16d773518108e98a",
@@ -6716,8 +6740,8 @@
           "url": "https://jacksonhealth.org/library/procurement/solicitation-notices.pdf"
         },
         {
-          "opportunity_id": "d8a55fbeead115f8",
-          "url": "https://northbayvillage-fl.gov/bids-rfps/"
+          "opportunity_id": "0a191603eed3747c",
+          "url": "https://www.coralgables.com/department/procurement/procurement-notices"
         }
       ],
       "statewide_rows": [],
@@ -6827,10 +6851,10 @@
     },
     {
       "page_key": "monroe/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -6950,15 +6974,19 @@
     },
     {
       "page_key": "nassau/commercial-general-contracting",
-      "open_count": 3,
-      "shown_count": 1,
+      "open_count": 4,
+      "shown_count": 2,
       "more_count": 2,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "fe4befbb0f6af5a0",
           "url": "https://www.fbfl.us/bids.aspx?bidID=396"
+        },
+        {
+          "opportunity_id": "e0dcb978ebee161d",
+          "url": "https://www.fbfl.us/bids.aspx?bidID=393"
         }
       ],
       "statewide_rows": [],
@@ -7060,16 +7088,16 @@
     },
     {
       "page_key": "okaloosa/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -7170,10 +7198,10 @@
     },
     {
       "page_key": "okeechobee/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -7297,10 +7325,10 @@
     },
     {
       "page_key": "orange/commercial-general-contracting",
-      "open_count": 10,
+      "open_count": 11,
       "shown_count": 3,
-      "more_count": 7,
-      "statewide_count": 1,
+      "more_count": 8,
+      "statewide_count": 2,
       "local_count": 9,
       "local_rows": [
         {
@@ -7415,16 +7443,16 @@
     },
     {
       "page_key": "osceola/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -7533,10 +7561,10 @@
     },
     {
       "page_key": "palm-beach/commercial-general-contracting",
-      "open_count": 17,
+      "open_count": 18,
       "shown_count": 3,
-      "more_count": 14,
-      "statewide_count": 1,
+      "more_count": 15,
+      "statewide_count": 2,
       "local_count": 16,
       "local_rows": [
         {
@@ -7689,10 +7717,10 @@
     },
     {
       "page_key": "pasco/commercial-general-contracting",
-      "open_count": 8,
+      "open_count": 9,
       "shown_count": 3,
-      "more_count": 5,
-      "statewide_count": 1,
+      "more_count": 6,
+      "statewide_count": 2,
       "local_count": 7,
       "local_rows": [
         {
@@ -7823,10 +7851,10 @@
     },
     {
       "page_key": "pinellas/commercial-general-contracting",
-      "open_count": 4,
+      "open_count": 5,
       "shown_count": 2,
-      "more_count": 2,
-      "statewide_count": 1,
+      "more_count": 3,
+      "statewide_count": 2,
       "local_count": 3,
       "local_rows": [
         {
@@ -7917,19 +7945,19 @@
     },
     {
       "page_key": "polk/sitework-heavy-civil",
-      "open_count": 37,
+      "open_count": 36,
       "shown_count": 3,
-      "more_count": 34,
+      "more_count": 33,
       "statewide_count": 5,
-      "local_count": 32,
+      "local_count": 31,
       "local_rows": [
-        {
-          "opportunity_id": "33ba7990d3d29bc9",
-          "url": "https://www.polkfl.gov/bid-form/inwood-avenue-e-nw-drainage-improvements/"
-        },
         {
           "opportunity_id": "809c19634f48ed7c",
           "url": "https://www.cityofbartow.net/bids.aspx?bidID=27"
+        },
+        {
+          "opportunity_id": "33ba7990d3d29bc9",
+          "url": "https://www.polkfl.gov/bid-form/inwood-avenue-e-nw-drainage-improvements/"
         },
         {
           "opportunity_id": "374bcce58a8f47a9",
@@ -7942,10 +7970,10 @@
     },
     {
       "page_key": "polk/commercial-general-contracting",
-      "open_count": 25,
+      "open_count": 26,
       "shown_count": 3,
-      "more_count": 22,
-      "statewide_count": 1,
+      "more_count": 23,
+      "statewide_count": 2,
       "local_count": 24,
       "local_rows": [
         {
@@ -7959,23 +7987,6 @@
         {
           "opportunity_id": "2c9641cb351ebe9a",
           "url": "https://auburndalefl.com/rfps/"
-        }
-      ],
-      "statewide_rows": [],
-      "unlisted_count": 0,
-      "unlisted_rows": []
-    },
-    {
-      "page_key": "polk/painting",
-      "open_count": 1,
-      "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 0,
-      "local_count": 1,
-      "local_rows": [
-        {
-          "opportunity_id": "ff1ad7a1dee92980",
-          "url": "https://www.polkfl.gov/bid-form/cq-26-442/"
         }
       ],
       "statewide_rows": [],
@@ -8085,19 +8096,23 @@
     },
     {
       "page_key": "putnam/commercial-general-contracting",
-      "open_count": 5,
-      "shown_count": 2,
-      "more_count": 3,
-      "statewide_count": 1,
-      "local_count": 4,
+      "open_count": 7,
+      "shown_count": 3,
+      "more_count": 4,
+      "statewide_count": 2,
+      "local_count": 5,
       "local_rows": [
+        {
+          "opportunity_id": "ea180dc6aa3391c6",
+          "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
+        },
         {
           "opportunity_id": "1c80778adb64bcea",
           "url": "https://crescentcity-fl.com/wp-content/uploads/2026/11/01-Bid-Advertisement-Invitation-Revised-09-Nov-26.pdf"
         },
         {
-          "opportunity_id": "66d23ace5686ac63",
-          "url": "https://apps.putnam-fl.com/bocc/callForBidsViewer/"
+          "opportunity_id": "a5addb61b5b6eb46",
+          "url": "https://www.palatka-fl.gov/bids.aspx?bidID=225"
         }
       ],
       "statewide_rows": [],
@@ -8200,16 +8215,16 @@
     },
     {
       "page_key": "st-johns/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -8318,10 +8333,10 @@
     },
     {
       "page_key": "st-lucie/commercial-general-contracting",
-      "open_count": 8,
+      "open_count": 9,
       "shown_count": 3,
-      "more_count": 5,
-      "statewide_count": 1,
+      "more_count": 6,
+      "statewide_count": 2,
       "local_count": 7,
       "local_rows": [
         {
@@ -8482,10 +8497,10 @@
     },
     {
       "page_key": "santa-rosa/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -8588,16 +8603,16 @@
     },
     {
       "page_key": "sarasota/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -8698,14 +8713,18 @@
     },
     {
       "page_key": "seminole/commercial-general-contracting",
-      "open_count": 3,
-      "shown_count": 1,
+      "open_count": 4,
+      "shown_count": 2,
       "more_count": 2,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "79968d35819b31c0",
+          "url": "https://flysfb.com/business/procurement/solicitations/"
+        },
+        {
+          "opportunity_id": "7df36b3d53ca4290",
           "url": "https://flysfb.com/business/procurement/solicitations/"
         }
       ],
@@ -8809,10 +8828,10 @@
     },
     {
       "page_key": "sumter/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -8915,16 +8934,16 @@
     },
     {
       "page_key": "suwannee/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -9025,15 +9044,19 @@
     },
     {
       "page_key": "taylor/commercial-general-contracting",
-      "open_count": 3,
-      "shown_count": 1,
+      "open_count": 4,
+      "shown_count": 2,
       "more_count": 2,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 2,
       "local_rows": [
         {
           "opportunity_id": "1890dfe89daa6cba",
           "url": "https://www.taylorcountygov.com/bid_detail_T25_R200.php"
+        },
+        {
+          "opportunity_id": "1f02cabb2fc4daf3",
+          "url": "https://www.taylorcountygov.com/bid_detail_T25_R195.php"
         }
       ],
       "statewide_rows": [],
@@ -9131,16 +9154,16 @@
     },
     {
       "page_key": "union/commercial-general-contracting",
-      "open_count": 1,
+      "open_count": 2,
       "shown_count": 1,
-      "more_count": 0,
-      "statewide_count": 1,
+      "more_count": 1,
+      "statewide_count": 2,
       "local_count": 0,
       "local_rows": [],
       "statewide_rows": [
         {
-          "opportunity_id": "b44aa79e3b38f645",
-          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/16049"
+          "opportunity_id": "cc77eb116b8df3c8",
+          "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/17373"
         }
       ],
       "unlisted_count": 0,
@@ -9265,10 +9288,10 @@
     },
     {
       "page_key": "volusia/commercial-general-contracting",
-      "open_count": 5,
-      "shown_count": 2,
+      "open_count": 6,
+      "shown_count": 3,
       "more_count": 3,
-      "statewide_count": 1,
+      "statewide_count": 2,
       "local_count": 4,
       "local_rows": [
         {
@@ -9278,6 +9301,10 @@
         {
           "opportunity_id": "31748dcd7907f747",
           "url": "https://www.debary.org/bids.aspx?bidID=22"
+        },
+        {
+          "opportunity_id": "e407b886b167428f",
+          "url": "https://www.vcsedu.org/directory/departments/operation-services/facilities-services/design-construction/bid-documents"
         }
       ],
       "statewide_rows": [],
@@ -9396,10 +9423,10 @@
     },
     {
       "page_key": "wakulla/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -9502,10 +9529,10 @@
     },
     {
       "page_key": "walton/commercial-general-contracting",
-      "open_count": 2,
+      "open_count": 3,
       "shown_count": 1,
-      "more_count": 1,
-      "statewide_count": 1,
+      "more_count": 2,
+      "statewide_count": 2,
       "local_count": 1,
       "local_rows": [
         {
@@ -9620,10 +9647,10 @@
     },
     {
       "page_key": "washington/commercial-general-contracting",
-      "open_count": 9,
+      "open_count": 10,
       "shown_count": 3,
-      "more_count": 6,
-      "statewide_count": 1,
+      "more_count": 7,
+      "statewide_count": 2,
       "local_count": 8,
       "local_rows": [
         {
