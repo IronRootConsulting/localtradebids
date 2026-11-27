@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-11-26",
+  "as_of": "2026-11-27",
   "exported_rows": 834,
-  "open": 736,
+  "open": 737,
   "statewide": 15,
   "local": 716,
-  "unlisted": 5,
+  "unlisted": 6,
   "page_count": 485,
   "per_trade": {
-    "roofing": 19,
+    "roofing": 20,
     "electrical": 91,
     "plumbing-hvac": 25,
     "sitework-heavy-civil": 325,
@@ -19,9 +19,9 @@
   "pages": [
     {
       "page_key": "home",
-      "open_count": 736,
+      "open_count": 737,
       "shown_count": 3,
-      "more_count": 733,
+      "more_count": 734,
       "statewide_count": 15,
       "local_count": 716,
       "local_rows": [
@@ -39,7 +39,7 @@
         }
       ],
       "statewide_rows": [],
-      "unlisted_count": 5,
+      "unlisted_count": 6,
       "unlisted_rows": []
     },
     {
@@ -1734,9 +1734,9 @@
     },
     {
       "page_key": "roofing",
-      "open_count": 19,
+      "open_count": 20,
       "shown_count": 3,
-      "more_count": 16,
+      "more_count": 17,
       "statewide_count": 1,
       "local_count": 18,
       "local_rows": [
@@ -1754,7 +1754,7 @@
         }
       ],
       "statewide_rows": [],
-      "unlisted_count": 0,
+      "unlisted_count": 1,
       "unlisted_rows": []
     },
     {
